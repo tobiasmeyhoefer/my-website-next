@@ -11,17 +11,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 50vw;
+  height: 50%;
   width: 100%;
-  /* background-color: red; */
   z-index: 3;
 }
 
 .downerBody{
-  height: 50vw;
+  height: 50%;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background-color: green; */
 }
