@@ -10,7 +10,7 @@ export default function Home() {
 
   let counter = 1;
   function countUpperBody() {
-    console.log(counter)
+    console.log("upper" + counter)
     if(counter >= 21) {
       counter = 0;
       return;
@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   function countDownerBuddy() {
-    console.log(counter)
+    console.log("downer" + counter)
     if(counter < 20) {
       counter = 0;
       return;
