@@ -13,6 +13,7 @@ export default function Home() {
     console.log(counter)
     if(counter >= 21) {
       counter = 0;
+      return;
     }
     counter++;
   }
@@ -21,10 +22,12 @@ export default function Home() {
     console.log(counter)
     if(counter < 20) {
       counter = 0;
+      return;
     }
 
     if(counter === 33) {
       router.push("/easterEgg")
+      return;
     }
 
     counter++;
