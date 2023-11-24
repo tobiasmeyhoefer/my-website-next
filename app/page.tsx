@@ -8,7 +8,7 @@ export default function Home() {
 
   const router = useRouter()
 
-  let counter = 0;
+  let counter = 1;
   function countUpperBody() {
     console.log(counter)
     if(counter >= 21) {
