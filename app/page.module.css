@@ -1,25 +1,8 @@
-.main {
+/* .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10rem;
   min-height: 100vh;
-}
-
-.upperBody{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50%;
-  width: 100%;
-  z-index: 3;
-}
-
-.downerBody{
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+} */
