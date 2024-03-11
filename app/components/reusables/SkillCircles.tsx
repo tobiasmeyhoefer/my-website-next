@@ -20,7 +20,7 @@ export default function SkillCircles({ params }: { params: { skill: string; circ
 
   return(
     <li key={params.skill} className="flex items-center">
-      <p className="text-xl w-48">{params.skill}</p>
+      <p className="text-base md:text-xl w-48">{params.skill}</p>
       <div className="flex gap-1">
         {content}
       </div>

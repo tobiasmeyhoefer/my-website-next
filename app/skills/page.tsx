@@ -3,7 +3,7 @@ import SkillCircles from "../components/reusables/SkillCircles"
 export default function skillsPage() {
   return (
     <>
-      <h2 className="text-3xl font-bold my-16">programming languages</h2>
+      <h2 className="text-xl md:text-3xl font-semibold my-16">programming languages</h2>
       <ul className="flex flex-col gap-6">
         <SkillCircles
           params={{
@@ -42,7 +42,7 @@ export default function skillsPage() {
           }}
         ></SkillCircles>
       </ul>
-      <h2 className="text-3xl font-bold my-16">Frameworks</h2>
+      <h2 className="text-xl md:text-3xl font-semibold my-16">Frameworks</h2>
       <ul className="flex flex-col gap-6">
         <SkillCircles
           params={{
@@ -58,7 +58,7 @@ export default function skillsPage() {
         ></SkillCircles>
         <SkillCircles
           params={{
-            skill: "Dotnet Blazor",
+            skill: ".Net Blazor",
             circles: 6,
           }}
         ></SkillCircles>
