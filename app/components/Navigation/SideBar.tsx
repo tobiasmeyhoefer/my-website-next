@@ -9,7 +9,7 @@ export default function SideBar({
 }): JSX.Element {
   return (
     <div
-      className="fixed md:hidden w-full h-96 overflow-hidden bg-white grid mt-20 left-0 z-10"
+      className="fixed md:hidden w-full overflow-hidden bg-white grid mt-20 left-0 z-10"
       style={{
         opacity: `${isOpen ? "1" : "0"}`,
         top: ` ${isOpen ? "0" : "-100%"}`,
@@ -18,6 +18,7 @@ export default function SideBar({
       <ul className="text-center text-xl w-full">
         <li className="w-full">
           <Link
+            onClick={toggle}
             href="/experience"
             className="h-full flex justify-center items-center hover:font-bold hover:bg-lightGray py-6 transition-all"
           >
@@ -26,6 +27,7 @@ export default function SideBar({
         </li>
         <li>
           <Link
+            onClick={toggle}
             href="/skills"
             className="h-full flex justify-center items-center hover:bg-lightGray py-6 hover:font-bold transition-all"
           >

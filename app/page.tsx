@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={space_grotesk.className + ' flex flex-col justify-center items-center h-[calc(100vh-80px)]'}>
-        <h1 className='text-8xl font-light -translate-y-20 text-center'>TOBIAS MEYHÖFER</h1>
+        <h1 className='text-6xl font-light -translate-y-20 text-center md:text-8xl'>TOBIAS MEYHÖFER</h1>
         <p className='font-light text-2xl -translate-y-10'>Junior Developer</p>
       </div>
     </main>
