@@ -34,7 +34,15 @@ export default function SideBar({
             skills
           </Link>
         </li>
-        <li></li>
+        <li>
+          <Link
+            href="/aboutme"
+            className="h-full flex justify-center items-center hover:bg-lightGray py-8 hover:font-bold transition-all"
+            onClick={toggle}
+          >
+            me
+          </Link>
+        </li>
       </ul>
     </div>
   )

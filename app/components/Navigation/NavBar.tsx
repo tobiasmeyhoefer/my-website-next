@@ -44,7 +44,7 @@ export default function NavBar({ toggle }: { toggle: () => void }) {
             </li>
           </ul>
           <div className="flex items-center pr-10">
-            <Link href="/">
+            <Link href="/" onClick={toggle}>
               <Image src={TM} alt="Logo of the Website" width={60} />
             </Link>
           </div>

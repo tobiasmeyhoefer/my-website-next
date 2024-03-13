@@ -1,7 +1,7 @@
 export default function experiencePage() {
   return (
     <>
-      <div className="h-full flex gap-10 my-16 mt-40">
+      <div className="h-full flex gap-10 mt-40 bg-test">
         <div className="w-16 bg-text h-96"></div>
         <div className="flex flex-col gap-20
         ">
