@@ -9,7 +9,7 @@ const space_grotesk = Space_Grotesk({
 
 export default function StartingPage() {
   return (
-    <div className={space_grotesk.className + ' flex flex-col pt-48 gap-8 items-center h-[calc(100vh-128px)]'}>
+    <div className={space_grotesk.className + ' w-full flex flex-col justify-center gap-8 items-center h-[calc(100vh-128px)]'}>
       <Image
         src={me}
         alt='me as an memoji'

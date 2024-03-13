@@ -2,7 +2,7 @@ import SkillCircles from "../components/reusables/SkillCircles"
 
 export default function skillsPage() {
   return (
-    <>
+    <div className="mt-40">
       <h2 className="text-xl md:text-3xl font-semibold my-16">programming languages</h2>
       <ul className="flex flex-col gap-6">
         <SkillCircles
@@ -69,6 +69,6 @@ export default function skillsPage() {
           }}
         ></SkillCircles>
       </ul>
-    </>
+    </div>
   )
 }
