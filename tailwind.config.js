@@ -11,7 +11,8 @@ module.exports = {
       text: "#272727",
       white: "#ffffff",
       lightGray: "#f0f0f0",
-      test: "#ff0000"
+      test: "#ff0000",
+      test2: "#ffff00"
     }
   },
   plugins: [],
