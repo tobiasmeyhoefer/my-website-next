@@ -22,10 +22,8 @@ export default function RootLayout({
         <header className='absolute top-0 left-0 right-0'>
           <Navigation></Navigation>
         </header>
-        <main className="px-9 md:px-20 flex">
-          <div className=' flex w-full max-w-screen-2xl mx-auto'>
-            {children}
-          </div>
+        <main className="px-10 md:px-40 2xl:px-80">
+          {children}
         </main>
       </body>
     </html>
