@@ -8,7 +8,7 @@ export default function experiencePage() {
           <p>coded the first websites with html and css</p>
           <p>started the journey with a few javascript trys</p>
           <p>started studying media informatics at Berliner Hochschule für Technik</p>
-          <p>working for Berliner Verkehrsbetriebe (BVG) since October 2022</p>
+          <p>working for Berliner Verkehrsbetriebe (BVG) since 01 October 2022</p>
         </div>
       </div>
     </>
