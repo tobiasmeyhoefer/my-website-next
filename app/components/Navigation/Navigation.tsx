@@ -8,10 +8,14 @@ export default function Navigation() {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+
+  const deactivate = () => {
+    setIsOpen(false)
+  }
   return (
     <>
       <SideBar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} deactivate={deactivate}/>
     </>
   )
 }

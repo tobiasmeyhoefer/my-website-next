@@ -6,27 +6,32 @@ const speed = 1
 let infos = document.getElementsByClassName("bouncing_info")
 let box = document.getElementById("box")
 
+let firstRender = true;
+
 //array mit allen 3 Dingern...
 const positions = [
   {
-    x: 0,
+    x: 300,
+    y: 100,
+    dirX: -1,
+    dirY: 1,
+    firstRender: true, // Hinzugefügt für jedes Element
+  },
+  {
+    x: 800,
     y: 0,
-    dirX: 1,
-    dirY: 1,
+    dirX: -1,
+    dirY: -1,
+    firstRender: true, // Hinzugefügt für jedes Element
   },
   {
-    x: 60,
-    y: 40,
+    x: 600,
+    y: 200,
     dirX: 1,
     dirY: 1,
+    firstRender: true, // Hinzugefügt für jedes Element
   },
-  {
-    x: 120,
-    y: 90,
-    dirX: 1,
-    dirY: 1,
-  },
-]
+];
 
 // const dvdWidth = dvd.clientWidth;
 // const dvdHeight = dvd.clientHeight;
@@ -42,17 +47,36 @@ function animate() {
 
     if (positions[i].y + height >= boxHeight || positions[i].y < 0) {
       positions[i].dirY *= -1
-      //hier funktion callen die den text dann anschließend ändert
-      infos[i].innerHTML = eigenschaften[randomIntFromInterval(0, 5)]
+
     }
     if (positions[i].x + width >= boxWidth || positions[i].x < 0) {
       positions[i].dirX *= -1
+      //hier funktion callen die den text dann anschließend ändert
+      while(true) {
+        let characteristic = eigenschaften[randomIntFromInterval(0, 5)]
+        if(characteristic != infos[i].innerHTML) {
+          infos[i].innerHTML = characteristic;
+          break;
+        } 
+      }
     }
 
-    positions[i].x += positions[i].dirX * speed
-    positions[i].y += positions[i].dirY * speed
-    infos[i].style.left = positions[i].x + "px"
-    infos[i].style.top = positions[i].y + "px"
+    if(positions[i].firstRender) {
+      let le = randomIntFromInterval(0, boxWidth - infos[i].clientWidth)
+      let to = randomIntFromInterval(0, boxHeight - infos[i].clientHeight)
+      infos[i].style.left = le + "px"
+      infos[i].style.top = to + "px"
+      positions[i].x = le
+      positions[i].y = to
+      console.log(boxHeight)
+      console.log(boxWidth)
+      positions[i].firstRender = false;
+    } else {
+      positions[i].x += positions[i].dirX * speed
+      positions[i].y += positions[i].dirY * speed
+      infos[i].style.left = positions[i].x + "px"
+      infos[i].style.top = positions[i].y + "px"
+    }
   }
 
   window.requestAnimationFrame(animate)

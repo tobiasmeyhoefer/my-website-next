@@ -9,7 +9,7 @@ export default function SideBar({
 }): JSX.Element {
   return (
     <div
-      className="fixed md:hidden w-full bg-white z-2 bottom-0 top-0 flex justify-center"
+      className="fixed md:hidden w-full bg-white z-2 bottom-0 top-0 flex justify-center z-10"
       style={{
         opacity: `${isOpen ? "1" : "0"}`,
         top: ` ${isOpen ? "0" : "-100%"}`,
@@ -34,7 +34,7 @@ export default function SideBar({
             skills
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/aboutme"
             className="h-full flex justify-center items-center hover:bg-lightGray py-8 hover:font-bold transition-all"
@@ -42,7 +42,7 @@ export default function SideBar({
           >
             me
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   )
