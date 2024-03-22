@@ -34,7 +34,7 @@ export default function SkillCircles({ params }: { params: { skill: string; circ
           show: {
             opacity: 1,
             transition: {
-              staggerChildren: 0.3,
+              staggerChildren: 0.4,
             },
           },
         }}

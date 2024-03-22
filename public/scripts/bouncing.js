@@ -35,10 +35,13 @@ const positions = [
 
 // const dvdWidth = dvd.clientWidth;
 // const dvdHeight = dvd.clientHeight;
-const boxWidth = box.clientWidth
-const boxHeight = box.clientHeight
+// const boxWidth = box.clientWidth
+// const boxHeight = box.clientHeight
 
 function animate() {
+
+  const boxWidth = box.clientWidth
+  const boxHeight = box.clientHeight
   //für jede info
   for (let i = 0; i < infos.length; i++) {
     //berechnung von höhe und breite
@@ -68,8 +71,6 @@ function animate() {
       infos[i].style.top = to + "px"
       positions[i].x = le
       positions[i].y = to
-      console.log(boxHeight)
-      console.log(boxWidth)
       positions[i].firstRender = false;
     } else {
       positions[i].x += positions[i].dirX * speed

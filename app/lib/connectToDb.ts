@@ -10,7 +10,6 @@ export const connectToDb = async() => {
         else {
             const temp = await mongoose.connect(db);
             connection = temp.connections[0].readyState;
-            console.log("testolin " + connection)
         }
         
     }

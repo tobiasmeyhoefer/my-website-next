@@ -5,6 +5,7 @@ import { z } from "zod"
 // import bcrypt from "bcrypt"
 import { connectToDb } from "./app/lib/connectToDb"
 import { User } from "./app/lib/models"
+import { redirect } from "next/navigation"
 
 type UserType = {
   name: string,
@@ -13,12 +14,10 @@ type UserType = {
 
 //connect here with mongodb
 async function getData(password: string): Promise<UserType | undefined>{
-  console.log("test")
   try {
     connectToDb()
     let users = await User.find()
     let user = users[0]
-    console.log(users)
     return user
 
     // const user = await sql<User>`SELECT * FROM users WHERE name=${name}`
@@ -45,7 +44,6 @@ export const { auth, signIn, signOut } = NextAuth({
             return user;
           }
         }
-        console.log('Invalid credentials');
         return null;
       },
     }),

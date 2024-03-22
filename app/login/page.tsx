@@ -9,7 +9,7 @@ export default function LoginForm() {
 
   return (
     <div className="absolute top-0 bg-white bottom-0 left-0 right-0 z-20">
-      <form action={dispatch}>
+      <form action={dispatch} className="space-y-3 h-full flex justify-center items-center">
         {/* <form className="space-y-3 h-full flex justify-center items-center"> */}
         <div className="flex flex-col h-fit">
           <div className="relative">

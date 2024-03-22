@@ -2,6 +2,7 @@
 
 import { signIn, signOut} from '@/auth';
 import { AuthError } from 'next-auth';
+import { redirect } from 'next/navigation';
 // import { signOut } from 'next-auth/react';
  
 export async function authenticate(
@@ -9,8 +10,8 @@ export async function authenticate(
   formData: FormData,
 ) {
   try {
-    console.log("sign in aufgerufen")
     await signIn('credentials', formData);
+    redirect("/")
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
