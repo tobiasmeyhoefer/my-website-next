@@ -6,7 +6,7 @@ const speed = 1
 let infos = document.getElementsByClassName("bouncing_info")
 let box = document.getElementById("box")
 
-let firstRender = true;
+let firstRender = true
 
 //array mit allen 3 Dingern...
 const positions = [
@@ -31,47 +31,45 @@ const positions = [
     dirY: 1,
     firstRender: true, // Hinzugefügt für jedes Element
   },
-];
+]
 
 // const dvdWidth = dvd.clientWidth;
 // const dvdHeight = dvd.clientHeight;
-// const boxWidth = box.clientWidth
-// const boxHeight = box.clientHeight
+const boxWidth = box.clientWidth
+const boxHeight = box.clientHeight
 
 function animate() {
-
-  const boxWidth = box.clientWidth
-  const boxHeight = box.clientHeight
+  // const boxWidth = box.clientWidth
+  // const boxHeight = box.clientHeight
   //für jede info
   for (let i = 0; i < infos.length; i++) {
     //berechnung von höhe und breite
-    const width = infos[i].clientWidth;
-    const height = infos[i].clientHeight;
+    const width = infos[i].clientWidth
+    const height = infos[i].clientHeight
 
     if (positions[i].y + height >= boxHeight || positions[i].y < 0) {
       positions[i].dirY *= -1
-
     }
     if (positions[i].x + width >= boxWidth || positions[i].x < 0) {
       positions[i].dirX *= -1
       //hier funktion callen die den text dann anschließend ändert
-      while(true) {
+      while (true) {
         let characteristic = eigenschaften[randomIntFromInterval(0, 5)]
-        if(characteristic != infos[i].innerHTML) {
-          infos[i].innerHTML = characteristic;
-          break;
-        } 
+        if (characteristic != infos[i].innerHTML) {
+          infos[i].innerHTML = characteristic
+          break
+        }
       }
     }
 
-    if(positions[i].firstRender) {
+    if (positions[i].firstRender) {
       let le = randomIntFromInterval(0, boxWidth - infos[i].clientWidth)
       let to = randomIntFromInterval(0, boxHeight - infos[i].clientHeight)
       infos[i].style.left = le + "px"
       infos[i].style.top = to + "px"
       positions[i].x = le
       positions[i].y = to
-      positions[i].firstRender = false;
+      positions[i].firstRender = false
     } else {
       positions[i].x += positions[i].dirX * speed
       positions[i].y += positions[i].dirY * speed
@@ -94,6 +92,7 @@ const eigenschaften = [
   "i hate oliven",
 ]
 
-function randomIntFromInterval(min, max) { // min and max included 
+function randomIntFromInterval(min, max) {
+  // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
