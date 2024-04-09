@@ -1,13 +1,7 @@
 "use client"
 
 //bekommt die Punkte Anzahl und liefert die Komponente zurück
-import { motion } from "framer-motion"
 import Circle from "./Circle"
-
-// params: {
-//   skill: string;
-//   circles: string;
-// }
 
 export default function SkillCircles({ params }: { params: { skill: string; circles: number } }) {
   let content = []
@@ -28,22 +22,11 @@ export default function SkillCircles({ params }: { params: { skill: string; circ
     <li key={params.skill} className="flex items-center w-fit relative">
       <div className="flex gap-1 absolute right-0 w-fit -z-10">{content2}</div>
       <p className="text-base md:text-xl w-48">{params.skill}</p>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0 },
-          show: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.4,
-            },
-          },
-        }}
-        initial="hidden"
-        animate="show"
+      <div
         className="flex gap-1"
       >
         {content}
-      </motion.div>
+      </div>
     </li>
   )
 }

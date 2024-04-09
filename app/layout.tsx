@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
-import Navigation from './components/Navigation/Navigation'
+import Navigation from './_components/Navigation/Navigation'
 import { cn } from '@/lib/utils'
 
 
@@ -24,16 +24,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='h-full'>
       <body className={cn(
-        "text-text antialiased font-sans",
+        "text-greenText antialiased font-sans min-h-screen h-full bg-creme",
         space_grotesk.variable,
         super_funky.variable
       )}>
         <header className='absolute top-0 left-0 right-0'>
           <Navigation></Navigation>
         </header>
-        <main className="px-10 md:px-40 2xl:px-80">
+        <main className="h-full">
           {children}
         </main>
       </body>

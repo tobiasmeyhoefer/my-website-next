@@ -1,4 +1,4 @@
-import SkillCircles from "../components/reusables/SkillCircles"
+import SkillCircles from "../_components/reusables/SkillCircles"
 
 export default function skillsPage() {
   return (
