@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='h-full'>
+    <html lang="en" className='h-full'>ut
       <body className={cn(
         "text-greenText antialiased font-sans min-h-screen h-full bg-creme",
         space_grotesk.variable,
