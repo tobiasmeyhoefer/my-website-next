@@ -70,6 +70,9 @@ function animate() {
 
 let resizeTimer;
 onresize = () => {
+  if(isMobile() && hasTouchSupport()) {
+    return
+  }
   window.cancelAnimationFrame(animationId);
   changeInfosVisibility(false)
   clearTimeout(resizeTimer);
@@ -133,4 +136,13 @@ function changeText(i) {
       break;
     }
   }
+}
+
+function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
+
+function hasTouchSupport() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 }
