@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
-import NavBar from './components/Navigation/NavBar'
 import Navigation from './components/Navigation/Navigation'
+import { cn } from '@/lib/utils'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const super_funky = localFont({
+  src: './../public/fonts/SuperFunky.ttf',
+  display: 'swap',
+  variable: "--super-funky"
+})
+const space_grotesk = Space_Grotesk({ subsets: ['latin'], variable:"--space-grotesk" })
 
 export const metadata: Metadata = {
   title: 'Tobias Meyhöfer',
@@ -18,7 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " text-text"}>
+      <body className={cn(
+        "text-text antialiased font-sans",
+        space_grotesk.variable,
+        super_funky.variable
+      )}>
         <header className='absolute top-0 left-0 right-0'>
           <Navigation></Navigation>
         </header>
