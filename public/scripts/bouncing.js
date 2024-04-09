@@ -101,6 +101,7 @@ const eigenschaften = [
 function randomizeStartPosition() {
   box = document.getElementById("box");
   boxWidth = box.clientWidth;
+  boxWidth = box.clientHeight;
   for (let i = 0; i < infos.length; i++) {
     let le = randomIntFromInterval(0, boxWidth - infos[i].clientWidth);
     let to = randomIntFromInterval(0, boxHeight - infos[i].clientHeight);
