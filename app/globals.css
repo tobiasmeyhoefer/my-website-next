@@ -9,5 +9,12 @@
 }
 
 body {
-  /* overflow-y: hidden; */
+  cursor:
+    url("/cursor/cursor-@1x.svg") 4 4,
+    pointer;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 4 4,
+    pointer;
+  background: #ffffff;
+  background: radial-gradient(at center, #ffffff, #fffdf0);
 }

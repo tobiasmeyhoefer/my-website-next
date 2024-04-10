@@ -19,7 +19,7 @@ export default function Home() {
         <h1 className="text-center font-serif text-6xl md:text-8xl">
           TOBIAS MEYHÖFER
         </h1>
-        <p className="text-2xl font-light">Junior Developer born & based in berlin with 3 years of coding experience</p>
+        <p className="text-2xl font-light text-center">Junior Developer born & based in berlin with 3 years of coding experience</p>
       </div>
       <section className="bg-green text-white h-[600px] p-20 text-3xl">
         <h2 className="font-serif">Education</h2>

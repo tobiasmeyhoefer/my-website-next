@@ -41,12 +41,12 @@ function animate() {
 
     if (positions[i].y + height >= boxHeight || positions[i].y < 0) {
       positions[i].dirY *= -1;
-      changeText(i)
+      changeText(i);
     }
     if (positions[i].x + width >= boxWidth || positions[i].x < 0) {
       positions[i].dirX *= -1;
       //hier funktion callen die den text dann anschließend ändert
-      changeText(i)
+      changeText(i);
     }
 
     if (positions[i].firstRender) {
@@ -70,20 +70,21 @@ function animate() {
 
 let resizeTimer;
 onresize = () => {
-  if(isMobile() && hasTouchSupport()) {
-    return
+  if (isMobile() && hasTouchSupport()) {
+    return;
   }
   window.cancelAnimationFrame(animationId);
-  changeInfosVisibility(false)
+  changeInfosVisibility(false);
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(function () {
     //wenn resizing abgeschlossen ist:
     //neue Zufallswerte ermitteln und animation starten
-    changeInfosVisibility(true) 
-    randomizeStartPosition()
+    changeInfosVisibility(true);
+    randomizeStartPosition();
     animationId = window.requestAnimationFrame(animate);
   }, 250);
 };
+
 let animationId = window.requestAnimationFrame(animate);
 
 //hier die eigenschaften die man auf der Seite dann schlussendlich sieht...
@@ -98,16 +99,27 @@ const eigenschaften = [
   "18.09.2002 🎂",
   "I'm giving every music type a chance",
   "I try to live very health",
-  "passion for aesthetics"
+  "passion for aesthetics",
 ];
 
 function randomizeStartPosition() {
   box = document.getElementById("box");
   boxWidth = box.clientWidth;
-  boxWidth = box.clientHeight;
+  boxHeight = box.clientHeight;
+  if (positions.length === 3) {
+    positions[0].dirX = 1;
+    positions[0].dirY = 1;
+    positions[1].dirX = -1;
+    positions[1].dirY = 1;
+    positions[2].dirX = -1;
+    positions[2].dirY = -1;
+  }
   for (let i = 0; i < infos.length; i++) {
-    let le = randomIntFromInterval(0, boxWidth - infos[i].clientWidth);
-    let to = randomIntFromInterval(0, boxHeight - infos[i].clientHeight);
+    let le = randomIntFromInterval(100, boxWidth - infos[i].clientWidth - 100);
+    let to = randomIntFromInterval(
+      100,
+      boxHeight - infos[i].clientHeight - 100,
+    );
     infos[i].style.left = le + "px";
     infos[i].style.top = to + "px";
     positions[i].x = le;
@@ -131,18 +143,19 @@ function randomIntFromInterval(min, max) {
 function changeText(i) {
   while (true) {
     let characteristic = eigenschaften[randomIntFromInterval(0, 5)];
-    if (characteristic != infos[i].innerHTML) {
-      infos[i].innerHTML = characteristic;
+    if (characteristic != infos[i].querySelector("p").innerHTML) {
+      infos[i].querySelector("p").innerHTML = characteristic;
       break;
     }
   }
 }
 
 function isMobile() {
-  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  const regex =
+    /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return regex.test(navigator.userAgent);
 }
 
 function hasTouchSupport() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
 }
