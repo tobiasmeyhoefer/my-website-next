@@ -20,14 +20,16 @@ export default function Home() {
           <p className="font-serif">TOBIAS</p>
           <p className="font-serif">MEYHOEFER</p>
         </div>
-        <h1 className="text-center font-serif text-6xl md:text-8xl">
+        <h1 id="name" className="text-center font-serif text-6xl md:text-8xl">
           TOBIAS MEYHOEFER
         </h1>
+        <Script src="scripts/charSwitching.js"></Script>
         <p className="text-2xl font-light text-center">Junior Developer born & based in berlin with 3 years of coding experience</p>
       </div>
       <section className="bg-green text-white h-[600px] p-20 text-3xl">
         <h2 className="font-serif">Education</h2>
       </section>
     </div>
+
   );
 }

@@ -46,18 +46,6 @@ const FlyingInformations = () => {
         />
         <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">track & field athlete</p>
       </div>
-      {/* <div
-        id="dvd2"
-        className="bouncing_info absolute -z-10 w-32 bg-text p-5 text-center text-white"
-      >
-        born in berlin
-      </div>
-      <div
-        id="dvd3"
-        className="bouncing_info relative -z-10 w-32 bg-text p-5 text-center text-white"
-      >
-        track & field athlete
-      </div> */}
       <Script src="scripts/bouncing.js"></Script>
     </div>
   );
