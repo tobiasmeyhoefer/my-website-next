@@ -29,7 +29,6 @@ body {
   left: 0;
   background: #ffffff;
   background: radial-gradient(at center, #ffffff, #fffdf0);
-  display: block;
   opacity: 1;
   z-index: 100;
   animation: startup 1.6s forwards;
@@ -78,14 +77,19 @@ body {
 
   0% {
     opacity: 0;
+    /* display: block; */
   }
   20% {
     opacity: 1;
   }
   80% {
     opacity: 1;
+    z-index: 100;
+    /* display: block; */
   }
   100% {
     opacity: 0;
+    display: none;
+    z-index: -100;
   }
 }
