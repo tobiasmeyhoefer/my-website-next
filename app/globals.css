@@ -17,4 +17,70 @@ body {
     pointer;
   background: #ffffff;
   background: radial-gradient(at center, #ffffff, #fffdf0);
+  overflow-x: hidden;
+}
+
+.startup {
+  /* animation: startup; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  background: radial-gradient(at center, #ffffff, #fffdf0);
+  display: block;
+  opacity: 1;
+  z-index: 100;
+  animation: startup 1.6s forwards;
+}
+
+.startup p:nth-child(1) {
+  position: absolute;
+  transform: translate(50vw, -15vh);
+  animation: startupForP1 2.4s forwards linear;
+  z-index: 101;
+  font-size: 50vh;
+}
+
+.startup p:nth-child(2) {
+  position: absolute;
+  transform: translate(60vw, 35vh);
+  animation: startupForP2 2.2s forwards linear;
+  z-index: 101;
+  font-size: 50vh;
+}
+
+@keyframes startupForP1 {
+  from {
+    transform: translate(calc(50vw), -15vh);
+  }
+  to {
+    transform: translate(calc(-100vw - 100%), -15vh);
+  }
+}
+
+@keyframes startupForP2 {
+  from {
+    transform: translate(calc(60vw), 35vh);
+  }
+  to {
+    transform: translate(calc(-100vw - 100%), 35vh);
+  }
+}
+
+@keyframes startup {
+
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

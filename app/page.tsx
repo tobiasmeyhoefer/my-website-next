@@ -16,8 +16,12 @@ export default function Home() {
           height={120}
           className=""
         />
+        <div className="startup">
+          <p className="font-serif">TOBIAS</p>
+          <p className="font-serif">MEYHOEFER</p>
+        </div>
         <h1 className="text-center font-serif text-6xl md:text-8xl">
-          TOBIAS MEYHÖFER
+          TOBIAS MEYHOEFER
         </h1>
         <p className="text-2xl font-light text-center">Junior Developer born & based in berlin with 3 years of coding experience</p>
       </div>
