@@ -16,8 +16,10 @@ body {
     -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 4 4,
     pointer;
   background: #ffffff;
-  background: radial-gradient(at center, #ffffff, #fffdf0);
+  /* background: radial-gradient(at center, #ffffff, #fffdf0); */
   overflow-x: hidden;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .startup {
@@ -28,10 +30,10 @@ body {
   bottom: 0;
   left: 0;
   background: #ffffff;
-  background: radial-gradient(at center, #ffffff, #fffdf0);
+  /* background: radial-gradient(at center, #ffffff, #fffdf0); */
   opacity: 1;
   z-index: 100;
-  animation: startup 1.6s forwards;
+  animation: startup 1.2s forwards;
   /* hardware acceleration trick on chrome? */
   /* transform: translateZ(0);
   transform: rotateZ(360deg);
@@ -57,19 +59,19 @@ body {
 
 @keyframes startupForP1 {
   from {
-    transform: translate(calc(50vw), -15vh);
+    transform: translate(calc(20vw), -15vh);
   }
   to {
-    transform: translate(calc(-100vw - 100%), -15vh);
+    transform: translate(calc(-50vw - 100%), -15vh);
   }
 }
 
 @keyframes startupForP2 {
   from {
-    transform: translate(calc(60vw), 35vh);
+    transform: translate(calc(30vw), 35vh);
   }
   to {
-    transform: translate(calc(-100vw - 100%), 35vh);
+    transform: translate(calc(-70vw - 100%), 35vh);
   }
 }
 

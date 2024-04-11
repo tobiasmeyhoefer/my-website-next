@@ -9,24 +9,29 @@ function delay(ms) {
 let hittedCharsArray = []
 
 async function mainLoop() {
-  await delay(1000);
-  for (let i = 0; i < 26; i++) {
-    await delay(150);
+  await delay(700);
+  while (true) {
+    await delay(50);
     for (let j = 0; j < myName.length; j++) {
+      let randomChar = getRandomLetter()
       if(j == 6) {
         continue
       }
       if(hittedCharsArray.includes(j)) {
         continue;
       } 
-      if (String.fromCharCode(97 + i) == myName[j]) {
-        myChangingName = replaceAt(myChangingName, j, String.fromCharCode(97 + i))
+      if (randomChar == myName[j]) {
+        myChangingName = replaceAt(myChangingName, j, randomChar)
         nameElem.innerHTML = myChangingName;
         hittedCharsArray.push(j)
         continue;
       }
-      myChangingName = replaceAt(myChangingName, j, String.fromCharCode(97 + i))
+      myChangingName = replaceAt(myChangingName, j, randomChar)
       nameElem.innerHTML = myChangingName;
+
+      if(myChangingName == "tobias meyhoefer") {
+        return
+      }
     }
   }
 }
@@ -37,3 +42,11 @@ function replaceAt(word, index, replacement) {
   return word.substring(0, index) + replacement + word.substring(index + replacement.length);
 }
 
+function getRandomLetter() {
+  return String.fromCharCode(97 + randomIntFromInterval(0, 25))
+}
+
+function randomIntFromInterval(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
