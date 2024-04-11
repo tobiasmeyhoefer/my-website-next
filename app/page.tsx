@@ -9,18 +9,18 @@ export default function Home() {
     <div className="h-full">
       <FlyingInformations/>
       <div className="flex h-full w-full flex-col items-center justify-center gap-8 font-sans">
-        <Image
+        {/* <Image
           src={me}
           alt="me as an memoji"
           width={120}
           height={120}
           className=""
-        />
-        <div className="startup">
+        /> */}
+        <div className="startup text-white">
           <p className="font-serif">TOBIAS</p>
           <p className="font-serif">MEYHOEFER</p>
         </div>
-        <h1 id="name" className="text-center font-serif text-6xl md:text-8xl">
+        <h1 id="name" className="font-serif text-[4.5rem] sm:text-[5.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] 2xl:text-[14rem] w-full max-w-screen-2xl text-white px-10">
           TOBIAS MEYHOEFER
         </h1>
         <Script src="scripts/charSwitching.js"></Script>

@@ -15,11 +15,18 @@ body {
   cursor:
     -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 4 4,
     pointer;
-  background: #ffffff;
+  /* background: #ffffff; */
   /* background: radial-gradient(at center, #ffffff, #fffdf0); */
   overflow-x: hidden;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+
+  background: linear-gradient(271deg, #a9b388, #5f6f52);
+  background-size: 400% 400%;
+
+  -webkit-animation: gradientanimation 15s ease infinite;
+  -moz-animation: gradientanimation 15s ease infinite;
+  animation: gradientanimation 15s ease infinite;
 }
 
 .startup {
@@ -29,7 +36,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #ffffff;
+  background: linear-gradient(271deg, #a9b388, #5f6f52);
+  background-size: 400% 400%;
+
+  -webkit-animation: gradientanimation 15s ease infinite;
+  -moz-animation: gradientanimation 15s ease infinite;
+  animation: gradientanimation 15s ease infinite;
   /* background: radial-gradient(at center, #ffffff, #fffdf0); */
   opacity: 1;
   z-index: 100;
@@ -94,4 +106,19 @@ body {
     display: none;
     z-index: -100;
   }
+}
+@-webkit-keyframes gradientanimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientanimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes gradientanimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
