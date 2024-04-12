@@ -30,12 +30,15 @@ export default function RootLayout({
         space_grotesk.variable,
         super_funky.variable
       )}>
-        <header className='absolute top-0 left-0 right-0'>
+        {/* <header className='absolute top-0 left-0 right-0'>
           <Navigation></Navigation>
         </header>
         <main className="h-full">
           {children}
-        </main>
+        </main> */}
+        <div className='bg-white h-full flex justify-center items-center'>
+          <p>under construction launch 1.0 in a few days</p>
+        </div>
       </body>
     </html>
   )
