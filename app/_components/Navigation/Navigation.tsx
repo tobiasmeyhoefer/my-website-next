@@ -1,21 +1,13 @@
-"use client"
-import { useState } from "react"
-import Navbar from "./NavBar"
-import SideBar from "./SideBar"
+import Link from "next/link";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const deactivate = () => {
-    setIsOpen(false)
-  }
   return (
-    <>
-      <SideBar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} deactivate={deactivate}/>
-    </>
+    <nav>
+      {/* <div>
+        <Logo/>
+        <Link href={"/work"}>see something?</Link>
+      </div>
+      <GetInTouchButton/> */}
+    </nav>
   )
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk, Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Navigation from './_components/Navigation/Navigation'
@@ -12,6 +12,7 @@ const super_funky = localFont({
   variable: "--super-funky"
 })
 const space_grotesk = Space_Grotesk({ subsets: ['latin'], variable:"--space-grotesk" })
+const roboto = Roboto({subsets: ["latin"], weight: ["100", "300", "400", "500", "700", "900"], variable:"--roboto"})
 
 export const metadata: Metadata = {
   title: 'Tobias Meyhöfer',

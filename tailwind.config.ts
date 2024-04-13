@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--space-grotesk)", ...fontFamily.sans],
+        sans: ["var(--roboto)", "var(--space-grotesk)", ...fontFamily.sans],
         serif: ["var(--super-funky)", ...fontFamily.serif],
       },
       colors: {
