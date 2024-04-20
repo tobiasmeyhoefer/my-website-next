@@ -21,9 +21,6 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 
-  background: linear-gradient(271deg, #a9b388, #5f6f52);
-  background-size: 400% 400%;
-
   -webkit-animation: gradientanimation 15s ease infinite;
   -moz-animation: gradientanimation 15s ease infinite;
   animation: gradientanimation 15s ease infinite;

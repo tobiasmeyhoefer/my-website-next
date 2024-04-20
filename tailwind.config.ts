@@ -1,14 +1,14 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   prefix: "",
   theme: {
     container: {
@@ -19,10 +19,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["var(--roboto)", "var(--space-grotesk)", ...fontFamily.sans],
-        serif: ["var(--super-funky)", ...fontFamily.serif],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,15 +53,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        text: "#272727",
-        white: "#ffffff",
-        middleGray: "#c2c2c2",
-        lightGray: "#f0f0f0",
-        test: "#ff0000",
-        test2: "#ffff00",
-        green: "#294122",
-        greenText: "#1D2F18",
-        creme: "#FFFDF0",
+        primary500: "#5C67C6"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,9 +74,13 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ["var(--roboto)", ...fontFamily.sans],
+        montserrat: ["var(--montserrat)", ...fontFamily.sans]
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config
