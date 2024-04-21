@@ -30,7 +30,7 @@ export default function RootLayout({
         <main className="h-full">
           {children}
         </main>
-        <div className='absolute bg-white opacity-30 h-12 text-black bottom-0 right-0 left-0 flex justify-center items-center'>
+        <div className='fixed bg-white opacity-30 h-12 right-0 left-0 bottom-0 flex justify-center items-center text-black'>
           <p>under construction launch 1.0 in a few days</p>
         </div>
       </body>

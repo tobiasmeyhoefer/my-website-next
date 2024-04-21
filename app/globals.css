@@ -10,20 +10,25 @@
 
 body {
   cursor:
-    url("/cursor/cursor-@1x.svg") 4 4,
-    pointer;
+    url("/cursor/cursor-@1x.svg") 16 16,
+    auto;
   cursor:
-    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 4 4,
-    pointer;
-  /* background: #ffffff; */
-  /* background: radial-gradient(at center, #ffffff, #fffdf0); */
+    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
+    auto;
   overflow-x: hidden;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
 
   -webkit-animation: gradientanimation 15s ease infinite;
   -moz-animation: gradientanimation 15s ease infinite;
   animation: gradientanimation 15s ease infinite;
+}
+
+button:hover, a:hover {
+  cursor:
+    url("/cursor/cursor-hover.svg") 16 16,
+    pointer;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
+    pointer;
 }
 
 .startup {
