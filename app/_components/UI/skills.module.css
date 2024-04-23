@@ -1,5 +1,6 @@
 .scrollContainer {
   height: 100px;
+  width: auto;
   overflow-x: hidden;
   position: relative;
 }

@@ -27,32 +27,32 @@ import styles from "@/app/_components/UI/skills.module.css"
 const Skills = () => {
   return ( 
     // xl:p-20 p-8 lg:pt-0
-    <section className="bg-neutral-100">
+    <section className="bg-neutral-100 w-full">
       <h2 className="text-black text-4xl font-montserrat pl-8 font-bold mb-12">Skills</h2>
       <div className={styles.scrollContainer}>
         <div className={styles.carouselprimary}>
-          <Image src={angular} alt="mongodb icon" width={70} height={70}/>
-          <Image src={bash} alt="mongodb icon" width={70} height={70}/>
-          <Image src={cSharp} alt="mongodb icon" width={70} height={70}/>
-          <Image src={css} alt="mongodb icon" width={70} height={70}/>
-          <Image src={dotnet} alt="mongodb icon" width={70} height={70}/>
-          <Image src={firebase} alt="mongodb icon" width={70} height={70}/>
-          <Image src={git} alt="mongodb icon" width={70} height={70}/>
-          <Image src={github} alt="mongodb icon" width={70} height={70}/>
-          <Image src={swift} alt="mongodb icon" width={70} height={70}/>
-          <Image src={tailwind} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={angular} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={bash} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={cSharp} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={css} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={dotnet} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={firebase} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={git} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={github} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={swift} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={tailwind} alt="mongodb icon" width={70} height={70}/>
         </div>
         <div className={`${styles.carouselprimary} ${styles.carouselsecondary}`}>
-          <Image src={gitlab} alt="mongodb icon" width={70} height={70}/>
-          <Image src={html} alt="mongodb icon" width={70} height={70}/>
-          <Image src={java} alt="mongodb icon" width={70} height={70}/>
-          <Image src={kotlin} alt="mongodb icon" width={70} height={70}/>
-          <Image src={neon} alt="mongodb icon" width={70} height={70}/>
-          <Image src={javascript} alt="mongodb icon" width={70} height={70}/>
-          <Image src={next} alt="mongodb icon" width={70} height={70}/>
-          <Image src={react} alt="mongodb icon" width={70} height={70}/>
-          <Image src={typescript} alt="mongodb icon" width={70} height={70}/>
-          <Image src={vscode} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={gitlab} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={html} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={java} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={kotlin} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={neon} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={javascript} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={next} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={react} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={typescript} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[40px]" src={vscode} alt="mongodb icon" width={70} height={70}/>
         </div>
       </div>
     </section>
