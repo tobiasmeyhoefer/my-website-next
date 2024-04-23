@@ -3,9 +3,9 @@ import Skills from "./Skills";
 const CVSection = () => {
   return (
     <>
-      <section className="flex h-[800px] w-full bg-neutral-100">
-        <div className="relative -top-32 left-20 h-full min-w-1/2 bg-neutral-800 p-12">
-          <h2 className="mb-10 font-montserrat text-3xl font-bold">
+      <section className="flex flex-col xl:flex-row w-full bg-neutral-100">
+        <div className="relative -top-32 xl:left-20 h-full min-w-1/2 bg-neutral-800 p-12">
+          <h2 className="mb-10 font-montserrat text-4xl font-bold">
             Experience
           </h2>
           <div className="flex flex-col gap-4">
@@ -47,8 +47,8 @@ const CVSection = () => {
             </p>
           </div>
         </div>
-        <div className="ml-24 p-12 text-neutral-900 w-full">
-          <h2 className="mb-12 font-montserrat text-3xl font-bold">
+        <div className="xl:ml-24 p-12 text-neutral-900 w-full -mt-32 lg:mt-0">
+          <h2 className="mb-12 font-montserrat text-4xl font-bold">
             Education
           </h2>
           <div className="flex flex-col gap-8 w-full">
@@ -56,7 +56,7 @@ const CVSection = () => {
               <p className="text-accentGreen font-montserrat text-6xl blur-[1px]">
                 2018
               </p>
-              <p className="z-10 pl-16 absolute top-10 text-nowrap">
+              <p className="z-10 pl-16 absolute top-10">
                 Graduation from Max-Delbrück Gymnasium Berlin
               </p>
             </div>
@@ -64,16 +64,16 @@ const CVSection = () => {
               <p className="text-accentGreen font-montserrat text-6xl blur-[1px]">
                 2021
               </p>
-              <p className="z-10 pl-16 absolute top-10 text-nowrap">
+              <p className="z-10 pl-16 absolute top-10">
                 Abitur at the Schul- und Leistungszentrum Berlin(SLZB, sports
                 theory and biology)
               </p>
             </div>
             <div className="flex items-end relative">
               <p className="text-accentGreen font-montserrat text-6xl blur-[1px]">
-                2021 - ~2025
+                until 2025
               </p>
-              <p className="z-10 pl-16 absolute top-10 text-nowrap">
+              <p className="z-10 pl-16 absolute top-10">
                 Media informatics at the Berlin University of Applied Sciences
               </p>
             </div>
@@ -81,7 +81,7 @@ const CVSection = () => {
               <p className="text-accentGreen font-montserrat text-6xl blur-[1px]">
                 2022
               </p>
-              <p className="z-10 pl-16 absolute top-10 text-nowrap">
+              <p className="z-10 pl-16 absolute top-10">
                 Student assistant at M&W Finanzoptimierung
               </p>
             </div>
@@ -98,7 +98,7 @@ const CVSection = () => {
               <p className="text-accentGreen font-montserrat text-6xl blur-[1px]">
                 2023
               </p>
-              <p className="z-10 pl-16 absolute top-10 text-nowrap">
+              <p className="z-10 pl-16 absolute top-10">
                 Semester abroad in Aarhus / Denmark in the field of software engineering
               </p>
             </div>

@@ -141,14 +141,17 @@ button:hover, a:hover {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'januar januar januar februar februar februar februar februar maerz maerz'
-    'januar januar januar april april mai mai mai maerz maerz'
-    'juni juni juni april april juli juli august august august'
-    'september september oktober april april november november august august august'
-    'september september dezember dezember dezember dezember dezember august august august';
+    'januar februar februar maerz'
+    'januar mai mai maerz'
+    'juni april juli juli'
+    'oktober oktober november august'
+    'september dezember november august'
+    'september dezember november august'
+    'september dezember november august';
   gap: 10px;
-  padding: 10px;
-  height: 800px;
+  padding: 8px;
+  height: 600px;
+  font-size: 14px;
 }
 
 .grid-container > div {
@@ -156,8 +159,20 @@ button:hover, a:hover {
   border-radius: 15px;
   text-align: center;
   display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    font-size: 20px;
+    grid-template-areas:
+    'januar januar januar februar februar februar februar februar maerz maerz'
+    'januar januar januar april april mai mai mai maerz maerz'
+    'juni juni juni april april juli juli august august august'
+    'september september oktober april april november november august august august'
+    'september september dezember dezember dezember dezember dezember august august august';
+  }
 }
 

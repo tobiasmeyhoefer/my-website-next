@@ -1,6 +1,6 @@
 const BentoSection = () => {
   return (
-    <section className="p-20">
+    <section className="p-8 xl:p-20">
       <div className="grid-container">
         <div className="item1">German (Native)</div>
         <div className="item2">Stress resistance and high ambition</div>

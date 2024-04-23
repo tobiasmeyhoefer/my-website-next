@@ -15,13 +15,13 @@ const HeroSection = () => {
         experience
       </p>
       <div className="absolute top-0 bottom-0 right-0 left-0 -z-10">
-        <Image
+        {/* <Image
           className="absolute -right-0 bottom-0 blur-[7px] w-[900px] xl:w-[1200px] translate-x-1/3 translate-y-1/4 -z-10"
           src={me}
           alt="portrait in comic style"
           width={1000}
           height={1000}
-        />
+        /> */}
       </div>
     </section>
   );
