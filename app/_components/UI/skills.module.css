@@ -1,0 +1,39 @@
+.scrollContainer {
+  height: 100px;
+}
+
+.carouselprimary, .carouselsecondary {
+  /* transform: translateX(0%); */
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.carouselprimary img {
+  margin-left: 20px;
+}
+
+.carouselprimary {
+  transform: translateX(0%);
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 24s linear infinite;
+}
+
+.carouselsecondary {
+  transform: translateX(100%);
+  animation: scroll-horizontal 24s linear infinite;
+  animation-delay: 12s;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    /* left: 100%; */
+    transform: translateX(100%);
+  }
+  100% {
+    /* left: -100%; */
+    transform: translateX(-100%);
+  }
+}

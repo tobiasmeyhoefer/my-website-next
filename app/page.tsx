@@ -2,19 +2,25 @@ import Script from "next/script";
 import FlyingInformations from "./_components/UI/FlyingInformations";
 import StartUpAnimation from "./_components/UI/StartUpAnimation";
 import HeroSection from "./_components/UI/HeroSection";
-import ExperienceAndEducationSection from "./_components/UI/ExperienceAndEducationSection";
+import BentoSection from "./_components/UI/BentoSection";
+import CVSection from "./_components/UI/CVSection";
+import Skills from "./_components/UI/Skills";
 
 export default function Home() {
   return (
-    <div className="h-full">
+    <>
       <FlyingInformations/>
-      <div className="flex h-full flex-col justify-center gap-8 font-sans w-full max-w-[1920px]">
+      <HeroSection/>
+      <CVSection/>
+      <Skills/>
+      <BentoSection/>
+      {/* <div className="flex h-full flex-col justify-center gap-8 font-sans w-full max-w-[1920px]"> */}
         {/* <StartUpAnimation/> */}
-        <HeroSection/>
+        {/* <HeroSection/> */}
         {/* <ExperienceAndEducationSection/> */}
         {/* <Script src="scripts/charSwitching.js"></Script> */}
-      </div>
-      <ExperienceAndEducationSection/>
-    </div>
+      {/* </div> */}
+      {/* <ExperienceAndEducationSection/> */}
+    </>
   );
 }

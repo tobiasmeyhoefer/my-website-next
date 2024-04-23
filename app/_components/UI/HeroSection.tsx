@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className="h-full flex flex-col justify-center">
       <h1
         id="name"
-        className="w-full max-w-screen-2xl px-10 font-montserrat text-[10vw] font-bold italic leading-none text-white"
+        className="w-full max-w-screen-2xl px-10 font-montserrat text-[10vw] font-extrabold italic leading-none text-white"
       >
         TOBIAS MEYHOEFER
       </h1>

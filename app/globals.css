@@ -124,3 +124,40 @@ button:hover, a:hover {
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
+
+.item1 { grid-area: januar; }
+.item2 { grid-area: februar; }
+.item3 { grid-area: maerz; }
+.item4 { grid-area: april; }
+.item5 { grid-area: mai; }
+.item6 { grid-area: juni; }
+.item7 { grid-area: juli; }
+.item8 { grid-area: august; }
+.item9 { grid-area: september; }
+.item10 { grid-area: oktober; }
+.item11 { grid-area: november; }
+.item12 { grid-area: dezember; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'januar januar januar februar februar februar februar februar maerz maerz'
+    'januar januar januar april april mai mai mai maerz maerz'
+    'juni juni juni april april juli juli august august august'
+    'september september oktober april april november november august august august'
+    'september september dezember dezember dezember dezember dezember august august august';
+  gap: 10px;
+  padding: 10px;
+  height: 800px;
+}
+
+.grid-container > div {
+  background-color: rgb(34, 34, 34);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
