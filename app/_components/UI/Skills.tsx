@@ -26,8 +26,9 @@ import styles from "@/app/_components/UI/skills.module.css"
 
 const Skills = () => {
   return ( 
-    <section className="bg-neutral-100 xl:p-20 p-8 lg:pt-0 overflow-x-hidden">
-      <h2 className="text-black text-4xl font-montserrat font-bold mb-12">Skills</h2>
+    // xl:p-20 p-8 lg:pt-0
+    <section className="bg-neutral-100">
+      <h2 className="text-black text-4xl font-montserrat pl-8 font-bold mb-12">Skills</h2>
       <div className={styles.scrollContainer}>
         <div className={styles.carouselprimary}>
           <Image src={angular} alt="mongodb icon" width={70} height={70}/>
@@ -41,7 +42,7 @@ const Skills = () => {
           <Image src={swift} alt="mongodb icon" width={70} height={70}/>
           <Image src={tailwind} alt="mongodb icon" width={70} height={70}/>
         </div>
-        <div className={`${styles.carouselprimary}  ${styles.carouselsecondary}`}>
+        <div className={`${styles.carouselprimary} ${styles.carouselsecondary}`}>
           <Image src={gitlab} alt="mongodb icon" width={70} height={70}/>
           <Image src={html} alt="mongodb icon" width={70} height={70}/>
           <Image src={java} alt="mongodb icon" width={70} height={70}/>

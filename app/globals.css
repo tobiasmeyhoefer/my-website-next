@@ -149,7 +149,7 @@ button:hover, a:hover {
     'september dezember november august'
     'september dezember november august';
   gap: 10px;
-  padding: 8px;
+  padding: 6px;
   height: 600px;
   font-size: 14px;
 }
@@ -159,7 +159,7 @@ button:hover, a:hover {
   border-radius: 15px;
   text-align: center;
   display: flex;
-  padding: 10px;
+  padding: 6px;
   justify-content: center;
   align-items: center;
 }

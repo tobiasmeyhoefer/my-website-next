@@ -1,9 +1,11 @@
 .scrollContainer {
   height: 100px;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .carouselprimary, .carouselsecondary {
-  transform: translateX(100%);
+  left: 100%;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -15,25 +17,21 @@
 }
 
 .carouselprimary {
-  transform: translateX(0%);
   display: flex;
   justify-content: space-around;
-  animation: scroll-horizontal 24s linear infinite;
+  animation: scroll-horizontal 20s linear infinite;
 }
 
 .carouselsecondary {
-  transform: translateX(100%);
-  animation: scroll-horizontal 24s linear infinite;
-  animation-delay: 12s;
+  animation: scroll-horizontal 20s linear infinite;
+  animation-delay: 10s;
 }
 
 @keyframes scroll-horizontal {
   0% {
-    /* left: 100%; */
-    transform: translateX(100%);
+    left: 100%;
   }
   100% {
-    /* left: -100%; */
-    transform: translateX(-100%);
+    left: -100%;
   }
 }
