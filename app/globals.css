@@ -20,6 +20,11 @@ body {
   -webkit-animation: gradientanimation 15s ease infinite;
   -moz-animation: gradientanimation 15s ease infinite;
   animation: gradientanimation 15s ease infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.bluredUiCircles {
+  transform: translate3d(0, 0, 0);
 }
 
 button:hover, a:hover {

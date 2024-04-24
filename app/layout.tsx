@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navigation from "./_components/Navigation/Navigation";
 import { cn } from "@/lib/utils";
+import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const roboto = Roboto({
@@ -14,8 +15,12 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Tobias Meyhöfer",
   description:
-    "A portfolio of the web, mobile and software developer Tobias Meyhöfer",
+    "A portfolio of the web, mobile and software developer Tobias Meyhöfer"
 };
+
+export const viewport: Viewport = {
+  themeColor: '#5C67C6',
+}
 
 export default function RootLayout({
   children,

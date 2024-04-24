@@ -159,3 +159,35 @@ function isMobile() {
 function hasTouchSupport() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0;
 }
+
+const setThemeColor = (color) => {
+  const meta = document.querySelector('meta[name="theme-color"]')
+  console.log("WARTE")
+  if (meta) {
+    console.log("GEFUNDEN: " + color)
+    meta.setAttribute('content', color)
+  }
+}
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const { isIntersecting, target } = entry
+        if (isIntersecting) {
+          const color = window.getComputedStyle(target).getPropertyValue("background-color");
+          console.log("color: " + color)
+          setThemeColor(color)
+        }
+      })
+  }, {
+    root: document.getElementById('viewport'),
+    rootMargin: "1px 0px -100% 0px",
+    treshold: 0.1
+  })
+  
+  document.querySelectorAll('.section').forEach(section => {
+    console.log("test")
+    console.log(section)
+    observer.observe(section)
+  })
+}

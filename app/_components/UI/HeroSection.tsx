@@ -3,26 +3,26 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="h-full flex flex-col justify-center">
+    <section className="flex h-full flex-col justify-center">
+      {/* <div className="section bg-red-300/0 absolute top-0 bottom-0 left-0 right-0 -z-50"></div> */}
       <h1
         id="name"
         className="w-full max-w-screen-2xl px-10 font-montserrat text-[10vw] font-extrabold italic leading-none text-white"
       >
         TOBIAS MEYHOEFER
       </h1>
-      <p className="mt-8 pl-14 font-montserrat text-2xl">
+      <p className="mt-8 pl-12 font-montserrat text-2xl md:pl-14">
         Junior Developer born & based in berlin with 3 years of coding
         experience
       </p>
-      <div className="absolute top-0 bottom-0 right-0 left-0 -z-10">
-        {/* <Image
-          className="absolute -right-0 bottom-0 blur-[7px] w-[900px] xl:w-[1200px] translate-x-1/3 translate-y-1/4 -z-10"
-          src={me}
-          alt="portrait in comic style"
-          width={1000}
-          height={1000}
-        /> */}
-      </div>
+      <Image
+        className="absolute -right-[40%] bottom-0 -z-10 w-[1200px] min-w-[800px] blur-[7px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
+        src={me}
+        alt="portrait in comic style"
+        width={1400}
+        height={1400}
+      />
+      <div className="bluredUiCircles absolute left-1/4 -z-20 h-[30vw] w-[30vw] rounded-full bg-neutral-900/30 blur-[8vw]" />
     </section>
   );
 };

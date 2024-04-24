@@ -31,28 +31,28 @@ const Skills = () => {
       <h2 className="text-black text-4xl font-montserrat pl-8 font-bold mb-12">Skills</h2>
       <div className={styles.scrollContainer}>
         <div className={styles.carouselprimary}>
-          <Image className="lg:w-[70px] w-[40px]" src={angular} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={bash} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={cSharp} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={css} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={dotnet} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={firebase} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={git} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={github} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={swift} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={tailwind} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={angular} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={bash} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={cSharp} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={css} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={dotnet} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={firebase} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={git} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={github} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={swift} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={tailwind} alt="mongodb icon" width={70} height={70}/>
         </div>
         <div className={`${styles.carouselprimary} ${styles.carouselsecondary}`}>
-          <Image className="lg:w-[70px] w-[40px]" src={gitlab} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={html} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={java} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={kotlin} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={neon} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={javascript} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={next} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={react} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={typescript} alt="mongodb icon" width={70} height={70}/>
-          <Image className="lg:w-[70px] w-[40px]" src={vscode} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={gitlab} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={html} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={java} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={kotlin} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={neon} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={javascript} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={next} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={react} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={typescript} alt="mongodb icon" width={70} height={70}/>
+          <Image className="lg:w-[70px] w-[30px]" src={vscode} alt="mongodb icon" width={70} height={70}/>
         </div>
       </div>
     </section>
