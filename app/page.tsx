@@ -9,7 +9,7 @@ import CVSection from "./_components/UI/CVSection";
 export default function Home() {
   return (
     <>
-      <FlyingInformations/>
+      {/* <FlyingInformations/> */}
       <HeroSection/>
       <CVSection/>
       <Skills/>

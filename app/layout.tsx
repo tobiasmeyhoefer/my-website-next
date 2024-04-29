@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./_components/Navigation/Navigation";
 import { cn } from "@/lib/utils";
 import Head from "next/head";
+import FlyingInformations from "./_components/UI/FlyingInformations";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const roboto = Roboto({
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Navigation></Navigation>
         </header>
         <main className="flex h-full justify-center">
+        <FlyingInformations/>
           <div className="w-full max-w-[1920px]">{children}</div>
         </main>
         {/* <div className="fixed bottom-0 left-0 right-0 flex h-12 items-center justify-center bg-white text-black opacity-30">

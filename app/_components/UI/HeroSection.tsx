@@ -16,11 +16,11 @@ const HeroSection = () => {
         experience
       </p>
       <Image
-        className="absolute -right-[40%] bottom-0 -z-10 w-[1200px] min-w-[800px] blur-[7px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
+        className="absolute -right-[40%] bottom-0 -z-10 min-w-[600px] blur-[7px] md:w-[1200px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
         src={me}
         alt="portrait in comic style"
-        width={1400}
-        height={1400}
+        width={1300}
+        height={1300}
       />
       <div className="bluredUiCircles absolute left-1/4 -z-20 h-[30vw] w-[30vw] rounded-full bg-neutral-900/30 blur-[8vw]" />
     </section>

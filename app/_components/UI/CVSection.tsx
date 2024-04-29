@@ -4,7 +4,7 @@ const CVSection = () => {
   return (
     <>
       <section className="section flex w-full flex-col bg-neutral-100 xl:flex-row">
-        <div className="min-w-1/2 relative -top-32 h-full bg-neutral-800 p-12 xl:left-20">
+        <div className="min-w-1/2 relative xl:-top-32 h-full bg-neutral-800 p-12 xl:left-20">
           <h2 className="mb-10 font-montserrat text-4xl font-bold">
             Experience
           </h2>
@@ -52,12 +52,12 @@ const CVSection = () => {
           </div>
           <div className="bluredUiCircles absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-neutral-400/30 blur-[100px]" />
         </div>
-        <div className="-mt-32 w-full p-12 text-neutral-900 lg:mt-0 xl:ml-24 z-10">
+        <div className="z-10 xl:-mt-32 w-full p-12 text-neutral-900 lg:mt-0 xl:ml-24">
           <h2 className="mb-12 font-montserrat text-4xl font-bold">
             Education
           </h2>
-          <div className="flex w-full flex-col gap-8">
-            <div className="items-en relative flex">
+          <div className="flex w-full flex-col">
+            <div className="items-en relative flex mb-12">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 2018
               </p>
@@ -65,7 +65,7 @@ const CVSection = () => {
                 Graduation from Max-Delbrück Gymnasium Berlin
               </p>
             </div>
-            <div className="relative flex items-end">
+            <div className="relative flex items-end mb-12">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 2021
               </p>
@@ -74,7 +74,7 @@ const CVSection = () => {
                 theory and biology)
               </p>
             </div>
-            <div className="relative flex items-end">
+            <div className="relative flex items-end mb-12">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 until 2025
               </p>
@@ -82,7 +82,7 @@ const CVSection = () => {
                 Media informatics at the Berlin University of Applied Sciences
               </p>
             </div>
-            <div className="relative flex items-end">
+            <div className="relative flex items-end mb-12">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 2022
               </p>
@@ -90,16 +90,16 @@ const CVSection = () => {
                 Student assistant at M&W Finanzoptimierung
               </p>
             </div>
-            <div className="relative flex w-full items-end">
+            <div className="relative flex w-full items-end mb-16">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 since 2022
               </p>
               <p className="absolute top-10 z-10 pl-16">
-                Web developer at Berliner Verkehrsbetriebe active development of
-                web applications to relieve various tasks of company employees
+                Web developer at Berliner Verkehrsbetriebe <span className="text-neutral-500 text-sm">active development of
+                web applications to relieve various tasks of company employees</span>
               </p>
             </div>
-            <div className="relative flex items-end">
+            <div className="relative flex items-end mb-12">
               <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
                 2023
               </p>
