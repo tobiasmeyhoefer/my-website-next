@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="flex h-full flex-col justify-center overflow-x-hidden">
+    <section className="flex h-full flex-col justify-center relative overflow-x-hidden">
       {/* <div className="section bg-red-300/0 absolute top-0 bottom-0 left-0 right-0 -z-50"></div> */}
       <h1
         id="name"
