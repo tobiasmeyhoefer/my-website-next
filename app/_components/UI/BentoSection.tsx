@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const BentoSection = () => {
   return (
-    <section className="p-6 xl:p-20 my-12">
+    <section className="p-6 xl:p-20 my-12 md:text-sm text-[12px]">
       <div className={cn(styles.contai, "grid-container font-montserrat font-bold")}>
         <div className="item1">German (Native)</div>
         <div className="item2">Stress resistance and high ambition</div>

@@ -44,9 +44,6 @@ export default function RootLayout({
         <FlyingInformations/>
           <div className="w-full max-w-[1920px]">{children}</div>
         </main>
-        {/* <div className="fixed bottom-0 left-0 right-0 flex h-12 items-center justify-center bg-white text-black opacity-30">
-          <p>under construction launch 1.0 in a few days</p>
-        </div> */}
       </body>
     </html>
   );

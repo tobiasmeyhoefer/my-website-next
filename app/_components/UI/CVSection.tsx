@@ -4,7 +4,7 @@ const CVSection = () => {
   return (
     <>
       <section className="section flex w-full flex-col bg-neutral-100 xl:flex-row">
-        <div className="min-w-1/2 relative xl:-top-32 h-full bg-neutral-800 p-12 xl:left-20">
+        <div className="min-w-1/2 relative h-full bg-neutral-800 p-12 xl:-top-32 xl:left-20">
           <h2 className="mb-10 font-montserrat text-4xl font-bold">
             Experience
           </h2>
@@ -52,58 +52,61 @@ const CVSection = () => {
           </div>
           <div className="bluredUiCircles absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-neutral-400/30 blur-[100px]" />
         </div>
-        <div className="z-10 xl:-mt-32 w-full p-12 text-neutral-900 lg:mt-0 xl:ml-24">
+        <div className="z-10 w-full p-12 text-neutral-900 lg:mt-0 xl:-mt-32 xl:ml-24">
           <h2 className="mb-12 font-montserrat text-4xl font-bold">
             Education
           </h2>
           <div className="flex w-full flex-col">
-            <div className="items-en relative flex mb-12">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 2018
               </p>
-              <p className="absolute top-10 z-10 pl-16">
+              <p className="top-10 z-10 -mt-6">
                 Graduation from Max-Delbrück Gymnasium Berlin
               </p>
             </div>
-            <div className="relative flex items-end mb-12">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 2021
               </p>
-              <p className="absolute top-10 z-10 pl-16">
+              <p className="top-10 z-10 -mt-6">
                 Abitur at the Schul- und Leistungszentrum Berlin(SLZB, sports
                 theory and biology)
               </p>
             </div>
-            <div className="relative flex items-end mb-12">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 until 2025
               </p>
-              <p className="absolute top-10 z-10 pl-16">
+              <p className="top-10 z-10 -mt-6">
                 Media informatics at the Berlin University of Applied Sciences
               </p>
             </div>
-            <div className="relative flex items-end mb-12">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 2022
               </p>
-              <p className="absolute top-10 z-10 pl-16">
+              <p className="top-10 z-10 -mt-6">
                 Student assistant at M&W Finanzoptimierung
               </p>
             </div>
-            <div className="relative flex w-full items-end mb-16">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 since 2022
               </p>
-              <p className="absolute top-10 z-10 pl-16">
-                Web developer at Berliner Verkehrsbetriebe <span className="text-neutral-500 text-sm">active development of
-                web applications to relieve various tasks of company employees</span>
+              <p className="top-10 z-10 -mt-6">
+                Web developer at Berliner Verkehrsbetriebe{" "}
+                <span className="text-sm text-neutral-500">
+                  active development of web applications to relieve various
+                  tasks of company employees
+                </span>
               </p>
             </div>
-            <div className="relative flex items-end mb-12">
-              <p className="font-montserrat text-6xl text-accentGreen blur-[1px]">
+            <div className="items-en relative mb-2 flex flex-col">
+              <p className="font-montserrat text-5xl text-accentGreen blur-[1px] md:text-6xl">
                 2023
               </p>
-              <p className="absolute top-10 z-10 pl-16">
+              <p className="top-10 z-10 -mt-6">
                 Semester abroad in Aarhus / Denmark in the field of software
                 engineering
               </p>

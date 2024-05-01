@@ -16,7 +16,7 @@ const HeroSection = () => {
         experience
       </p>
       <Image
-        className="absolute -right-[40%] bottom-0 -z-10 min-w-[600px] blur-[7px] md:w-[1200px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
+        className="absolute -right-[40%] bottom-0 -z-10 min-w-[400px] blur-[4px] md:blur-[7px] md:w-[1200px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
         src={me}
         alt="portrait in comic style"
         width={1300}
