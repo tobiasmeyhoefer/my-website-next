@@ -13,7 +13,7 @@ export default function Navigation() {
           <Link href={"work"}>work</Link>
         </div>
         <div>
-          <Link className="bg-accentGreen md:px-5 md:py-3 text-sm border-b-4 border-r-4 border-black px-3 py-3 text-black transition-colors hover:bg-neutral-200" href={"/contact"}>get in touch</Link>
+          <Link className="bg-accentGreen md:px-5 md:py-3 text-sm border-b-4 border-r-4 border-black px-3 py-3 text-black transition-colors hover:bg-accentGreenDark" href={"/contact"}>get in touch</Link>
         </div>
       </div>
     </nav>

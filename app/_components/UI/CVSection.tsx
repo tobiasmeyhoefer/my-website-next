@@ -53,7 +53,7 @@ const CVSection = () => {
           <div className="bluredUiCircles absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-neutral-400/30 blur-[100px]" />
         </div>
         <div className="z-10 w-full p-12 text-neutral-900 lg:mt-0 xl:-mt-32 xl:ml-24">
-          <h2 className="mb-12 font-montserrat text-4xl font-bold">
+          <h2 className="mt-0 md:mt-32 mb-12 font-montserrat text-4xl font-bold">
             Education
           </h2>
           <div className="flex w-full flex-col">

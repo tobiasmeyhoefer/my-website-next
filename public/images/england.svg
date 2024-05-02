@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 512 512" xml:space="preserve">
-<path style="fill:#FFFFFF;" d="M395.901,7.286H116.099C56.003,7.286,7.286,56.004,7.286,116.099v279.803
-	c0,60.095,48.717,108.812,108.812,108.812h279.803c60.095,0,108.812-48.717,108.812-108.812V116.099
-	C504.714,56.004,455.997,7.286,395.901,7.286z"/>
-<polygon style="fill:#ED1F34;" points="504.714,231.958 280.042,231.958 280.042,7.286 231.958,7.286 231.958,231.958 
-	7.286,231.958 7.286,280.042 231.958,280.042 231.958,504.714 280.042,504.714 280.042,280.042 504.714,280.042 "/>
-<path d="M395.901,0H116.099C52.082,0,0,52.082,0,116.099v279.803C0,459.918,52.082,512,116.099,512h279.803
-	C459.918,512,512,459.918,512,395.901V116.099C512,52.082,459.918,0,395.901,0z M497.427,116.099v108.572H287.329V14.573h108.573
-	C451.883,14.573,497.427,60.118,497.427,116.099z M116.099,14.573h108.573v210.098H14.573V116.099
-	C14.573,60.118,60.117,14.573,116.099,14.573z M14.573,395.901V287.329h210.098v210.098H116.099
-	C60.117,497.427,14.573,451.882,14.573,395.901z M395.901,497.427H287.329V287.329H438.39c4.024,0,7.287-3.262,7.287-7.286
-	c0-4.025-3.262-7.286-7.287-7.286H280.042c-4.024,0-7.286,3.262-7.286,7.286v217.384h-33.511V280.043
-	c0-4.025-3.262-7.286-7.286-7.286H14.573v-33.512h217.385c4.024,0,7.286-3.262,7.286-7.286V14.573h33.511v217.384
-	c0,4.025,3.262,7.286,7.286,7.286h217.385v33.512h-25.875c-4.024,0-7.286,3.262-7.286,7.286c0,4.025,3.262,7.286,7.286,7.286h25.875
-	v108.572C497.427,451.882,451.883,497.427,395.901,497.427z"/>
-</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<title>england-flag</title>
+<g id="england-flag">
+<circle cx="30" cy="35" r="23" style="fill:#eaeaea"/>
+<line x1="49.837" y1="47.663" x2="46.163" y2="51.337" style="fill:none;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<line x1="46.163" y1="47.663" x2="49.837" y2="51.337" style="fill:none;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<circle cx="36" cy="45" r="2" style="fill:none;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<circle cx="46" cy="7" r="1" style="fill:#4c241d"/>
+<rect x="9" y="36" width="4" height="25" style="fill:#d6d6d6;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<rect x="9" y="10" width="21" height="26" style="fill:#ffffff;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<rect x="34" y="13" width="21" height="26" style="fill:#ffffff;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<rect x="29" y="10" width="5" height="26" style="fill:#e66353;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<rect x="9" y="21" width="20" height="4" style="fill:#e66353;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<rect x="34" y="24" width="21" height="4" style="fill:#e66353;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.04939015319192px"/>
+<line x1="11" y1="61" x2="28" y2="61" style="fill:none;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+<line x1="34" y1="61" x2="40" y2="61" style="fill:none;stroke:#4c241d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+</g>
+</svg>
