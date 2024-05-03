@@ -1,4 +1,5 @@
 import me from "@/public/images/me.png";
+import star from "@/public/svg/star1.svg";
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -6,22 +7,25 @@ const HeroSection = () => {
     <section className="flex h-full flex-col justify-center max-md:relative">
       <h1
         id="name"
-        className="w-full max-w-screen-2xl px-10 font-montserrat text-[10vw] font-extrabold italic leading-none text-white"
+        className="w-full max-w-screen-2xl px-6 font-montserrat text-[10vw] font-extrabold italic leading-none text-white md:px-12"
       >
         TOBIAS MEYHOEFER
       </h1>
-      <p className="mt-8 pl-12 font-montserrat text-2xl md:pl-14">
+      <p className="mr-4 mt-8 pl-7 font-montserrat text-2xl md:pl-12">
         Junior Developer born & based in berlin with 3 years of coding
         experience
       </p>
-      <Image
-        className="absolute -right-[40%] bottom-0 -z-10 min-w-[400px] blur-[4px] md:blur-[7px] md:w-[1200px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px] "
-        src={me}
-        alt="portrait in comic style"
-        width={1300}
-        height={1300}
-      />
-      <div className="bluredUiCircles absolute left-1/4 -z-20 h-[30vw] w-[30vw] rounded-full bg-neutral-900/30 blur-[8vw]" />
+      <div className="absolute h-full w-full overflow-x-hidden -z-40">
+        <Image
+          className="absolute -right-[40%] bottom-0 -z-10 min-w-[400px] blur-[4px] md:w-[1200px] md:blur-[7px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px]"
+          src={me}
+          alt="portrait in comic style"
+          width={1300}
+          height={1300}
+        />
+        <Image className="absolute -z-50 top-20 left-0 w-[70vw]" src={star} alt="star icon"/>
+      </div>
+      <div className="bluredUiCircles absolute left-1/4 top-1/3 -z-20 h-[34vw] w-[30vw] rounded-full bg-neutral-900/40 blur-[8vw]" />
     </section>
   );
 };

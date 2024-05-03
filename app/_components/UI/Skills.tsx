@@ -27,8 +27,8 @@ import styles from "@/app/_components/UI/skills.module.css"
 const Skills = () => {
   return ( 
     // xl:p-20 p-8 lg:pt-0
-    <section className="bg-neutral-100 w-full pb-10">
-      <h2 className="text-black text-4xl font-montserrat xl:pl-20 pl-12 font-bold mb-12">Skills</h2>
+    <section className="bg-neutral-100 w-full md:pb-10">
+      <h2 className="text-black text-4xl font-montserrat xl:pl-20 md:pl-12 pl-6 font-bold mb-12">Skills</h2>
       <div className={styles.scrollContainer}>
         <div className={styles.carouselprimary}>
           <Image className="lg:w-[70px] md:w-[40px] w-[25px]" src={angular} alt="mongodb icon" width={70} height={70}/>
