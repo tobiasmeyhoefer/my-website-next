@@ -15,7 +15,7 @@ const HeroSection = () => {
         Junior Developer born & based in berlin with 3 years of coding
         experience
       </p>
-      <div className="absolute h-full w-full overflow-x-hidden -z-40">
+      <div className="absolute h-full w-full overflow-x-clip -z-40">
         <Image
           className="absolute -right-[40%] bottom-0 -z-10 min-w-[400px] blur-[4px] md:w-[1200px] md:blur-[7px] xl:-bottom-1/4 xl:-right-[20%] 2xl:w-[1400px]"
           src={me}

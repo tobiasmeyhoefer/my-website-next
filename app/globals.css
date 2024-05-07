@@ -15,7 +15,6 @@ body {
   cursor:
     -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
     auto;
-  overflow-x: hidden;
 
   -webkit-animation: gradientanimation 15s ease infinite;
   -moz-animation: gradientanimation 15s ease infinite;
@@ -182,22 +181,22 @@ button:hover, a:hover {
 /* CUSTOM SCROLL BAR */
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
-/* Track */
+/* Track
 ::-webkit-scrollbar-track {
   background: #5C67C6; 
   border-radius: 1px;
 }
- 
+  */
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #C8DF53; 
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #9cb038; 
-}
+} */
