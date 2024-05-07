@@ -20,6 +20,7 @@ body {
   -moz-animation: gradientanimation 15s ease infinite;
   animation: gradientanimation 15s ease infinite;
   transform: translate3d(0, 0, 0);
+  animation: bodyNoScroll 2s forwards linear;
 }
 
 .bluredUiCircles, .object {
@@ -36,22 +37,12 @@ button:hover, a:hover {
 }
 
 .startup {
-  /* animation: startup; */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(271deg, #a9b388, #5f6f52);
-  background-size: 400% 400%;
-
   -webkit-animation: gradientanimation 15s ease infinite;
   -moz-animation: gradientanimation 15s ease infinite;
   animation: gradientanimation 15s ease infinite;
-  /* background: radial-gradient(at center, #ffffff, #fffdf0); */
-  opacity: 1;
-  z-index: 100;
   animation: startup 1.2s forwards;
+  overflow: hidden;
+
   /* hardware acceleration trick on chrome? */
   /* transform: translateZ(0);
   transform: rotateZ(360deg);
@@ -75,12 +66,21 @@ button:hover, a:hover {
   font-size: 50vh;
 }
 
-@keyframes startupForP1 {
+@keyframes bodyNoScroll {
   from {
-    transform: translate(calc(20vw), -15vh);
+    overflow-y: hidden;
   }
   to {
-    transform: translate(calc(-50vw - 100%), -15vh);
+    overflow-y: visible;
+  }
+}
+
+@keyframes startupForP1 {
+  from {
+    transform: translate(calc(50vw), -15vh);
+  }
+  to {
+    transform: translate(calc(-0vw - 100%), -15vh);
   }
 }
 
@@ -89,7 +89,7 @@ button:hover, a:hover {
     transform: translate(calc(30vw), 35vh);
   }
   to {
-    transform: translate(calc(-70vw - 100%), 35vh);
+    transform: translate(calc(-80vw - 100%), 35vh);
   }
 }
 
@@ -181,22 +181,22 @@ button:hover, a:hover {
 /* CUSTOM SCROLL BAR */
 
 /* width */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
-} */
+}
 
-/* Track
+/* Track */
 ::-webkit-scrollbar-track {
   background: #5C67C6; 
   border-radius: 1px;
 }
-  */
+ 
 /* Handle */
-/* ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #C8DF53; 
-} */
+}
 
 /* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #9cb038; 
-} */
+}

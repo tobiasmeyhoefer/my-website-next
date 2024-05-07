@@ -1,6 +1,6 @@
 let nameElem = document.getElementById("name");
-let myName = "tobias meyhoefer";
-let myChangingName = "tobias meyhoefer";
+let myName = "TOBIAS MEYHOEFER";
+let myChangingName = "TOBIAS MEYHOEFER";
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -13,7 +13,7 @@ async function mainLoop() {
   while (true) {
     await delay(50);
     for (let j = 0; j < myName.length; j++) {
-      let randomChar = getRandomLetter()
+      let randomChar = getRandomLetter().toUpperCase()
       if(j == 6) {
         continue
       }
@@ -29,7 +29,7 @@ async function mainLoop() {
       myChangingName = replaceAt(myChangingName, j, randomChar)
       nameElem.innerHTML = myChangingName;
 
-      if(myChangingName == "tobias meyhoefer") {
+      if(myChangingName == "TOBIAS MEYHOEFER") {
         return
       }
     }
@@ -43,7 +43,7 @@ function replaceAt(word, index, replacement) {
 }
 
 function getRandomLetter() {
-  return String.fromCharCode(97 + randomIntFromInterval(0, 25))
+  return String.fromCharCode(97 + randomIntFromInterval(0, 25)).toLocaleUpperCase()
 }
 
 function randomIntFromInterval(min, max) {

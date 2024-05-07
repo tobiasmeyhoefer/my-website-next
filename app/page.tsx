@@ -13,11 +13,8 @@ export default function Home() {
       <HeroSection/>
       <CVSection/>
       <Skills/>
-      <BentoSection/>
-      {/* <div className="flex h-full flex-col justify-center gap-8 font-sans w-full max-w-[1920px]"> */}
-        {/* <StartUpAnimation/> */}
-        {/* <Script src="scripts/charSwitching.js"></Script> */}
-      {/* </div> */}
+      {/* <BentoSection/> */}
+      {/* <StartUpAnimation/> */}
     </>
   );
 }

@@ -5,6 +5,7 @@ import Navigation from "./_components/Navigation/Navigation";
 import { cn } from "@/lib/utils";
 import Head from "next/head";
 import FlyingInformations from "./_components/UI/FlyingInformations";
+import StartUpAnimation from "./_components/UI/StartUpAnimation";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const roboto = Roboto({
@@ -16,12 +17,12 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Tobias Meyhöfer",
   description:
-    "A portfolio of the web, mobile and software developer Tobias Meyhöfer"
+    "A portfolio of the web, mobile and software developer Tobias Meyhöfer",
 };
 
 export const viewport: Viewport = {
-  themeColor: '#5C67C6',
-}
+  themeColor: "#5C67C6",
+};
 
 export default function RootLayout({
   children,
@@ -41,7 +42,8 @@ export default function RootLayout({
           <Navigation></Navigation>
         </header>
         <main className="flex h-full justify-center">
-        <FlyingInformations/>
+          <StartUpAnimation/>
+          <FlyingInformations />
           <div className="w-full max-w-[1920px]">{children}</div>
         </main>
       </body>
