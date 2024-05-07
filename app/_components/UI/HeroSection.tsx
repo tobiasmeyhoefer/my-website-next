@@ -23,7 +23,7 @@ const HeroSection = () => {
           width={1300}
           height={1300}
         />
-        <Image className="absolute -z-50 top-20 left-0 w-[70vw]" src={star} alt="star icon"/>
+        <Image className="absolute object -z-50 top-20 left-0 w-[70vw]" src={star} alt="star icon"/>
       </div>
       <div className="bluredUiCircles absolute left-1/4 top-1/3 -z-20 h-[34vw] w-[30vw] rounded-full bg-neutral-900/40 blur-[8vw]" />
     </section>

@@ -23,7 +23,7 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.bluredUiCircles {
+.bluredUiCircles, .object {
   transform: translate3d(0, 0, 0);
 }
 
