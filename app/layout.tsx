@@ -3,6 +3,7 @@ import { Montserrat, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navigation from "./_components/Navigation/Navigation";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -26,13 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="">
       <body
         className={
-          "h-full min-h-screen overflow-x-hidden font-space_grotesk antialiased"
+          "h-[calc(100vh-140px)] overflow-x-hidden font-space_grotesk antialiased"
         }
       >
-        <div className="fixed bottom-0 bg-neutral-900 w-full text-center py-2 text-neutral-400">This page is currently under construction</div>
+        <div className="fixed bottom-0 w-full bg-neutral-900 py-2 text-center text-neutral-400">
+          This page is currently under construction
+        </div>
         <header className="flex justify-center">
           <div className="w-full max-w-[1200px]">
             <Navigation></Navigation>
@@ -41,6 +44,7 @@ export default function RootLayout({
         <main className="flex h-full justify-center">
           <div className="w-full max-w-[1200px] px-8">{children}</div>
         </main>
+        <Toaster />
       </body>
     </html>
   );
