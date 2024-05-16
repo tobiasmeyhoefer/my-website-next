@@ -32,11 +32,13 @@ export default function RootLayout({
           "h-full min-h-screen overflow-x-hidden font-space_grotesk antialiased"
         }
       >
-        <header className="">
-          <Navigation></Navigation>
+        <header className="flex justify-center">
+          <div className="w-full max-w-[1200px]">
+            <Navigation></Navigation>
+          </div>
         </header>
         <main className="flex h-full justify-center">
-          <div className="w-full max-w-[1920px]">{children}</div>
+          <div className="w-full max-w-[1200px] px-8">{children}</div>
         </main>
       </body>
     </html>

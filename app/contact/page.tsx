@@ -1,10 +1,12 @@
+import ContactForm from "@/components/ui/contact-form";
+
 const Contact = () => {
   return (
-    <section className="mt-[160px] px-8">
-      <h1 className="font-montserrat font-bold text-6xl mb-4">Contact</h1>
-      <p>Email: tobias.meyhoefer02@gmail.com</p>
-    </section>
-   );
-}
- 
+    <>
+      <h1 className="text-3xl font-bold my-8">Contact</h1>
+      <ContactForm />
+    </>
+  );
+};
+
 export default Contact;
