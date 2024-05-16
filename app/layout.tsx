@@ -32,6 +32,7 @@ export default function RootLayout({
           "h-full min-h-screen overflow-x-hidden font-space_grotesk antialiased"
         }
       >
+        <div className="fixed bottom-0 bg-neutral-900 w-full text-center py-2 text-neutral-400">This page is currently under construction</div>
         <header className="flex justify-center">
           <div className="w-full max-w-[1200px]">
             <Navigation></Navigation>

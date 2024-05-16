@@ -11,7 +11,8 @@ export default function Home() {
     <>
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
-      <p>Tobias Meyhöfer</p>
+      <p className="text-3xl font-bold">Tobias Meyhöfer</p>
+      <p>Junior Web Developer</p>
       {/* <CVSection/>
       <Skills/> */}
       {/* <BentoSection/> */}

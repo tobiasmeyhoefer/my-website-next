@@ -8,12 +8,20 @@ export default function Navigation() {
     <nav className="flex h-[140px] justify-center">
       <div className="flex w-full max-w-[1920px] items-center justify-between px-10">
         <div className="flex items-center gap-8 md:gap-12">
-          <Link href={"work"}>work</Link>
+          <Link href={"/"}>
+            <Image className="w-8" src={Logo} alt="Logo tm"></Image>
+          </Link>
+
+          <Link
+            className="p-4 transition-all hover:font-semibold"
+            href={"gallery"}
+          >
+            gallery
+          </Link>
         </div>
         <Button variant="default">
           <Link href={"/contact"}>get in touch</Link>
         </Button>
-
       </div>
     </nav>
   );
