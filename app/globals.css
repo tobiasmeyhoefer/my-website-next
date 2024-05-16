@@ -1,202 +1,76 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-body {
-  cursor:
-    url("/cursor/cursor-@1x.svg") 16 16,
-    auto;
-  cursor:
-    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
-    auto;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
 
-  -webkit-animation: gradientanimation 15s ease infinite;
-  -moz-animation: gradientanimation 15s ease infinite;
-  animation: gradientanimation 15s ease infinite;
-  transform: translate3d(0, 0, 0);
-  animation: bodyNoScroll 2s forwards linear;
-}
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
 
-.bluredUiCircles, .object {
-  transform: translate3d(0, 0, 0);
-}
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
 
-button:hover, a:hover {
-  cursor:
-    url("/cursor/cursor-hover.svg") 16 16,
-    pointer;
-  cursor:
-    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
-    pointer;
-}
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
 
-.startup {
-  -webkit-animation: gradientanimation 15s ease infinite;
-  -moz-animation: gradientanimation 15s ease infinite;
-  animation: gradientanimation 15s ease infinite;
-  animation: startup 1.2s forwards;
-  overflow: hidden;
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
 
-  /* hardware acceleration trick on chrome? */
-  /* transform: translateZ(0);
-  transform: rotateZ(360deg);
-  backface-visibility: hidden;
-  perspective: 1000; */
-}
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
 
-.startup p:nth-child(1) {
-  position: absolute;
-  transform: translate(50vw, -15vh);
-  animation: startupForP1 2.4s forwards linear;
-  z-index: 101;
-  font-size: 50vh;
-}
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
 
-.startup p:nth-child(2) {
-  position: absolute;
-  transform: translate(60vw, 35vh);
-  animation: startupForP2 2.2s forwards linear;
-  z-index: 101;
-  font-size: 50vh;
-}
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
 
-@keyframes bodyNoScroll {
-  from {
-    overflow-y: hidden;
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
   }
-  to {
-    overflow-y: visible;
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-}
-
-@keyframes startupForP1 {
-  from {
-    transform: translate(calc(50vw), -15vh);
-  }
-  to {
-    transform: translate(calc(-0vw - 100%), -15vh);
-  }
-}
-
-@keyframes startupForP2 {
-  from {
-    transform: translate(calc(30vw), 35vh);
-  }
-  to {
-    transform: translate(calc(-80vw - 100%), 35vh);
-  }
-}
-
-@keyframes startup {
-
-  0% {
-    opacity: 0;
-    /* display: block; */
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-    z-index: 100;
-    /* display: block; */
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -100;
-  }
-}
-@-webkit-keyframes gradientanimation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes gradientanimation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes gradientanimation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-.item1 { grid-area: januar; }
-.item2 { grid-area: februar; }
-.item3 { grid-area: maerz; }
-.item4 { grid-area: april; }
-.item5 { grid-area: mai; }
-.item6 { grid-area: juni; }
-.item7 { grid-area: juli; }
-.item8 { grid-area: august; }
-.item9 { grid-area: september; }
-.item10 { grid-area: oktober; }
-.item11 { grid-area: november; }
-.item12 { grid-area: dezember; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'januar februar februar maerz'
-    'januar mai mai maerz'
-    'juni april juli juli'
-    'oktober oktober november august'
-    'september dezember november august'
-    'september dezember november august'
-    'september dezember november august';
-  gap: 10px;
-  height: 600px;
-}
-
-.grid-container > div {
-  background-color: rgb(34, 34, 34);
-  border-radius: 15px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 1280px) {
-  .grid-container {
-    font-size: 20px;
-    grid-template-areas:
-    'januar januar januar februar februar februar februar februar maerz maerz'
-    'januar januar januar april april mai mai mai maerz maerz'
-    'juni juni juni april april juli juli august august august'
-    'september september oktober april april november november august august august'
-    'september september dezember dezember dezember dezember dezember august august august';
-  }
-}
-
-/* ----------------- */
-/* CUSTOM SCROLL BAR */
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #5C67C6; 
-  border-radius: 1px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #C8DF53; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #9cb038; 
-}

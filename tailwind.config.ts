@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/defaultTheme"
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
   darkMode: ["class"],
@@ -19,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ["var(--montserrat)", ...fontFamily.sans],
+        space_grotesk: ["var(--space_grotesk)", ...fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -53,9 +57,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        primary500: "#5C67C6",
-        accentGreen: "#C8DF53",
-        accentGreenDark: "#95AC20"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,10 +77,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        sans: ["var(--roboto)", ...fontFamily.sans],
-        montserrat: ["var(--montserrat)", ...fontFamily.sans]
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],

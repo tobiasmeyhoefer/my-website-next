@@ -10,9 +10,10 @@ export default function Home() {
   return (
     <>
       {/* <FlyingInformations/> */}
-      <HeroSection/>
-      <CVSection/>
-      <Skills/>
+      {/* <HeroSection/> */}
+      <p>Tobias Meyhöfer</p>
+      {/* <CVSection/>
+      <Skills/> */}
       {/* <BentoSection/> */}
       {/* <StartUpAnimation/> */}
     </>
