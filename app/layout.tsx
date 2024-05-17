@@ -27,25 +27,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="h-full">
       <body
         className={cn(
-          "h-[calc(100vh-140px)] overflow-x-hidden font-space_grotesk antialiased",
+          "min-h-screen h-0 overflow-x-hidden font-space_grotesk antialiased",
           montserrat.variable,
           space_grotesk.variable,
         )}
       >
-        <div className="fixed bottom-0 w-full bg-neutral-900 py-2 text-center text-neutral-400">
-          This page is currently under construction
-        </div>
         <header className="flex justify-center">
-          <div className="w-full max-w-[1400px]">
+          <div className="w-full max-w-[1800px]">
             <Navigation></Navigation>
           </div>
         </header>
-        <main className="flex h-full justify-center">
-          <div className="w-full max-w-[1400px] px-8">{children}</div>
+        <main className="min-h-[calc(100vh-220px)] flex justify-center">
+          <div className="w-full max-w-[1800px] px-8">{children}</div>
         </main>
+        <footer className="h-20 w-full bg-neutral-900 py-2 text-center flex items-center justify-center text-neutral-400">
+          This page is currently under construction
+        </footer>
         <Toaster />
       </body>
     </html>

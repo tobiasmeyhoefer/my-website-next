@@ -1,35 +1,104 @@
-import Script from "next/script";
-import FlyingInformations from "./_components/UI/FlyingInformations";
-import StartUpAnimation from "./_components/UI/StartUpAnimation";
-import HeroSection from "./_components/UI/HeroSection";
-import BentoSection from "./_components/UI/BentoSection";
-import Skills from "./_components/UI/Skills";
-import CVSection from "./_components/UI/CVSection";
+import TestAnimation from "@/components/animations/test-animation";
 
 export default function Home() {
   return (
     <>
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
-
-      <div className="flex h-full items-center justify-center">
-        <div className="flex -translate-y-[140px] flex-col items-center justify-center">
-          <p className="font-montserrat text-[4vw] font-bold">
-            TOBIAS MEYHÖFER
+      <TestAnimation>
+        <section className="flex h-[calc(100vh-140px)] items-center justify-center">
+          <div className="relative flex flex-col items-center justify-center">
+            <p className="mb-2 font-montserrat text-2xl font-bold lg:text-5xl xl:mb-4 2xl:text-8xl">
+              TOBIAS MEYHÖFER
+            </p>
+            <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
+              Junior Web Developer
+            </p>
+            <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
+            <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
+          </div>
+        </section>
+        <section className="h-screen">
+          <h2 className="mb-2 text-xl font-bold">Skills</h2>
+          <h3 className="font-bold">Programming Languages_</h3>
+          <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
+          <h3 className="font-bold">Technologies_ </h3>
+          <p>
+            HTML, CSS, SQL, MongoDB, PostGreSQL, VS-code, Git, Github, Gitlab,
+            MacOS, Windows, Linux
           </p>
-          <p className="font-montserrat text-[2vw] font-light">
-            Junior Web Developer
+          <h3 className="font-bold">Frameworks_</h3>
+          <p>
+            React, Next.js, Angular, Express, .NET, Auth.js, Zod, Node.js,
+            TailwindCSS, Sass, Drizzle, Prisma
           </p>
-          <div
-            className="h-[20vw] absolute -bottom-[150%] -right-[10%]
-            w-[20vw] rounded-full bg-white opacity-40 blur-2xl"
-          ></div>
-          <div
-            className="h-[20vw] absolute -top-[150%] -left-[10%]
-            w-[20vw] rounded-full bg-white opacity-30 blur-2xl"
-          ></div>
-        </div>
-      </div>
+          <hr className="my-10" />
+          <h2 className="mb-2 text-xl font-bold">Work & Experience</h2>
+          <h3 className="font-bold">Work_</h3>
+          <p>
+            Web developer at “Berliner Verkehrsbetriebe (BVG)”, active
+            development of web applications to relieve various tasks of company
+            employees
+          </p>
+          <h3 className="font-bold">Strength_ </h3>
+          <p>
+            Fullstack CRUD Applications in multiple frameworks (Next.js,
+            Angular, .NET)
+          </p>
+          <h3 className="font-bold">Design_ </h3>
+          <p>
+            Design Laws, gestalt principles, modern UI Design with TailwindCSS
+          </p>
+          <h3 className="font-bold">Else_ </h3>
+          <p>
+            Shell scripting (bash, zsh, Powershell), algorithms und data
+            structures, ISO-OSI layer-model Protocolls, UML Diagrams, GraphQL,
+            AWS, Scrum
+          </p>
+          <hr className="my-10" />
+          <h2 className="mb-2 text-xl font-bold">Projects</h2>
+          <p>
+            <span className="font-bold">Developed</span> journaling application
+            called “Yournal“ for personal using to avoid paid models, build with
+            Next.js App Router and newest technologies like Clerk and Drizzle
+          </p>
+          <p>
+            <span className="font-bold">Implemented</span> a gesture-based
+            voice-controlled drawing application written in processing to show
+            the possibilities of human computer interaction
+          </p>
+          <p>
+            <span className="font-bold">Engineered</span> applications in
+            Next.js and Angular to solve admin problems as part of abroad
+            semester in Aarhus
+          </p>
+          <p>
+            <span className="font-bold">Constructed</span> a talking mirror as
+            an IOT device with communication via the MQTT protocol, sensors and
+            connection to LLM, with microphone and speaker
+          </p>
+          <p>
+            <span className="font-bold">Coded</span> a cocktail Application in
+            Kotlin with the new Jetpack-Compose Framework
+          </p>
+          <hr className="my-10" />
+          <h2 className="mb-2 text-xl font-bold">Else</h2>
+          <h3 className="font-bold">Languages_</h3>
+          <p>
+            German (native), English (fluent), Danish (basics), Turkish (basics)
+          </p>
+          <h3 className="font-bold">since 2021_ </h3>
+          <p>
+            Studying media-based computer science at Berliner Hochschule für
+            Technik, German Grade System: 1.4, US Grade System: 3.6{" "}
+          </p>
+          <h3 className="font-bold">2023_</h3>
+          <p>
+            Semester abroad in Aarhus/Denmark to improve social-cultural
+            knowledge
+          </p>
+        </section>
+      </TestAnimation>
       {/* <CVSection/>
       <Skills/> */}
       {/* <BentoSection/> */}

@@ -21,7 +21,7 @@ const formSchema = z.object({
   reason: z.string().min(2).max(300),
 });
 
-import { sendResendMail } from "@/actions";
+import { actionResponse, sendResendMail } from "@/actions";
 import { useToast } from "./use-toast";
 import { useState } from "react";
 
@@ -40,19 +40,20 @@ const ContactForm = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
-    await sendResendMail(values.name, values.reason)
+    const response: actionResponse = await sendResendMail(values.name, values.reason)
+
     toast({
-      title: "Email sent ✅",
+      title: response.msg,
     })
     setIsLoading(false)
   }
 
   return (
-    <section>
+    <section className="flex justify-center ">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg p-6 shadow-lg "
+          className="space-y-8 rounded-lg p-6 shadow-lg max-w-[800px] w-full"
         >
           <FormField
             control={form.control}

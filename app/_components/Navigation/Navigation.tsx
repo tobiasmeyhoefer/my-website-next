@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "@/public/svg/Logo.svg";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import ShinyButton from "@/components/ui/shiny-button";
 
 export default function Navigation() {
   return (
@@ -19,9 +20,7 @@ export default function Navigation() {
             gallery
           </Link>
         </div>
-        <Button variant="default">
-          <Link href={"/contact"}>get in touch</Link>
-        </Button>
+        <ShinyButton/>
       </div>
     </nav>
   );
