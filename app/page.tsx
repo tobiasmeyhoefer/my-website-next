@@ -12,11 +12,22 @@ export default function Home() {
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
 
-      <div className="h-full flex justify-center items-center">
-        <div className="flex -translate-y-[140px] flex-col items-center justify-center p-20">
-          <p className="text-[4vw] font-bold font-montserrat">TOBIAS MEYHÖFER</p>
-          <p className="text-[2vw] font-light font-montserrat">Junior Web Developer</p>
-          <div className="absolute bg-white rounded-full w-80 h-80 blur-2xl -bottom-1/4 right-10 opacity-40"></div>
+      <div className="flex h-full items-center justify-center">
+        <div className="flex -translate-y-[140px] flex-col items-center justify-center">
+          <p className="font-montserrat text-[4vw] font-bold">
+            TOBIAS MEYHÖFER
+          </p>
+          <p className="font-montserrat text-[2vw] font-light">
+            Junior Web Developer
+          </p>
+          <div
+            className="h-[20vw] absolute -bottom-[150%] -right-[10%]
+            w-[20vw] rounded-full bg-white opacity-40 blur-2xl"
+          ></div>
+          <div
+            className="h-[20vw] absolute -top-[150%] -left-[10%]
+            w-[20vw] rounded-full bg-white opacity-30 blur-2xl"
+          ></div>
         </div>
       </div>
       {/* <CVSection/>
