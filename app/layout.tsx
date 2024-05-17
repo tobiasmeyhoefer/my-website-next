@@ -29,20 +29,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={
-          "h-[calc(100vh-140px)] overflow-x-hidden font-space_grotesk antialiased"
-        }
+        className={cn(
+          "h-[calc(100vh-140px)] overflow-x-hidden font-space_grotesk antialiased",
+          montserrat.variable,
+          space_grotesk.variable,
+        )}
       >
         <div className="fixed bottom-0 w-full bg-neutral-900 py-2 text-center text-neutral-400">
           This page is currently under construction
         </div>
         <header className="flex justify-center">
-          <div className="w-full max-w-[1200px]">
+          <div className="w-full max-w-[1400px]">
             <Navigation></Navigation>
           </div>
         </header>
         <main className="flex h-full justify-center">
-          <div className="w-full max-w-[1200px] px-8">{children}</div>
+          <div className="w-full max-w-[1400px] px-8">{children}</div>
         </main>
         <Toaster />
       </body>

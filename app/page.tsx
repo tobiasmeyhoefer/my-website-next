@@ -11,8 +11,14 @@ export default function Home() {
     <>
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
-      <p className="text-3xl font-bold my-8">Tobias Meyhöfer</p>
-      <p className="font-light">Junior Web Developer</p>
+
+      <div className="h-full flex justify-center items-center">
+        <div className="flex -translate-y-[140px] flex-col items-center justify-center p-20">
+          <p className="text-[4vw] font-bold font-montserrat">TOBIAS MEYHÖFER</p>
+          <p className="text-[2vw] font-light font-montserrat">Junior Web Developer</p>
+          <div className="absolute bg-white rounded-full w-80 h-80 blur-2xl -bottom-1/4 right-10 opacity-40"></div>
+        </div>
+      </div>
       {/* <CVSection/>
       <Skills/> */}
       {/* <BentoSection/> */}
