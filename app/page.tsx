@@ -18,7 +18,7 @@ export default function Home() {
             <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
           </div>
         </section>
-        <section className="h-screen">
+        <section className="mb-10">
           <h2 className="mb-2 text-xl font-bold">Skills</h2>
           <h3 className="font-bold">Programming Languages_</h3>
           <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
