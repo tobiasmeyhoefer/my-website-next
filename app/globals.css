@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --radial-gradient-background: 250, 250, 250;
   --solid-color-background: 15, 15, 15;

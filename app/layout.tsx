@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body
         className={cn(
-          "min-h-screen h-0 overflow-x-hidden font-space_grotesk antialiased",
+          "h-0 min-h-screen overflow-x-hidden font-space_grotesk text-neutral-800 antialiased",
           montserrat.variable,
           space_grotesk.variable,
         )}
@@ -40,10 +40,10 @@ export default function RootLayout({
             <Navigation></Navigation>
           </div>
         </header>
-        <main className="min-h-[calc(100vh-220px)] flex justify-center">
+        <main className="flex min-h-[calc(100vh-180px)] justify-center">
           <div className="w-full max-w-[1800px] px-8">{children}</div>
         </main>
-        <footer className="h-20 w-full bg-neutral-900 py-2 text-center flex items-center justify-center text-neutral-400">
+        <footer className="flex h-10 w-full items-center justify-center bg-neutral-900 text-center text-neutral-400">
           This page is currently under construction
         </footer>
         <Toaster />

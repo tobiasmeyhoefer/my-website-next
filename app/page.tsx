@@ -1,25 +1,29 @@
 import TestAnimation from "@/components/animations/test-animation";
+import { TypingEffect } from "@/components/animations/typing-effect";
 
 export default function Home() {
   return (
     <>
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
+      {/* <TestAnimation> */}
       <TestAnimation>
         <section className="flex h-[calc(100vh-140px)] items-center justify-center">
-          <div className="relative flex flex-col items-center justify-center">
-            <p className="mb-2 font-montserrat text-2xl font-bold lg:text-5xl xl:mb-4 2xl:text-8xl">
+          <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
+            {/* <p className="mb-2 font-montserrat text-2xl font-bold lg:text-5xl xl:mb-4 2xl:text-8xl">
               TOBIAS MEYHÖFER
-            </p>
+            </p> */}
+            <TypingEffect />
             <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
               Junior Web Developer
             </p>
             <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
             <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
+            {/* <div className="absolute left-[-30%] top-[240%] h-40 w-40 rounded-full bg-black opacity-80 blur-3xl lg:h-60 lg:w-60 lg:opacity-40 2xl:h-60 2xl:w-60"></div> */}
           </div>
         </section>
         <section className="mb-10">
-          <h2 className="mb-2 text-xl font-bold">Skills</h2>
+          <h2 className="mb-2 text-3xl font-bold">Skills</h2>
           <h3 className="font-bold">Programming Languages_</h3>
           <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
           <h3 className="font-bold">Technologies_ </h3>
@@ -33,7 +37,7 @@ export default function Home() {
             TailwindCSS, Sass, Drizzle, Prisma
           </p>
           <hr className="my-10" />
-          <h2 className="mb-2 text-xl font-bold">Work & Experience</h2>
+          <h2 className="mb-2 text-3xl font-bold">Work & Experience</h2>
           <h3 className="font-bold">Work_</h3>
           <p>
             Web developer at “Berliner Verkehrsbetriebe (BVG)”, active
@@ -56,7 +60,7 @@ export default function Home() {
             AWS, Scrum
           </p>
           <hr className="my-10" />
-          <h2 className="mb-2 text-xl font-bold">Projects</h2>
+          <h2 className="mb-2 text-3xl font-bold">Projects</h2>
           <p>
             <span className="font-bold">Developed</span> journaling application
             called “Yournal“ for personal using to avoid paid models, build with
@@ -82,7 +86,7 @@ export default function Home() {
             Kotlin with the new Jetpack-Compose Framework
           </p>
           <hr className="my-10" />
-          <h2 className="mb-2 text-xl font-bold">Else</h2>
+          <h2 className="mb-2 text-3xl font-bold">Else</h2>
           <h3 className="font-bold">Languages_</h3>
           <p>
             German (native), English (fluent), Danish (basics), Turkish (basics)
@@ -99,6 +103,7 @@ export default function Home() {
           </p>
         </section>
       </TestAnimation>
+      {/* </TestAnimation> */}
       {/* <CVSection/>
       <Skills/> */}
       {/* <BentoSection/> */}
