@@ -1,5 +1,7 @@
 import TestAnimation from "@/components/animations/test-animation";
 import { TypingEffect } from "@/components/animations/typing-effect";
+import Image from "next/image";
+import star from "@/public/svg/star.svg"
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
       {/* <HeroSection/> */}
       {/* <TestAnimation> */}
       <TestAnimation>
-        <section className="flex h-[calc(100vh-140px)] items-center justify-center">
+        <section className="flex flex-col h-[calc(100vh-140px)] items-center justify-center">
           <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
             {/* <p className="mb-2 font-montserrat text-2xl font-bold lg:text-5xl xl:mb-4 2xl:text-8xl">
               TOBIAS MEYHÖFER
@@ -21,8 +23,10 @@ export default function Home() {
             <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
             {/* <div className="absolute left-[-30%] top-[240%] h-40 w-40 rounded-full bg-black opacity-80 blur-3xl lg:h-60 lg:w-60 lg:opacity-40 2xl:h-60 2xl:w-60"></div> */}
           </div>
+          <Image className="absolute top-1/2 lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]" src={star} alt="star image" width={500} height={500}/>
         </section>
         <section className="mb-10">
+          <hr/>
           <h2 className="mb-2 text-3xl font-bold">Skills</h2>
           <h3 className="font-bold">Programming Languages_</h3>
           <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
