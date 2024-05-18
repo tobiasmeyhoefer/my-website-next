@@ -45,6 +45,7 @@ const ContactForm = () => {
     toast({
       title: response.msg,
     })
+    form.reset()
     setIsLoading(false)
   }
 

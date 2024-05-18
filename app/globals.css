@@ -14,6 +14,25 @@
   --overlay-color: 255, 255, 255;
 }
 
+body {
+  cursor:
+    url("/cursor/cursor-@1x.svg") 16 16,
+    auto;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
+    auto;
+}
+
+button:hover, a:hover {
+  cursor:
+    url("/cursor/cursor-hover.svg") 16 16,
+    pointer;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
+    pointer;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
