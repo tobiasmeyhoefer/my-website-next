@@ -13,7 +13,7 @@ export function BlurIn() {
       animate="visible"
       transition={{ duration: 1 }}
       variants={variants1}
-      className="text-center text-sm md:text-lg"
+      className="text-sm md:text-lg"
     >
       This page is currently under construction
     </motion.h1>

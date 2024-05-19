@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Logo from "@/public/svg/Logo.svg";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import ShinyButton from "@/components/ui/shiny-button";
 
-export default function Navigation() {
+export default function NavBar() {
   return (
     <nav className="flex h-[140px] justify-center">
       <div className="flex w-full max-w-[1920px] items-center justify-between px-10">

@@ -14,13 +14,9 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
-    "@react-email/components": "^0.0.17",
-    "aws4": "^1.12.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
-    "lucide-react": "^0.366.0",
-    "mobile-detect": "^1.4.5",
     "mongoose": "^8.2.2",
     "next": "^14.2.3",
     "react": "^18.2.0",
@@ -32,7 +28,6 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^20.11.25",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "autoprefixer": "^10.4.18",

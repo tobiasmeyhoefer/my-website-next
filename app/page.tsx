@@ -1,7 +1,9 @@
 import TestAnimation from "@/components/animations/test-animation";
 import { TypingEffect } from "@/components/animations/typing-effect";
 import Image from "next/image";
-import star from "@/public/svg/star.svg"
+import star from "@/public/svg/star.svg";
+import TestAnimation2 from "@/components/animations/test-animation2";
+import ScrollAnimation from "@/components/animations/test-animation2";
 
 export default function Home() {
   return (
@@ -9,24 +11,29 @@ export default function Home() {
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
       {/* <TestAnimation> */}
-      <TestAnimation>
-        <section className="flex flex-col h-[calc(100vh-140px)] items-center justify-center">
-          <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
-            {/* <p className="mb-2 font-montserrat text-2xl font-bold lg:text-5xl xl:mb-4 2xl:text-8xl">
-              TOBIAS MEYHÖFER
-            </p> */}
-            <TypingEffect />
-            <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
-              Junior Web Developer
-            </p>
-            <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
-            <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
-            {/* <div className="absolute left-[-30%] top-[240%] h-40 w-40 rounded-full bg-black opacity-80 blur-3xl lg:h-60 lg:w-60 lg:opacity-40 2xl:h-60 2xl:w-60"></div> */}
-          </div>
-          <Image className="absolute top-1/2 lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]" src={star} alt="star image" width={500} height={500}/>
-        </section>
-        <section className="mb-10">
-          <hr className="my-10"/>
+      <section className="flex h-[calc(100vh-140px)] flex-col items-center justify-center">
+        {/* <TestAnimation> */}
+        <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
+          <TypingEffect />
+          <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
+            Junior Web Developer
+          </p>
+          <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
+          <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
+          {/* <div className="absolute left-[-30%] top-[240%] h-40 w-40 rounded-full bg-black opacity-80 blur-3xl lg:h-60 lg:w-60 lg:opacity-40 2xl:h-60 2xl:w-60"></div> */}
+        </div>
+        {/* </TestAnimation> */}
+        <Image
+          className="absolute top-1/2 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px]"
+          src={star}
+          alt="star image"
+          width={500}
+          height={500}
+        />
+      </section>
+      <section className="mb-10">
+        <ScrollAnimation>
+          <hr className="my-10" />
           <h2 className="mb-2 text-3xl font-bold">Skills</h2>
           <h3 className="font-bold">Programming Languages_</h3>
           <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
@@ -40,6 +47,8 @@ export default function Home() {
             React, Next.js, Angular, Express, .NET, Auth.js, Zod, Node.js,
             TailwindCSS, Sass, Drizzle, Prisma
           </p>
+        </ScrollAnimation>
+        <ScrollAnimation>
           <hr className="my-10" />
           <h2 className="mb-2 text-3xl font-bold">Work & Experience</h2>
           <h3 className="font-bold">Work_</h3>
@@ -63,7 +72,9 @@ export default function Home() {
             structures, ISO-OSI layer-model Protocolls, UML Diagrams, GraphQL,
             AWS, Scrum
           </p>
-          <hr className="my-10" />
+        </ScrollAnimation>
+        <hr className="my-10" />
+        <ScrollAnimation>
           <h2 className="mb-2 text-3xl font-bold">Projects</h2>
           <p>
             <span className="font-bold">Developed</span> journaling application
@@ -89,6 +100,8 @@ export default function Home() {
             <span className="font-bold">Coded</span> a cocktail Application in
             Kotlin with the new Jetpack-Compose Framework
           </p>
+        </ScrollAnimation>
+        <ScrollAnimation>
           <hr className="my-10" />
           <h2 className="mb-2 text-3xl font-bold">Else</h2>
           <h3 className="font-bold">Languages_</h3>
@@ -105,8 +118,8 @@ export default function Home() {
             Semester abroad in Aarhus/Denmark to improve social-cultural
             knowledge
           </p>
-        </section>
-      </TestAnimation>
+        </ScrollAnimation>
+      </section>
       {/* </TestAnimation> */}
       {/* <CVSection/>
       <Skills/> */}

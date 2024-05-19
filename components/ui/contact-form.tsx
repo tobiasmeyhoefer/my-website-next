@@ -54,16 +54,16 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg p-6 shadow-2xl border border-neutral-300 max-w-[800px] w-full"
+          className="space-y-8 rounded-lg p-8 shadow-xl border border-neutral-300 max-w-[800px] w-full"
         >
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-md">Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input className="h-12" placeholder="John Doe" {...field} />
                 </FormControl>
                 <FormDescription>What is your name?</FormDescription>
                 <FormMessage />
@@ -75,7 +75,7 @@ const ContactForm = () => {
             name="reason"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Reason</FormLabel>
+                <FormLabel className="text-md">Reason</FormLabel>
                 <FormControl>
                   <Textarea
                     className="h-[140px]"
