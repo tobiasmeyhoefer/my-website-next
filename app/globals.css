@@ -23,6 +23,10 @@ body {
     auto;
 }
 
+::selection {
+  background: rgb(158, 169, 95);
+}
+
 button:hover, a:hover {
   cursor:
     url("/cursor/cursor-hover.svg") 16 16,

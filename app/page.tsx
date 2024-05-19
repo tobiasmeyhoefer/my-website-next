@@ -26,7 +26,7 @@ export default function Home() {
           <Image className="absolute top-1/2 lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]" src={star} alt="star image" width={500} height={500}/>
         </section>
         <section className="mb-10">
-          <hr/>
+          <hr className="my-10"/>
           <h2 className="mb-2 text-3xl font-bold">Skills</h2>
           <h3 className="font-bold">Programming Languages_</h3>
           <p>Javascript/Typescript, C#, Java, Swift, Kotlin</p>
