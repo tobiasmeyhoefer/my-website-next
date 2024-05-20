@@ -18,9 +18,10 @@ export const metadata: Metadata = {
     "A portfolio of the web, mobile and software developer Tobias Meyhöfer",
 };
 
-// export const viewport: Viewport = {
-//   themeColor: "#5C67C6",
-// };
+export const viewport: Viewport = {
+  themeColor: "#5C67C6",
+  maximumScale: 1
+};
 
 export default function RootLayout({
   children,

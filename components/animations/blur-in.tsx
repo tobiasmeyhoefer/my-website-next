@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 export function BlurIn() {
   const variants1 = {
@@ -8,14 +8,16 @@ export function BlurIn() {
     visible: { filter: "blur(0px)", opacity: 1 },
   };
   return (
-    <motion.h1
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 1 }}
-      variants={variants1}
-      className="text-sm md:text-lg"
-    >
-      This page is currently under construction
-    </motion.h1>
+    <LazyMotion features={domAnimation}>
+      <m.h1
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 1 }}
+        variants={variants1}
+        className="text-sm md:text-lg"
+      >
+        This page is currently under construction
+      </m.h1>
+    </LazyMotion>
   );
 }

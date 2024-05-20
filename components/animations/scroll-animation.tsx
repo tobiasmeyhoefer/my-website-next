@@ -2,7 +2,7 @@
 
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
-export default function TestAnimation({
+export default function ScrollAnimation({
   children,
 }: {
   children: React.ReactNode;
@@ -10,10 +10,9 @@ export default function TestAnimation({
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.75 }}
-        className=""
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ ease: "easeIn", duration: 0.75 }}
       >
         {children}
       </m.div>
