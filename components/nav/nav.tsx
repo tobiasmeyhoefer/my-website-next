@@ -6,13 +6,13 @@ import ShinyButton from "@/components/ui/shiny-button";
 export default function NavBar() {
   return (
     <nav className="flex h-[140px] justify-center">
-      <div className="flex w-full max-w-[1920px] items-center justify-between md:px-10 px-5">
-        <div className="flex items-center gap-2 md:gap-12">
+      <div className="flex w-full max-w-[1920px] items-center justify-between md:px-10 px-8">
+        <div className="flex items-center gap-6 md:gap-12">
           <Link
             className=" group w-8 h-10 flex items-center justify-center object-cover"
             href={"/"}
           >
-            <Image className="w-8 group-hover:rotate-180 transition-all" src={Logo} alt="Logo tm"></Image>
+            <Image className="md:w-8 w-6 group-hover:rotate-180 transition-all" src={Logo} alt="Logo tm"></Image>
           </Link>
 
           <Link

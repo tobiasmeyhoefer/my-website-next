@@ -63,7 +63,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel className="text-md">Name</FormLabel>
                 <FormControl>
-                  <Input className="h-12" placeholder="John Doe" {...field} />
+                  <Input className="h-12 focus-within:ring-red-100" placeholder="John Doe" {...field} />
                 </FormControl>
                 <FormDescription>What is your name?</FormDescription>
                 <FormMessage />
