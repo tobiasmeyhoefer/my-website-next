@@ -11,7 +11,7 @@ export default function Home() {
       {/* <FlyingInformations/> */}
       {/* <HeroSection/> */}
       {/* <TestAnimation> */}
-      <section className="flex h-[calc(100vh-140px)] flex-col items-center justify-center">
+      <section className="flex h-[calc(100svh-140px)] flex-col items-center justify-center">
         {/* <TestAnimation> */}
         <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
           <TypingEffect />
