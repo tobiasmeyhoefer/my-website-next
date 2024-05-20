@@ -13,13 +13,13 @@ const space_grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Tobias Meyhöfer",
+  title: "Tobias Meyhoefer",
   description:
-    "A portfolio of the web, mobile and software developer Tobias Meyhöfer",
+    "A portfolio of the web, mobile and software developer Tobias Meyhoefer",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#5C67C6",
+  themeColor: "#ffffff",
   maximumScale: 1
 };
 
@@ -43,7 +43,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex min-h-[calc(100vh-180px)] justify-center">
-          <div className="w-full max-w-[1800px] px-8">{children}</div>
+          <div className="w-full max-w-[1800px] md:px-8 px-6">{children}</div>
         </main>
         <footer className="flex h-20 w-full items-center justify-center text-neutral-400">
           <BlurIn/>

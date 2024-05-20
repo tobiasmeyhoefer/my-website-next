@@ -1,16 +1,7 @@
-import TestAnimation from "@/components/animations/test-animation";
 import { TypingEffect } from "@/components/animations/typing-effect";
 import Image from "next/image";
 import star from "@/public/svg/star.svg";
 import ScrollAnimation from "@/components/animations/scroll-animation";
-import Test from "@/components/ui/exotic-image";
-// import AnimatedImage from "@/components/ui/exotic-image";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-
-const AnimatedImage = dynamic(() => import("@/components/ui/exotic-image"), {
-  ssr: false, // This makes sure the component is only rendered on the client-side
-});
 
 export default function Home() {
   return (
@@ -24,7 +15,7 @@ export default function Home() {
           <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
           <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
         </div>
-        <div className="absolute translate-y-[150px] ">
+        <div className="absolute md:translate-y-[150px] translate-y-[100px]">
           <Image
             className="h-[300px] w-[300px] lg:h-[500px] lg:w-[500px]"
             src={star}
@@ -33,13 +24,6 @@ export default function Home() {
             height={500}
           />
         </div>
-        {/* <Image
-          className="top-1/2 h-[300px] w-[300px] lg:h-[500px] lg:w-[500px]"
-          src={star}
-          alt="star image"
-          width={500}
-          height={500}
-        /> */}
       </section>
       <section className="mb-10">
         <ScrollAnimation>
