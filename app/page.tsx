@@ -13,24 +13,17 @@ export default function Home() {
           <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
             Junior Web Developer
           </p>
-          <div className="absolute -bottom-[140%] -right-[10%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-60 lg:w-60 lg:opacity-60 xl:-right-[0%] 2xl:h-80 2xl:w-80"></div>
-          <div className="absolute -left-[14%] -top-[120%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:h-40 lg:w-40 lg:opacity-60 2xl:h-60 2xl:w-60"></div>
+          <div className="absolute h-20 w-20 top-[20%] left-[70%] rounded-full bg-white opacity-80 blur-2xl lg:left-[65%] lg:top-[30%] 2xl:top-[40%] 2xl:left-[73%] lg:size-60 2xl:size-80"></div>
+          <div className="absolute top-[-40%] left-[-20%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl lg:left-[-15%] lg:top-[-120%] 2xl:-top-[120%] 2xl:-left-[14%]] lg:size-40 2xl:size-60"></div>
         </div>
         <div className="absolute translate-y-[100px] md:translate-y-[150px]">
-          {/* <Image
-            className="h-[300px] w-[300px] lg:h-[500px] lg:w-[500px]"
-            src={star}
-            alt="star image"
-            width={500}
-            height={500}
-          /> */}
           <Drag>
             <Image
-              className="pointer-events-none h-[300px] w-[300px] select-none lg:h-[500px] lg:w-[500px]"
+              className="pointer-events-none h-[200px] w-[200px] select-none lg:h-[300px] lg:w-[300px]"
               src={star}
               alt="star image"
-              width={500}
-              height={500}
+              width={200}
+              height={200}
             />
           </Drag>
         </div>

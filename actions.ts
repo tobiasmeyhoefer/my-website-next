@@ -9,16 +9,18 @@ export type actionResponse = {
 }
 
 export async function sendResendMail(
-  senderMail: string,
+  senderName: string,
   reason: string,
+  contact: string
 ): Promise<actionResponse> {
   const { data, error } = await resend.emails.send({
-    from: "Acme <onboarding@resend.dev>",
-    to: ["angryobi02@gmail.com"],
-    subject: "Kontaktanfrage von " + senderMail,
-    text: reason,
+    from: "noreply@tobiasmeyhoefer.de",
+    to: ["tobias.meyhoefer02@gmail.com"],
+    subject: "Kontaktanfrage von " + senderName,
+    text: reason + "\n\n" + "Kontakt:" + contact,
   });
 
+  console.log(error)
   if (error) {
     return { msg: "Something went wrong ❌" };
   }

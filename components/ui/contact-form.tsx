@@ -19,6 +19,7 @@ import { Textarea } from "./textarea";
 const formSchema = z.object({
   name: z.string().min(2).max(50),
   reason: z.string().min(2).max(300),
+  contact: z.string().optional(),
 });
 
 import { actionResponse, sendResendMail } from "@/actions";
@@ -35,12 +36,13 @@ const ContactForm = () => {
     defaultValues: {
       name: "",
       reason: "",
+      contact: ""
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
-    const response: actionResponse = await sendResendMail(values.name, values.reason)
+    const response: actionResponse = await sendResendMail(values.name, values.reason, values.contact ?? "")
 
     toast({
       title: response.msg,
@@ -79,11 +81,25 @@ const ContactForm = () => {
                 <FormControl>
                   <Textarea
                     className="h-[140px]"
-                    placeholder="..."
+                    placeholder="Hey I wanna hire you!"
                     {...field}
                   />
                 </FormControl>
                 <FormDescription>What is the reason of contact</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="contact"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-md">Contact Information</FormLabel>
+                <FormControl>
+                  <Input className="h-12 focus-within:ring-red-100" placeholder="optional" {...field} />
+                </FormControl>
+                <FormDescription>How can i reach you? e.g. email or mobile</FormDescription>
                 <FormMessage />
               </FormItem>
             )}

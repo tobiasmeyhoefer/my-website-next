@@ -23,7 +23,7 @@ export function TypingEffect() {
   }, [i]);
 
   return (
-    <h1 className="mb-2 text-center font-montserrat text-2xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] lg:text-5xl xl:mb-4 2xl:text-8xl">
+    <h1 className="mb-2 text-center font-montserrat text-2xl font-bold tracking-[-0.02em] drop-shadow-sm lg:text-5xl xl:mb-4 2xl:text-8xl">
       {displayedText ? displayedText : ""}
     </h1>
   );
