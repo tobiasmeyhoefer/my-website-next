@@ -56,18 +56,18 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg p-8 shadow-xl border border-neutral-300 max-w-[800px] w-full"
+          className="space-y-8 rounded-lg md:p-8 p-6 shadow-xl border border-neutral-300 max-w-[800px] w-full"
         >
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">Name</FormLabel>
+                <FormLabel className="text-md max-md:text-sm">Name</FormLabel>
                 <FormControl>
-                  <Input className="h-12 focus-within:ring-red-100" placeholder="John Doe" {...field} />
+                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="John Doe" {...field} />
                 </FormControl>
-                <FormDescription>What is your name?</FormDescription>
+                <FormDescription>Who are you?</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -77,10 +77,10 @@ const ContactForm = () => {
             name="reason"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">Reason</FormLabel>
+                <FormLabel className="text-md max-md:text-sm">Reason</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="h-[140px]"
+                    className="md:h-[140px] h-[100px]"
                     placeholder="Hey I wanna hire you!"
                     {...field}
                   />
@@ -95,11 +95,11 @@ const ContactForm = () => {
             name="contact"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md">Contact Information</FormLabel>
+                <FormLabel className="text-md max-md:text-sm">Contact Information</FormLabel>
                 <FormControl>
-                  <Input className="h-12 focus-within:ring-red-100" placeholder="optional" {...field} />
+                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="optional" {...field} />
                 </FormControl>
-                <FormDescription>How can i reach you? e.g. email or mobile</FormDescription>
+                <FormDescription>How can I reach you? e.g. email or mobile</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
