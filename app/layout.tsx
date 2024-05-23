@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { BlurIn } from "@/components/animations/blur-in";
 import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
+import NumberTicker from "@/components/magicui/number-ticker";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -52,7 +53,11 @@ export default function RootLayout({
         <footer className="flex h-20 w-full items-center justify-center text-neutral-400">
           <BlurIn />
         </footer>
+
         <Toaster />
+        <div className="counterWrapper absolute bg-red-200 inset-0">
+          <NumberTicker value={100}/>
+        </div>
       </body>
     </html>
   );
