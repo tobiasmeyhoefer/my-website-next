@@ -1,5 +1,3 @@
-import { Example } from "@/components/animations/image-animation";
-
 const Work = () => {
   return (
     <>

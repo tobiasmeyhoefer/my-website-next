@@ -54,10 +54,10 @@ export default function RootLayout({
           <BlurIn />
         </footer>
 
-        <Toaster />
-        <div className="counterWrapper absolute bg-red-200 inset-0">
-          <NumberTicker value={100}/>
+        <div className="counterWrapper absolute inset-0 flex justify-center items-center">
+          <NumberTicker value={100} className="text-6xl font-bold"/>
         </div>
+        <Toaster />
       </body>
     </html>
   );

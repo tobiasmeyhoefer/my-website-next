@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,7 +27,8 @@ body {
   background: rgb(158, 169, 95);
 }
 
-button:hover, a:hover {
+button:hover,
+a:hover {
   cursor:
     url("/cursor/cursor-hover.svg") 16 16,
     pointer;
@@ -35,7 +36,6 @@ button:hover, a:hover {
     -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
     pointer;
 }
-
 
 @layer base {
   :root {
@@ -153,22 +153,29 @@ button:hover, a:hover {
   -webkit-mask-composite: xor;
 }
 
-
 /* OWN CSS */
 
 .counterWrapper {
- animation: startUpAnimationScreen 2s linear forwards;
- display: block;
+  animation: startUpAnimationScreen 4s linear forwards;
+  background: white;
 }
 
 @keyframes startUpAnimationScreen {
   0% {
-    display: block;
-    background-color: green;
+    opacity: 1;
+    background: white;
+  }
+  90% {
+    opacity: 1;
+    background: white;
+  }
 
+  99% {
+    z-index: 0;
   }
   100% {
     display: none;
-    background-color: aqua;
+    opacity: 0;
+    z-index: -20;
   }
 }
