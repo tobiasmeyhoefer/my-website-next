@@ -17,8 +17,8 @@ import { useForm } from "react-hook-form";
 import { Textarea } from "./textarea";
 
 const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  reason: z.string().min(2).max(300),
+  name: z.string().min(2, {message: "at least 2 letters"}).max(50, {message: "not more then 50 letters"}),
+  reason: z.string().min(2, {message: "at least 2 letters"}).max(300, {message: "not more then 300 letters"}),
   contact: z.string().optional(),
 });
 

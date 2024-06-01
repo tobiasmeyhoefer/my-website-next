@@ -199,3 +199,28 @@ svg.trail path {
 
   opacity: 10%;
 }
+
+/* ANIMATION GALLERY  LOTTIEFILES */
+
+.lottieanimationplane {
+  animation: lottieAnimationPlane 5s linear forwards;
+  opacity: 1;
+}
+
+@keyframes lottieAnimationPlane {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

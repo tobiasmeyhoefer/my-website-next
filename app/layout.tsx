@@ -39,7 +39,7 @@ export default function RootLayout({
           space_grotesk.variable,
         )}
       >
-        <header className="flex justify-center">
+        <header className="flex justify-center w-screen">
           <div className="w-full max-w-[1800px]">
             <NavBar />
           </div>
