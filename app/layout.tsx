@@ -51,12 +51,12 @@ export default function RootLayout({
           </span>
         </main>
 
-        {/* <div className="counterWrapper absolute inset-0 flex items-center justify-center">
+        <div className="counterWrapper absolute inset-0 flex items-center justify-center">
           <NumberTicker
             value={100}
             className="text-2xl font-bold md:text-4xl"
           />
-        </div> */}
+        </div>
         <Toaster />
         <svg className="trail pointer-events-none" viewBox="0 0 1 1">
           <path d="" />
