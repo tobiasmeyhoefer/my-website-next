@@ -3,6 +3,8 @@ import Image from "next/image";
 import star from "@/public/svg/star.svg";
 import ScrollAnimation from "@/components/animations/scroll-animation";
 import Drag from "@/components/drag/drag-component";
+import ScrollDown from "@/components/ui/scroll-down";
+import ScrollUp from "@/components/ui/scroll-up";
 
 export default function Home() {
   return (
@@ -27,8 +29,9 @@ export default function Home() {
             />
           </Drag>
         </div>
+        <ScrollDown />
       </section>
-      <section className="mb-20">
+      <section id="resume-area" className="mb-20">
         <h2 className="text-3xl font-bold">Resume Area</h2>
         <ScrollAnimation>
           <hr className="my-10" />
@@ -120,6 +123,7 @@ export default function Home() {
             Semester abroad in Aarhus/Denmark to improve social-cultural
             knowledge
           </p>
+          <ScrollUp />
         </ScrollAnimation>
       </section>
     </>

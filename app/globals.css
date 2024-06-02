@@ -15,6 +15,10 @@
   --color-trail: #323232;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor:
     url("/cursor/cursor-@1x.svg") 16 16,
@@ -200,6 +204,7 @@ body {
 
   100% {
     overflow: auto;
+    overflow-x: hidden;
   }
 }
 

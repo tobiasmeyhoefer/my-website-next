@@ -5,7 +5,7 @@ import ShinyButton from "@/components/ui/shiny-button";
 
 export default function NavBar() {
   return (
-    <nav className="flex h-[140px] justify-center z-10">
+    <nav id="nav" className="flex h-[140px] justify-center z-10">
       <div className="flex w-full max-w-[1920px] items-center justify-between md:px-10 px-8">
         <div className="flex items-center gap-4 md:gap-10">
           <Link
