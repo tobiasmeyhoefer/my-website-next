@@ -4,7 +4,7 @@ import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 const LottieAnimationGallery = () => {
   return (
-    <div className="mt-40 lottieanimationplane">
+    <div className="mt-20 lottieanimationplane">
       <Player
         autoplay
         // loop

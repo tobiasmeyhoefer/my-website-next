@@ -22,6 +22,7 @@ const config = {
       fontFamily: {
         montserrat: ["var(--montserrat)", ...fontFamily.sans],
         space_grotesk: ["var(--space_grotesk)", ...fontFamily.sans],
+        vt323: ["var(--vt323)", ...fontFamily.sans]
       },
       colors: {
         border: "hsl(var(--border))",

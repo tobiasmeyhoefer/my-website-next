@@ -52,7 +52,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="flex justify-center ">
+    <section className="flex justify-center mb-20">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

@@ -28,7 +28,7 @@ export default function Home() {
           </Drag>
         </div>
       </section>
-      <section className="mb-10">
+      <section className="mb-20">
         <h2 className="text-3xl font-bold">Resume Area</h2>
         <ScrollAnimation>
           <hr className="my-10" />

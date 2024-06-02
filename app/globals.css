@@ -161,6 +161,14 @@ a:hover {
   background: white;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  animation: no-scroll-animation 4s linear forwards;
+}
+
 @keyframes startUpAnimationScreen {
   0% {
     opacity: 1;
@@ -178,6 +186,20 @@ a:hover {
     display: none;
     opacity: 0;
     z-index: -20;
+  }
+}
+
+@keyframes no-scroll-animation {
+  0% {
+    overflow: hidden;
+  }
+
+  99% {
+    overflow: hidden;
+  }
+
+  100% {
+    overflow: auto;
   }
 }
 
