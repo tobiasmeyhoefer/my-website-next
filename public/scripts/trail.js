@@ -8,8 +8,6 @@ let mouse = {
   y: 0,
 }
 
-console.log("testolin")
-
 const move = (event) => {
   const x = event.clientX
   const y = event.clientY

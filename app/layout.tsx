@@ -7,6 +7,7 @@ import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Script from "next/script";
+import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -14,7 +15,7 @@ const space_grotesk = Space_Grotesk({
   variable: "--space_grotesk",
 });
 const vt323 = VT323({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["400"],
   variable: "--vt323",
 });
@@ -42,7 +43,7 @@ export default function RootLayout({
           "h-0 min-h-screen overflow-x-hidden font-space_grotesk text-neutral-800 antialiased",
           montserrat.variable,
           space_grotesk.variable,
-          vt323.variable
+          vt323.variable,
         )}
       >
         <header className="flex w-screen justify-center">
@@ -60,7 +61,7 @@ export default function RootLayout({
         <div className="counterWrapper absolute inset-0 flex items-center justify-center">
           <NumberTicker
             value={100}
-            className="text-2xl font-vt323 md:text-4xl"
+            className="font-vt323 text-2xl md:text-4xl"
           />
         </div>
         <Toaster />
