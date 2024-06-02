@@ -4,7 +4,6 @@ import star from "@/public/svg/star.svg";
 import ScrollAnimation from "@/components/animations/scroll-animation";
 import Drag from "@/components/drag/drag-component";
 import ScrollDown from "@/components/ui/scroll-down";
-import ScrollUp from "@/components/ui/scroll-up";
 
 export default function Home() {
   return (
@@ -123,7 +122,6 @@ export default function Home() {
             Semester abroad in Aarhus/Denmark to improve social-cultural
             knowledge
           </p>
-          <ScrollUp />
         </ScrollAnimation>
       </section>
     </>
