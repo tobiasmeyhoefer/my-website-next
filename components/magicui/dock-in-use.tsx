@@ -11,7 +11,7 @@ export function DockInUse() {
         <DockIcon link="https://github.com/tobiasmeyhoefer">
           <Icons.gitHub className="h-6 w-6" />
         </DockIcon>
-        <DockIcon link="https://www.youtube.com/channel/UCXhK6xesHzOyXuABfg9racw">
+        <DockIcon link="https://www.youtube.com/@tobitacklestech">
           <Icons.youtube className="h-6 w-6" />
         </DockIcon>
         <DockIcon link="https://www.linkedin.com/in/tobias-meyhöfer-5aab29244/">
