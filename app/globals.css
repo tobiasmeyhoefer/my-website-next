@@ -19,28 +19,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  cursor:
-    url("/cursor/cursor-@1x.svg") 16 16,
-    auto;
-  cursor:
-    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
-    auto;
-} */
-
 ::selection {
   background: rgb(158, 169, 95);
 }
-
-/* button:hover,
-a:hover {
-  cursor:
-    url("/cursor/cursor-hover.svg") 16 16,
-    pointer;
-  cursor:
-    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
-    pointer;
-} */
 
 @layer base {
   :root {
@@ -103,15 +84,6 @@ a:hover {
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 

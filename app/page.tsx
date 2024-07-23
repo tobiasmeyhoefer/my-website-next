@@ -1,11 +1,15 @@
+"use client"
+
 import { TypingEffect } from "@/components/animations/typing-effect";
 import Image from "next/image";
 import star from "@/public/svg/star.svg";
 import ScrollAnimation from "@/components/animations/scroll-animation";
 import Drag from "@/components/drag/drag-component";
 import ScrollDown from "@/components/ui/scroll-down";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+
   return (
     <>
       <section className="flex h-[calc(100vh-140px)] flex-col items-center justify-center">
