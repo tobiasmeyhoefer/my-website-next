@@ -1,7 +1,8 @@
+// @ts-check
+ 
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  /* config options here */
+}
  
-const withBundleAnalyzer = require('@next/bundle-analyzer')()
- 
-module.exports =
-  process.env.ANALYZE === 'true' ? withBundleAnalyzer(nextConfig) : nextConfig
+module.exports = nextConfig
