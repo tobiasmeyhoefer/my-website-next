@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className="">
       <body
         className={cn(
-          "h-0 min-h-screen bg-background overflow-x-hidden font-space_grotesk text-neutral-800 antialiased",
+          "h-0 min-h-screen bg-background text-foreground overflow-x-hidden font-space_grotesk antialiased",
           montserrat.variable,
           space_grotesk.variable,
           vt323.variable,
