@@ -23,7 +23,7 @@ const ScrollDown = () => {
   }, []);
 
   return (
-    <a id="scrollDownButton" href="#resume-area">
+    <a id="scrollDownButton" href="#resume-area" className="transition-all">
       <div className="absolute bottom-6 right-6 rounded-full bg-neutral-800 p-4 transition-all hover:bg-neutral-700">
         <FaAngleDown className="fill-white" />
       </div>
