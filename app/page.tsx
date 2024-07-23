@@ -30,6 +30,14 @@ export default function Home() {
         </div>
         <ScrollDown />
       </section>
+      <section className="mb-10">
+        <h2 className="font-bold text-2xl mb-4">currently cooking 👨🏼‍🍳</h2>
+        <ul className="list-disc pl-5">
+          <li>Appointment Booking Tool</li>
+          <li>University Project</li>
+          <li>Bachelor Thesis</li>
+        </ul>
+      </section>
       <section id="resume-area" className="mb-20">
         <h2 className="text-3xl font-bold">Resume Area</h2>
         <ScrollAnimation>
