@@ -34,7 +34,7 @@ export default function Home() {
         <ScrollDown />
       </section>
       <section className="mb-10">
-        <h2 className="font-bold text-3xl mb-4">currently cooking 👨🏼‍🍳</h2>
+        <h2 id="currently_cooking" className="font-bold text-3xl mb-4 pt-10">currently cooking 👨🏼‍🍳</h2>
         <ul className="list-disc pl-5">
           <li>Appointment Booking Tool</li>
           <li>University Project</li>

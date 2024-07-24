@@ -3,7 +3,7 @@ import ContactForm from "@/components/ui/contact-form";
 const Contact = () => {
   return (
     <>
-      <h1 className="mb-12 text-center text-5xl font-bold">Contact</h1>
+      <h1 className="md:mb-12 text-center pl-6 md:text-4xl text-3xl font-bold">Contact</h1>
       <ContactForm />
     </>
   );

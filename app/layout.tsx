@@ -58,7 +58,7 @@ export default function RootLayout({
               <NavBar />
             </div>
           </header>
-          <main className="flex min-h-[calc(100vh-220px)] justify-center pb-20">
+          <main className="flex min-h-[calc(100vh-220px)] justify-center">
             <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
             <span className="fixed bottom-10 left-1/2 m-0 h-fit w-fit -translate-x-1/2 p-0 max-xl:hidden">
               <DockInUse />
@@ -68,12 +68,12 @@ export default function RootLayout({
             <FooterContent />
           </footer>
 
-          <div className="counterWrapper absolute inset-0 flex items-center justify-center">
+          {/* <div className="counterWrapper absolute inset-0 flex items-center justify-center">
             <NumberTicker
               value={100}
               className="font-vt323 text-2xl md:text-4xl"
             />
-          </div>
+          </div> */}
           <Toaster />
           <svg className="trail pointer-events-none" viewBox="0 0 1 1">
             <path d="" />
