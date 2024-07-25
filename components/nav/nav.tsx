@@ -20,7 +20,7 @@ export default function NavBar() {
             className="transition-all rounded-full mr-8"
             href={"/"}
           >
-            <Image className={cn("aspect-square object-cover rounded-full hover:brightness-125 transition-all", path === "/" ? "ring-1 ring-foreground" : "ring-0")}  src={Me} width={50} height={50} alt="image of the author"/>
+            <Image className={cn("aspect-square md:w-12 w-8 object-cover rounded-full hover:brightness-125 transition-all", path === "/" ? "ring-1 ring-foreground" : "ring-0")}  src={Me} width={50} height={50} alt="image of the author"/>
             {/* <Image className="md:w-8 w-6 group-hover:rotate-180 transition-all" src={Logo} alt="Logo tm"></Image> */}
           </Link>
           {/* <Link

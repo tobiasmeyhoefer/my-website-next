@@ -72,21 +72,24 @@ const SortedTechPage = () => {
     },
     {
       name: "Zustand",
-      description: "small, fast and scalable bearbones state-management solution",
+      description:
+        "small, fast and scalable bearbones state-management solution",
       category: [Category.StateManagement],
       href: "https://zustand-demo.pmnd.rs/",
       imageComponent: ZustandIcon,
     },
     {
       name: "Typescript",
-      description: "strongly typed programming language that builds on JavaScript",
+      description:
+        "strongly typed programming language that builds on JavaScript",
       category: [Category.ProgrammingLanguage],
       href: "https://www.typescriptlang.org/",
       imageComponent: TypescriptIcon,
     },
     {
       name: "Node.js",
-      description: "free, open-source, cross-platform JavaScript runtime environment",
+      description:
+        "free, open-source, cross-platform JavaScript runtime environment",
       category: [Category.Utility],
       href: "https://nodejs.org/en",
       imageComponent: NodeIcon,
@@ -114,30 +117,70 @@ const SortedTechPage = () => {
     },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(
+    null,
+  );
 
   return (
     <section className="">
-      <div className="flex gap-4 mb-6 flex-wrap">
-      <Button variant={"secondary"} onClick={() => setSelectedCategory(null)}>Show All</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.WebFramework)}>Web Framework</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.Utility)}>Utility</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.Design)}>Design</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.Database)}>Database</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.ComponentLibrary)}>Component Library</Button>
-        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.ComponentLibrary)}>Programming Language</Button>
+      <div className="mb-6 flex flex-wrap gap-4">
+        <Button variant={"secondary"} onClick={() => setSelectedCategory(null)}>
+          Show All
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.WebFramework)}
+        >
+          Web Framework
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.Utility)}
+        >
+          Utility
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.Design)}
+        >
+          Design
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.Database)}
+        >
+          Database
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.ComponentLibrary)}
+        >
+          Component Library
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => setSelectedCategory(Category.ProgrammingLanguage)}
+        >
+          Programming Language
+        </Button>
       </div>
       <div className="flex flex-wrap gap-4">
-        {techList.filter((tech) => selectedCategory === null || tech.category.includes(selectedCategory)).map((tech) => (
-          <TechCard
-            key={tech.name}
-            name={tech.name}
-            description={tech.description}
-            href={tech.href}
-            ImageComponent={tech.imageComponent}
-            category={tech.category}
-          />
-        ))}
+        {techList
+          .filter(
+            (tech) =>
+              selectedCategory === null ||
+              tech.category.includes(selectedCategory),
+          )
+          .map((tech) => (
+            <TechCard
+              key={tech.name}
+              name={tech.name}
+              description={tech.description}
+              href={tech.href}
+              ImageComponent={tech.imageComponent}
+              category={tech.category}
+            />
+          ))}
       </div>
     </section>
   );

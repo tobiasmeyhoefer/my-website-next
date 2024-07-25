@@ -60,7 +60,7 @@ export default function RootLayout({
           </header>
           <main className="flex min-h-[calc(100vh-220px)] justify-center">
             <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
-            <span className="fixed bottom-10 left-1/2 m-0 h-fit w-fit -translate-x-1/2 p-0 max-xl:hidden">
+            <span className="fixed bottom-10 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
               <DockInUse />
             </span>
           </main>
@@ -75,11 +75,11 @@ export default function RootLayout({
             />
           </div> */}
           <Toaster />
-          {isMobile && (
+          {isMobile ? (
             <svg className="trail pointer-events-none" viewBox="0 0 1 1">
               <path d="" />
             </svg>
-          )}
+          ) : null}
         </ThemeProvider>
       </body>
       <Script src="scripts/trail.js"></Script>
