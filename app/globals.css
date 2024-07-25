@@ -30,8 +30,9 @@ html {
 
     --color-trail: #323232;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: #ffffff;
+    --card-foreground: #202020;
+    --card-hover: #f4f4f4;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
@@ -64,8 +65,9 @@ html {
 
     --color-trail: #f4f4f4;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: #101010;
+    --card-foreground: #ffffff;
+    --card-hover: #202020;
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
@@ -136,20 +138,20 @@ html {
 
 /* OWN CSS */
 
-.counterWrapper {
+/* .counterWrapper {
   animation: startUpAnimationScreen 4s linear forwards;
   background: white;
-}
+} */
 
 .no-scroll {
   overflow: hidden;
 }
-
+/* 
 body {
   animation: no-scroll-animation 4s linear forwards;
-}
+} */
 
-@keyframes startUpAnimationScreen {
+/* @keyframes startUpAnimationScreen {
   0% {
     opacity: 1;
     background: white;
@@ -167,9 +169,9 @@ body {
     opacity: 0;
     z-index: -20;
   }
-}
+} */
 
-@keyframes no-scroll-animation {
+/* @keyframes no-scroll-animation {
   0% {
     overflow: hidden;
   }
@@ -182,7 +184,7 @@ body {
     overflow: auto;
     overflow-x: hidden;
   }
-}
+} */
 
 svg.trail {
   position: fixed;

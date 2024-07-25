@@ -65,7 +65,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel className="text-md max-md:text-sm">Name</FormLabel>
                 <FormControl>
-                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="John Doe" {...field} />
+                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="Your nmae" {...field} />
                 </FormControl>
                 <FormDescription>Who are you?</FormDescription>
                 <FormMessage />

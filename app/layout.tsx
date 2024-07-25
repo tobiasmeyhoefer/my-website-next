@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
-import NumberTicker from "@/components/magicui/number-ticker";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import FooterContent from "@/components/FooterContent";
+import { isMobileDevice } from "@/lib/mobileDetection";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
   maximumScale: 1,
 };
 
@@ -37,11 +36,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const isMobile = isMobileDevice();
   return (
     <html lang="en" className="">
       <body
         className={cn(
-          "h-0 min-h-screen bg-background text-foreground overflow-x-hidden font-space_grotesk antialiased",
+          "h-0 min-h-screen overflow-x-hidden bg-background font-space_grotesk text-foreground antialiased",
           montserrat.variable,
           space_grotesk.variable,
           vt323.variable,
@@ -75,9 +75,11 @@ export default function RootLayout({
             />
           </div> */}
           <Toaster />
-          <svg className="trail pointer-events-none" viewBox="0 0 1 1">
-            <path d="" />
-          </svg>
+          {isMobile && (
+            <svg className="trail pointer-events-none" viewBox="0 0 1 1">
+              <path d="" />
+            </svg>
+          )}
         </ThemeProvider>
       </body>
       <Script src="scripts/trail.js"></Script>

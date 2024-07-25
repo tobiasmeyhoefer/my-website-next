@@ -43,7 +43,7 @@ export default function Home() {
         <hr className="my-10 dark:border-neutral-700"/>
       </section>
       <section id="resume-area" className="mb-20">
-        <h2 className="text-3xl font-bold mb-10">Resume Area</h2>
+        <h2 className="text-3xl font-bold mb-10">Resume Area 📝</h2>
         <ScrollAnimation>
           {/* <hr className="my-10 dark:border-neutral-700" /> */}
           <h2 className="mb-4 text-2xl font-bold">Skills</h2>

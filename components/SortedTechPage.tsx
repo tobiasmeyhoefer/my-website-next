@@ -8,6 +8,12 @@ import TailwindIcon from "./icons/TailwindIcon";
 import ZodIcon from "./icons/ZodIcon";
 import { TechCard } from "./TechCard";
 import { Button } from "./ui/button";
+import ZustandIcon from "./icons/ZustandIcon";
+import TypescriptIcon from "./icons/TypescriptIcon";
+import NodeIcon from "./icons/NodeIcon";
+import PostGreSQLIcon from "./icons/PostGresSQLIcon";
+import SupabaseIcon from "./icons/SupabaseIcon";
+import NeonIcon from "./icons/NeonIcon";
 
 export enum Category {
   WebFramework = "Web Framework",
@@ -16,6 +22,7 @@ export enum Category {
   Design = "Design",
   Database = "Database",
   ComponentLibrary = "Component Library",
+  ProgrammingLanguage = "Programming Language",
 }
 
 const SortedTechPage = () => {
@@ -63,6 +70,48 @@ const SortedTechPage = () => {
       href: "https://zod.dev/",
       imageComponent: ZodIcon,
     },
+    {
+      name: "Zustand",
+      description: "small, fast and scalable bearbones state-management solution",
+      category: [Category.StateManagement],
+      href: "https://zustand-demo.pmnd.rs/",
+      imageComponent: ZustandIcon,
+    },
+    {
+      name: "Typescript",
+      description: "strongly typed programming language that builds on JavaScript",
+      category: [Category.ProgrammingLanguage],
+      href: "https://www.typescriptlang.org/",
+      imageComponent: TypescriptIcon,
+    },
+    {
+      name: "Node.js",
+      description: "free, open-source, cross-platform JavaScript runtime environment",
+      category: [Category.Utility],
+      href: "https://nodejs.org/en",
+      imageComponent: NodeIcon,
+    },
+    {
+      name: "PostgreSQL",
+      description: "powerful, open source object-relational database system",
+      category: [Category.Database],
+      href: "https://www.postgresql.org/",
+      imageComponent: PostGreSQLIcon,
+    },
+    {
+      name: "Supabase",
+      description: "TypeScript-first schema declaration and validation library",
+      category: [Category.Database],
+      href: "https://supabase.com/",
+      imageComponent: SupabaseIcon,
+    },
+    {
+      name: "NeonDb",
+      description: "serverless postgress database",
+      category: [Category.Database],
+      href: "https://neon.tech/",
+      imageComponent: NeonIcon,
+    },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
@@ -76,6 +125,7 @@ const SortedTechPage = () => {
         <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.Design)}>Design</Button>
         <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.Database)}>Database</Button>
         <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.ComponentLibrary)}>Component Library</Button>
+        <Button variant={"secondary"} onClick={() => setSelectedCategory(Category.ComponentLibrary)}>Programming Language</Button>
       </div>
       <div className="flex flex-wrap gap-4">
         {techList.filter((tech) => selectedCategory === null || tech.category.includes(selectedCategory)).map((tech) => (
