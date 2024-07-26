@@ -1,4 +1,9 @@
 import SortedTechPage from "@/components/SortedTechPage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tech"
+};
 
 const TechPage = () => {
   return (
