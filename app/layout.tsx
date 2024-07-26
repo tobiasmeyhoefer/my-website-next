@@ -8,7 +8,6 @@ import { DockInUse } from "@/components/magicui/dock-in-use";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import FooterContent from "@/components/FooterContent";
-import { isMobileDevice } from "@/lib/mobileDetection";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -27,9 +26,6 @@ export const metadata: Metadata = {
     template: "%s | Tobias Meyhöfer",
   },
   description: "Hey my name is Tobi, I'm a webdeveloper from Germany",
-  twitter: {
-    card: "summary_large_image"
-  }
 };
 
 export const viewport: Viewport = {
@@ -41,7 +37,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isMobile = isMobileDevice();
   return (
     <html lang="en" className="">
       <body
@@ -80,11 +75,9 @@ export default function RootLayout({
             />
           </div> */}
           <Toaster />
-          {isMobile ? (
-            <svg className="trail pointer-events-none" viewBox="0 0 1 1">
-              <path d="" />
-            </svg>
-          ) : null}
+          <svg className="trail pointer-events-none max-md:hidden" viewBox="0 0 1 1">
+            <path d="" />
+          </svg>
         </ThemeProvider>
       </body>
       <Script src="scripts/trail.js"></Script>
