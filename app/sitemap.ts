@@ -3,19 +3,19 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${process.env.NEXT_PUBIC_BASE_URL}/`,
+      url: "https://tobiasmeyhoefer.de/",
     //   lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBIC_BASE_URL}/tech`,
+      url: "https://tobiasmeyhoefer.de/tech",
     //   lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBIC_BASE_URL}/contact`,
+      url: "https://tobiasmeyhoefer.de/contact",
     //   lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,

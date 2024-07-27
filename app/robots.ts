@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `${process.env.NEXT_PUBIC_BASE_URL}/sitemap.xml`,
+    sitemap: "https://tobiasmeyhoefer.de/sitemap.xml",
   }
 }
