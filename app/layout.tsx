@@ -21,10 +21,7 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Tobias Meyhöfer",
-    template: "%s | Tobias Meyhöfer",
-  },
+  title: "Tobias Meyhöfer - Portfolio",
   description: "Hey my name is Tobi, I'm a webdeveloper from Germany",
 };
 
@@ -75,7 +72,10 @@ export default function RootLayout({
             />
           </div> */}
           <Toaster />
-          <svg className="trail pointer-events-none max-md:hidden" viewBox="0 0 1 1">
+          <svg
+            className="trail pointer-events-none max-md:hidden"
+            viewBox="0 0 1 1"
+          >
             <path d="" />
           </svg>
         </ThemeProvider>
