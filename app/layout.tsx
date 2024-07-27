@@ -21,8 +21,8 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "Tobias Meyhöfer - Portfolio",
-  description: "Hey my name is Tobi, I'm a webdeveloper from Germany",
+  title: "Tobias Meyhöfer - Webdeveloper Portfolio",
+  description: "Portfolio of Tobias Meyhöfer, a webdeveloper from Germany, content creator, student and track&field athlete",
 };
 
 export const viewport: Viewport = {
