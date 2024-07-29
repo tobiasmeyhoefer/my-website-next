@@ -56,7 +56,7 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg md:p-8 p-6 border border-none shadow-none max-w-[800px] w-full"
+          className="space-y-8 rounded-lg p-2 border border-none shadow-none max-w-[800px] w-full"
         >
           <FormField
             control={form.control}

@@ -32,8 +32,8 @@ export function TechCard({
     >
       <Card className="flex h-full flex-col justify-between rounded-lg bg-card text-card-foreground hover:bg-card-hover dark:border-neutral-700">
         <CardHeader className="rounded-lg p-0">
-          <div className="flex justify-center">
-            <ImageComponent className="flex h-[160px] w-[160px] justify-end p-6 dark:bg-white/10" />
+          <div className="flex justify-center dark:bg-white/30">
+            <ImageComponent className="flex h-[160px] w-[160px] justify-end p-6" />
           </div>
           <CardTitle className="px-4 pt-4 text-center">{name}</CardTitle>
           <CardDescription className="px-4 text-center">{description}</CardDescription>

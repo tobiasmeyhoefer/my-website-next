@@ -36,8 +36,7 @@ export default function Home() {
       <section className="mb-10">
         <h2 id="currently_cooking" className="font-bold text-3xl mb-4 pt-10">currently cooking 👨🏼‍🍳</h2>
         <ul className="list-disc pl-5">
-          <li>Appointment Booking Tool</li>
-          <li>University Project</li>
+          <li>Easy Scrum Like Tool for small companies</li>
           <li>Bachelor Thesis</li>
         </ul>
         <hr className="my-10 dark:border-neutral-700"/>
