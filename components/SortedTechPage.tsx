@@ -32,7 +32,7 @@ import ThreeIcon from "./icons/ThreeIcon";
 import FigmaIcon from "./icons/FigmaIcon";
 import NotionIcon from "./icons/NotionIcon";
 import DrizzleIcon from "./icons/DrizzleIcon";
-import NoImageIcon from "./icons/TwilioIcon copy";
+import ReactEmailIcon from "./icons/ReactEmailIcon";
 
 export enum Category {
   Framework = "Framework",
@@ -243,7 +243,7 @@ const SortedTechPage = () => {
       description: "next generation of writing emails",
       category: [Category.Utility],
       href: "https://react.email/",
-      imageComponent: NoImageIcon,
+      imageComponent: ReactEmailIcon,
     },
     {
       name: "Figma",
