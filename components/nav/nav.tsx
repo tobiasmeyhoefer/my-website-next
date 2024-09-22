@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 export default function NavBar() {
 
   const path = usePathname()
-  console.log(path)
 
   return (
     <nav id="nav" className="flex h-[140px] justify-center z-10">

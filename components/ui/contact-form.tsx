@@ -104,7 +104,7 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          {isLoading ? <Button disabled type="submit">Submit</Button> : <Button type="submit">Submit</Button>}
+          {isLoading ? <Button disabled type="submit">Send</Button> : <Button type="submit">Submit</Button>}
         </form>
       </Form>
     </section>
