@@ -64,13 +64,6 @@ export default function RootLayout({
           <footer>
             <FooterContent />
           </footer>
-
-          {/* <div className="counterWrapper absolute inset-0 flex items-center justify-center">
-            <NumberTicker
-              value={100}
-              className="font-vt323 text-2xl md:text-4xl"
-            />
-          </div> */}
           <Toaster />
           <svg
             className="trail pointer-events-none max-md:hidden"
