@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
-import Script from "next/script";
-import { ThemeProvider } from "@/components/theme-provider";
 import FooterContent from "@/components/FooterContent";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
@@ -22,7 +20,8 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: "Tobias Meyhöfer - Webdeveloper Portfolio",
-  description: "Portfolio of Tobias Meyhöfer, a webdeveloper from Germany, content creator, student and track&field athlete",
+  description:
+    "Portfolio of Tobias Meyhöfer, a webdeveloper from Germany, content creator, student and track&field athlete",
 };
 
 export const viewport: Viewport = {
@@ -44,34 +43,34 @@ export default function RootLayout({
           vt323.variable,
         )}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+        > */}
+        <header className="flex w-screen justify-center">
+          <div className="w-full max-w-[1800px]">
+            <NavBar />
+          </div>
+        </header>
+        <main className="flex min-h-[calc(100vh-220px)] justify-center">
+          <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
+          <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
+            <DockInUse />
+          </span>
+        </main>
+        <footer>
+          <FooterContent />
+        </footer>
+        <Toaster />
+        {/* <svg
+          className="trail pointer-events-none max-md:hidden"
+          viewBox="0 0 1 1"
         >
-          <header className="flex w-screen justify-center">
-            <div className="w-full max-w-[1800px]">
-              <NavBar />
-            </div>
-          </header>
-          <main className="flex min-h-[calc(100vh-220px)] justify-center">
-            <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
-            <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
-              <DockInUse />
-            </span>
-          </main>
-          <footer>
-            <FooterContent />
-          </footer>
-          <Toaster />
-          <svg
-            className="trail pointer-events-none max-md:hidden"
-            viewBox="0 0 1 1"
-          >
-            <path d="" />
-          </svg>
-        </ThemeProvider>
+          <path d="" />
+        </svg> */}
+        {/* </ThemeProvider> */}
       </body>
       {/* <Script src="scripts/trail.js"></Script> */}
     </html>
