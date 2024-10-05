@@ -61,7 +61,7 @@ html {
 
   .dark {
     --background: #101010;
-    --foreground:#ffffff;
+    --foreground: #ffffff;
 
     --color-trail: #f4f4f4;
 
@@ -145,6 +145,25 @@ html {
 
 .no-scroll {
   overflow: hidden;
+}
+
+body {
+  cursor:
+    url("/cursor/cursor-@1x.svg") 16 16,
+    auto;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
+    auto;
+}
+
+button:hover,
+a:hover {
+  cursor:
+    url("/cursor/cursor-hover.svg") 16 16,
+    pointer;
+  cursor:
+    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
+    pointer;
 }
 /* 
 body {

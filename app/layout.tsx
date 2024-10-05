@@ -73,7 +73,7 @@ export default function RootLayout({
           </svg>
         </ThemeProvider>
       </body>
-      <Script src="scripts/trail.js"></Script>
+      {/* <Script src="scripts/trail.js"></Script> */}
     </html>
   );
 }
