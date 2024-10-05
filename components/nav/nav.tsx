@@ -29,7 +29,7 @@ export default function NavBar() {
               alt="image of the author"
             />
           </Link>
-          <Link
+          {/* <Link
             className={cn(
               "p-4 transition-all hover:font-semibold",
               path === "/tech" ? "font-bold" : "font-normal",
@@ -37,6 +37,15 @@ export default function NavBar() {
             href={"/tech"}
           >
             tech
+          </Link> */}
+          <Link
+            className={cn(
+              "p-4 transition-all hover:font-semibold",
+              path === "/changelog" ? "font-bold" : "font-normal",
+            )}
+            href={"/changelog"}
+          >
+            changelog
           </Link>
         </div>
         <ShinyButton />
