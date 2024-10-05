@@ -57,7 +57,7 @@ export default function RootLayout({
           </header>
           <main className="flex min-h-[calc(100vh-220px)] justify-center">
             <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
-            <span className="fixed bottom-10 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
+            <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
               <DockInUse />
             </span>
           </main>
