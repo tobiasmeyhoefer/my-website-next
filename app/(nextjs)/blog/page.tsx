@@ -9,6 +9,7 @@ const BlogPage = async () => {
 
   return (
     <div className="mt-40">
+      <h1 >Blog</h1>
       <Posts posts={posts} />
     </div>
   );
