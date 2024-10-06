@@ -47,6 +47,9 @@ importers:
       '@sanity/preview-kit':
         specifier: ^5.1.1
         version: 5.1.1(@sanity/client@6.22.1)(react@19.0.0-rc-1460d67c-20241003)
+      '@sanity/preview-url-secret':
+        specifier: ^1.6.21
+        version: 1.6.21(@sanity/client@6.22.1)
       '@sanity/vision':
         specifier: ^3.59.1
         version: 3.59.1(@babel/runtime@7.25.7)(@codemirror/lint@6.8.2)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.2)(codemirror@6.0.1(@lezer/common@1.2.2))(react-dom@19.0.0-rc-1460d67c-20241003(react@19.0.0-rc-1460d67c-20241003))(react-is@18.3.1)(react@19.0.0-rc-1460d67c-20241003)(styled-components@6.1.13(react-dom@19.0.0-rc-1460d67c-20241003(react@19.0.0-rc-1460d67c-20241003))(react@19.0.0-rc-1460d67c-20241003))

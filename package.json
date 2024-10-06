@@ -22,6 +22,7 @@
     "@sanity/icons": "^3.4.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-kit": "^5.1.1",
+    "@sanity/preview-url-secret": "^1.6.21",
     "@sanity/vision": "^3.59.1",
     "@tabler/icons-react": "^3.19.0",
     "@types/ua-parser-js": "^0.7.39",
