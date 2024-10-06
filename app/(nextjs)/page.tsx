@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <BackgroundBeamsWithCollision>
-        <section className="flex w-full h-[calc(100vh)] flex-col items-center justify-center">
+        <section className="flex h-[calc(100vh)] w-full flex-col items-center justify-center">
           <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
             <TypingEffect />
             <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
@@ -33,7 +33,7 @@ export default function Home() {
           <ScrollDown />
         </section>
       </BackgroundBeamsWithCollision>
-      <ResumeSection/>
+      <ResumeSection />
     </>
   );
 }

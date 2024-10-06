@@ -3,9 +3,8 @@ import { Montserrat, Space_Grotesk, VT323 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
-import NavBar from "@/components/nav/nav";
-import { DockInUse } from "@/components/magicui/dock-in-use";
-import FooterContent from "@/components/FooterContent";
+import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -43,36 +42,18 @@ export default function RootLayout({
           vt323.variable,
         )}
       >
-        {/* <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        > */}
-        <header className="flex w-screen justify-center">
-          <div className="w-full max-w-[1800px]">
-            <NavBar />
-          </div>
-        </header>
-        <main className="flex min-h-[calc(100vh-220px)] justify-center">
-          <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
-          <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
-            <DockInUse />
-          </span>
-        </main>
-        <footer>
-          <FooterContent />
-        </footer>
+        {draftMode().isEnabled && (
+          <a
+            className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
+            href="/api/draft-mode/disable"
+          >
+            Disable preview mode
+          </a>
+        )}
+        <main>{children}</main>
+        {draftMode().isEnabled && <VisualEditing />}
         <Toaster />
-        {/* <svg
-          className="trail pointer-events-none max-md:hidden"
-          viewBox="0 0 1 1"
-        >
-          <path d="" />
-        </svg> */}
-        {/* </ThemeProvider> */}
       </body>
-      {/* <Script src="scripts/trail.js"></Script> */}
     </html>
   );
 }
