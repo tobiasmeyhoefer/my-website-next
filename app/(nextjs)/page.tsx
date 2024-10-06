@@ -13,8 +13,9 @@ export default function Home() {
         <section className="flex h-[calc(100vh)] w-full flex-col items-center justify-center">
           <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
             <TypingEffect />
-            <p className="font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
-              Junior Web Developer
+            <p className="relative font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
+              <s>Junior</s> Web Developer
+              <span className="absolute -bottom-2 left-2 text-xs">Senior</span>
             </p>
             <div className="absolute left-[70%] top-[20%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[65%] lg:top-[30%] lg:size-60 2xl:left-[73%] 2xl:top-[40%] 2xl:size-80"></div>
             <div className="2xl:-left-[14%]] absolute left-[-20%] top-[-40%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[-15%] lg:top-[-120%] lg:size-40 2xl:-top-[120%] 2xl:size-60"></div>
