@@ -1,16 +1,17 @@
+import Link from "next/link";
 import { POSTS_QUERYResult } from "../../sanity.types";
 
 export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
   return (
-    <ul className="container mx-auto grid grid-cols-1 divide-y divide-blue-100">
+    <ul className="flex flex-col">
       {posts.map((post) => (
         <li key={post._id}>
-          <a
-            className="block p-4 hover:bg-blue-50"
+          <Link
+            className="block p-4 hover:bg-zinc-100"
             href={`/blog/${post?.slug?.current}`}
           >
             {post?.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

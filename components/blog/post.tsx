@@ -9,8 +9,8 @@ export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
 
   return (
-    <main className="container mx-auto prose prose-lg p-4">
-      {title ? <h1>{title}</h1> : null}
+    <div className="prose prose-lg p-4">
+      {title ? <h1 className="mt-10 md:mb-12 mb-6 md:text-5xl text-3xl font-bold">{title}</h1> : null}
       {mainImage?.asset?._ref ? (
         <Image
           className="float-left m-0 w-1/3 mr-4 rounded-lg"
@@ -23,6 +23,6 @@ export function Post({ post }: { post: POST_QUERYResult }) {
       {body ? <PortableText value={body} /> : null}
       <hr />
       <Link href="/">&larr; Return home</Link>
-    </main>
+    </div>
   );
 }

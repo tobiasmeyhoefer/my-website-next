@@ -8,8 +8,8 @@ const BlogPage = async () => {
   });
 
   return (
-    <div className="mt-40">
-      <h1 >Blog</h1>
+    <div className="">
+      <h1 className="mt-10 md:mb-12 mb-6 md:text-5xl text-center text-3xl font-bold">Blog</h1>
       <Posts posts={posts} />
     </div>
   );

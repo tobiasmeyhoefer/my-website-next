@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <BackgroundBeamsWithCollision>
-        <section className="flex h-[calc(100vh)] w-full flex-col items-center justify-center">
-          <div className="relative flex -translate-y-[140px] flex-col items-center justify-center">
+        <section className="flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center">
+          <div className="relative flex -translate-y-[100px] md:-translate-y-[100px] flex-col items-center justify-center">
             <TypingEffect />
             <p className="relative font-montserrat text-sm font-light lg:text-2xl 2xl:text-5xl">
               <s>Junior</s> Web Developer
@@ -21,7 +21,7 @@ export default function Home() {
             <div className="2xl:-left-[14%]] absolute left-[-20%] top-[-40%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[-15%] lg:top-[-120%] lg:size-40 2xl:-top-[120%] 2xl:size-60"></div>
           </div>
           <div className="absolute translate-y-[100px] md:translate-y-[150px]">
-            <Drag>
+            {/* <Drag> */}
               <Image
                 className="pointer-events-none h-[200px] w-[200px] select-none dark:brightness-200 lg:h-[300px] lg:w-[300px]"
                 src={star}
@@ -29,7 +29,7 @@ export default function Home() {
                 width={200}
                 height={200}
               />
-            </Drag>
+            {/* </Drag> */}
           </div>
           <ScrollDown />
         </section>

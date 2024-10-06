@@ -14,8 +14,8 @@ export default function RootLayout({
           <NavBar />
         </div>
       </header>
-      <main className="flex min-h-[calc(100vh-220px)] justify-center">
-        <div className="w-full max-w-[1800px] px-6 md:px-8">{children}</div>
+      <main className="flex mt-[80px] md:mt-[100px] min-h-[calc(100vh-160px)] md:min-h-[calc(100vh-180px)] justify-center">
+        <div className="w-full max-w-[1800px] px-8 md:px-10">{children}</div>
         <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
           <DockInUse />
         </span>
