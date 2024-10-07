@@ -9,6 +9,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import { presentationTool } from 'sanity/presentation'
 import { resolve } from '@/sanity/presentation/resolve'
+import {markdownSchema} from 'sanity-plugin-markdown'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {apiVersion, dataset, projectId} from './sanity/env'
@@ -34,5 +35,6 @@ export default defineConfig({
         },
       },
     }),
+    markdownSchema()
   ],
 })

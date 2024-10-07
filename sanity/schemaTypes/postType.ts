@@ -1,3 +1,4 @@
+import { markdownSchema } from 'sanity-plugin-markdown';
 import {DocumentTextIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
@@ -23,6 +24,7 @@ export const postType = defineType({
       type: 'reference',
       to: {type: 'author'},
     }),
+    
     defineField({
       name: 'mainImage',
       type: 'image',
@@ -50,6 +52,11 @@ export const postType = defineType({
       name: 'body',
       type: 'blockContent',
     }),
+    {
+      type: 'markdown',
+      description: 'A Github flavored markdown field with image uploading',
+      name: 'bio',
+    },
   ],
   preview: {
     select: {

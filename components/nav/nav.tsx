@@ -29,7 +29,7 @@ export default function NavBar() {
               alt="image of the author"
             />
           </Link>
-          <div className="flex gap-2 md:gap-8">
+          <div className="flex gap-2 md:gap-6">
             <Link
               className={cn(
                 "p-1 md:p-4 transition-all hover:font-semibold",
