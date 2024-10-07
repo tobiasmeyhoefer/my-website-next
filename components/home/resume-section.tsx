@@ -1,4 +1,5 @@
 import ScrollAnimation from "@/components/animations/scroll-animation";
+import Link from "next/link";
 
 const ResumeSection = () => {
   return (
@@ -47,10 +48,9 @@ const ResumeSection = () => {
             Work_
           </h3>
           <p className="mb-1">
-            currently_ writing my bachelor thesis: impact of rendering
-            strategies in Next.js
+            see <Link className="underline text-fuchsia-900" href={"/changelog"}>changelog</Link>
           </p>
-          <p className="mb-1">
+          {/* <p className="mb-1">
             since 2024: Peaks & Pies, working as a fullstack webdeveloper on
             enterprise landing page conversion optimization for multiple
             international companies with Next.js and Sanity
@@ -59,7 +59,7 @@ const ResumeSection = () => {
             2022 - 2024: Web developer at “Berliner Verkehrsbetriebe (BVG)”,
             active development of web applications to relieve various tasks of
             company employees
-          </p>
+          </p> */}
           <h3 className="w-fit bg-fuchsia-100 font-bold dark:bg-fuchsia-900">
             Strength_{" "}
           </h3>
