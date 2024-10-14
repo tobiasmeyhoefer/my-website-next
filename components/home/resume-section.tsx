@@ -24,7 +24,7 @@ const ResumeSection = () => {
             Programming Languages_
           </h3>
           <p>
-            Javascript/Typescript, C#, Java and basic knowledge in Swift, Kotlin
+            Javascript/Typescript, C#, Java and basic knowledge in Swift and Kotlin
           </p>
           <h3 className="w-fit bg-amber-100 font-bold dark:bg-amber-900">
             Technologies_{" "}
