@@ -19,7 +19,7 @@ export function Post({ post }: { post: POST_QUERYResult }) {
   const plainBody = body ? portableTextToPlain(body) : "";
 
   return (
-    <div className="p-4">
+    <div className="md:p-4">
       {title ? (
         <h1 className="mb-6 mt-10 text-3xl font-bold md:mb-12 md:text-5xl">
           {title}
