@@ -1,4 +1,3 @@
-import { markdownSchema } from 'sanity-plugin-markdown';
 import {DocumentTextIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
@@ -19,26 +18,26 @@ export const postType = defineType({
         source: 'title',
       },
     }),
-    defineField({
-      name: 'author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
+    // defineField({
+    //   name: 'author',
+    //   type: 'reference',
+    //   to: {type: 'author'},
+    // }),
     
-    defineField({
-      name: 'mainImage',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        }
-      ]
-    }),
+    // defineField({
+    //   name: 'mainImage',
+    //   type: 'image',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    //   fields: [
+    //     {
+    //       name: 'alt',
+    //       type: 'string',
+    //       title: 'Alternative text',
+    //     }
+    //   ]
+    // }),
     defineField({
       name: 'categories',
       type: 'array',
@@ -52,21 +51,21 @@ export const postType = defineType({
       name: 'body',
       type: 'blockContent',
     }),
-    {
-      type: 'markdown',
-      description: 'A Github flavored markdown field with image uploading',
-      name: 'bio',
-    },
+    // {
+    //   type: 'markdown',
+    //   description: 'A Github flavored markdown field with image uploading',
+    //   name: 'bio',
+    // },
   ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'mainImage',
+  //   },
+  //   prepare(selection) {
+  //     const {author} = selection
+  //     return {...selection, subtitle: author && `by ${author}`}
+  //   },
+  // },
 })

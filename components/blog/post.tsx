@@ -1,26 +1,25 @@
-import Image from "next/image";
-import { PortableText } from "@portabletext/react";
-
-import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERYResult } from "../../sanity.types";
 import Link from "next/link";
+import MdxBody from "./mdx-body";
 
+function portableTextToPlain(blocks: any[] = []): string {
+  return blocks
+    .map(block => {
+      if (block._type !== 'block' || !block.children) {
+        return ''
+      }
+      return block.children.map((child: any) => child.text).join('')
+    })
+    .join('\n\n')
+}
 export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
+  const plainBody = body ? portableTextToPlain(body) : ''
 
   return (
-    <div className="prose prose-lg p-4">
+    <div className="p-4">
       {title ? <h1 className="mt-10 md:mb-12 mb-6 md:text-5xl text-3xl font-bold">{title}</h1> : null}
-      {mainImage?.asset?._ref ? (
-        <Image
-          className="float-left m-0 w-1/3 mr-4 rounded-lg"
-          src={urlFor(mainImage?.asset?._ref).width(300).height(300).url()}
-          width={300}
-          height={300}
-          alt={title || ""}
-        />
-      ) : null}
-      {body ? <PortableText value={body} /> : null}
+      <MdxBody body={plainBody}/>
       <hr />
       <Link href="/">&larr; Return home</Link>
     </div>

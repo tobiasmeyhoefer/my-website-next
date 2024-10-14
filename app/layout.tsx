@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Space_Grotesk, VT323 } from "next/font/google";
+import { Montserrat, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
@@ -11,10 +11,10 @@ const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--space_grotesk",
 });
-const vt323 = VT323({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--vt323",
+  variable: "--inter",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
           "h-0 min-h-screen overflow-x-hidden bg-background font-space_grotesk text-foreground antialiased",
           montserrat.variable,
           space_grotesk.variable,
-          vt323.variable,
+          inter.variable,
         )}
       >
         {draftMode().isEnabled && (

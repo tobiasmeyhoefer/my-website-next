@@ -12,7 +12,6 @@
   --radial-gradient-background: 250, 250, 250;
   --solid-color-background: 27, 27, 27;
   --overlay-color: 255, 255, 255;
-  /* --color-trail: #323232; */
 }
 
 html {
@@ -20,7 +19,7 @@ html {
 }
 
 ::selection {
-  background: rgb(158, 169, 95);
+  background: #59943b;
 }
 
 @layer base {
@@ -136,18 +135,11 @@ html {
   -webkit-mask-composite: xor;
 }
 
-/* OWN CSS */
-
-/* .counterWrapper {
-  animation: startUpAnimationScreen 4s linear forwards;
-  background: white;
-} */
-
 .no-scroll {
   overflow: hidden;
 }
 
-body {
+/* body {
   cursor:
     url("/cursor/cursor-@1x.svg") 16 16,
     auto;
@@ -164,87 +156,4 @@ a:hover {
   cursor:
     -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
     pointer;
-}
-/* 
-body {
-  animation: no-scroll-animation 4s linear forwards;
 } */
-
-/* @keyframes startUpAnimationScreen {
-  0% {
-    opacity: 1;
-    background: white;
-  }
-  90% {
-    opacity: 1;
-    background: white;
-  }
-
-  99% {
-    z-index: 0;
-  }
-  100% {
-    display: none;
-    opacity: 0;
-    z-index: -20;
-  }
-} */
-
-/* @keyframes no-scroll-animation {
-  0% {
-    overflow: hidden;
-  }
-
-  99% {
-    overflow: hidden;
-  }
-
-  100% {
-    overflow: auto;
-    overflow-x: hidden;
-  }
-} */
-
-svg.trail {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  z-index: 1000;
-}
-
-svg.trail path {
-  fill: none;
-
-  stroke: var(--color-trail);
-  stroke-width: 4px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-
-  opacity: 10%;
-}
-
-/* ANIMATION GALLERY  LOTTIEFILES */
-
-.lottieanimationplane {
-  animation: lottieAnimationPlane 5s linear forwards;
-  opacity: 1;
-}
-
-@keyframes lottieAnimationPlane {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
