@@ -7,10 +7,12 @@ export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
       {posts.map((post) => (
         <li key={post._id}>
           <Link
-            className="block p-4 hover:bg-zinc-100"
+            className="block p-6 transition-all hover:bg-zinc-100 rounded-lg"
             href={`/blog/${post?.slug?.current}`}
           >
-            {post?.title}
+            <div>
+              <p>{post?.title}</p>
+            </div>
           </Link>
         </li>
       ))}
