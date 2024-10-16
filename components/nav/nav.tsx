@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <nav
       id="nav"
-      className="fixed z-10 flex h-[80px] w-full max-w-[1920px] justify-center bg-white/20 backdrop-blur-sm backdrop-filter md:h-[100px]"
+      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center bg-white/20 backdrop-blur-sm backdrop-filter md:h-[100px]"
     >
       <div className="flex w-full max-w-[1920px] items-center justify-between px-8 md:px-10">
         <div className="flex items-center">
@@ -32,7 +32,7 @@ export default function NavBar() {
           <div className="flex gap-3 md:gap-6">
             <Link
               className={cn(
-                "p-1 md:p-4 transition-all hover:font-semibold",
+                "bg-red-200 p-1 transition-all before:p-1 before:transition-all before:content-['changelog'] hover:font-bold before:font-bold md:p-4 before:md:p-4 before:block before:invisible",
                 path === "/changelog" ? "font-bold" : "font-normal",
               )}
               href={"/changelog"}
@@ -41,7 +41,7 @@ export default function NavBar() {
             </Link>
             <Link
               className={cn(
-                "p-1 md:p-4 transition-all hover:font-semibold",
+                "bg-green-200 p-1 transition-all hover:font-bold md:p-4",
                 path === "/blog" ? "font-bold" : "font-normal",
               )}
               href={"/blog"}

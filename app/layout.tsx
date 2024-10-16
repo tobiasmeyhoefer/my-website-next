@@ -9,7 +9,7 @@ import { draftMode } from "next/headers";
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--space_grotesk",
+  variable: "--space_grotesk", 
 });
 const inter = Inter({
   subsets: ["latin"],
