@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <nav
       id="nav"
-      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center bg-white/20 backdrop-blur-sm backdrop-filter md:h-[100px]"
+      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center bg-background/20 dark:bg-black/20 backdrop-blur-sm backdrop-filter md:h-[100px]"
     >
       <div className="flex w-full max-w-[1920px] items-center justify-between px-8 md:px-10">
         <div className="flex items-center">

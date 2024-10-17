@@ -5,11 +5,12 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--space_grotesk", 
+  variable: "--space_grotesk",
 });
 
 export const metadata: Metadata = {
@@ -38,13 +39,21 @@ export default function RootLayout({
       >
         {draftMode().isEnabled && (
           <a
-            className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
+            className="fixed bottom-0 right-0 m-4 bg-blue-500 p-4 text-white"
             href="/api/draft-mode/disable"
           >
             Disable preview mode
           </a>
         )}
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+        </ThemeProvider>
+
         {draftMode().isEnabled && <VisualEditing />}
         <Toaster />
       </body>

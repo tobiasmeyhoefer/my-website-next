@@ -7,7 +7,7 @@ export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
       {posts.map((post) => (
         <li key={post._id}>
           <Link
-            className="block p-6 transition-all hover:bg-zinc-100 rounded-lg"
+            className="block p-6 transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg"
             href={`/blog/${post?.slug?.current}`}
           >
             <div>
