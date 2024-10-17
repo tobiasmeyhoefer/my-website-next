@@ -148,12 +148,12 @@ body {
     auto;
 }
 
-/* button:hover,
+button:hover,
 a:hover {
   cursor:
-    url("/cursor/cursor-hover.svg") 16 16,
+    url("/cursor/cursor-hover.svg") 4 2,
     pointer;
   cursor:
-    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
+    -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 8 4,
     pointer;
-}  */
+} 

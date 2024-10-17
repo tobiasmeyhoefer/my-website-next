@@ -20,7 +20,7 @@ export default function NavBar() {
           <Link className="rounded-full transition-all" href={"/"}>
             <Image
               className={cn(
-                "mr-4 aspect-square w-8 rounded-full object-cover transition-all hover:brightness-125 md:mr-8 md:w-12",
+                "mr-6 aspect-square w-8 rounded-full object-cover transition-all hover:brightness-125 md:mr-12 md:w-12",
                 path === "/" ? "ring-1 ring-foreground" : "ring-0",
               )}
               src={Me}
@@ -29,10 +29,10 @@ export default function NavBar() {
               alt="image of the author"
             />
           </Link>
-          <div className="flex gap-3 md:gap-6">
+          <div className="flex">
             <Link
               className={cn(
-                "flex w-24 items-center justify-centerp-1 transition-all hover:font-bold",
+                "flex w-20 md:w-24 items-center justify-center p-1 transition-all hover:font-bold",
                 path === "/changelog" ? "font-bold" : "font-normal",
               )}
               href={"/changelog"}
@@ -41,7 +41,7 @@ export default function NavBar() {
             </Link>
             <Link
               className={cn(
-                "flex w-16 items-center justify-center p-1 transition-all hover:font-bold md:p-4",
+                "flex w-14 md:w-16 items-center justify-center p-1 transition-all hover:font-bold md:p-4",
                 path === "/blog" ? "font-bold" : "font-normal",
               )}
               href={"/blog"}

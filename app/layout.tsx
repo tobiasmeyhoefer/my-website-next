@@ -11,11 +11,6 @@ const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--space_grotesk", 
 });
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--inter",
-});
 
 export const metadata: Metadata = {
   title: "Tobias Meyhöfer - Webdeveloper Portfolio",
@@ -39,7 +34,6 @@ export default function RootLayout({
           "h-0 min-h-screen overflow-x-hidden bg-background font-space_grotesk text-foreground antialiased",
           montserrat.variable,
           space_grotesk.variable,
-          inter.variable,
         )}
       >
         {draftMode().isEnabled && (

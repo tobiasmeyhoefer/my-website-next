@@ -28,7 +28,7 @@ const ShinyButton = () => {
               mass: 0.1,
             },
           }}
-          className="radial-gradient relative rounded-md md:px-4 text-sm md:text-base md:py-2 py-2 px-3 transition-colors hover:bg-neutral-800"
+          className="radial-gradient relative rounded-md md:px-4 text-sm md:text-base md:py-2 py-2 px-3 transition-colors hover:bg-neutral-700"
         >
           <span className="linear-mask relative block h-full w-full tracking-wide text-neutral-100">
             get in touch
