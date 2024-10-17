@@ -139,16 +139,16 @@ html {
   overflow: hidden;
 }
 
-/* body {
+body {
   cursor:
-    url("/cursor/cursor-@1x.svg") 16 16,
+    url("/cursor/cursor-@1x.svg") 0 0,
     auto;
   cursor:
-    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 16 16,
+    -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 0 0,
     auto;
 }
 
-button:hover,
+/* button:hover,
 a:hover {
   cursor:
     url("/cursor/cursor-hover.svg") 16 16,
@@ -156,4 +156,4 @@ a:hover {
   cursor:
     -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 16 16,
     pointer;
-} */
+}  */
