@@ -29,7 +29,7 @@ export default function NavBar() {
               alt="image of the author"
             />
           </Link>
-          <div className="flex">
+          <div className="flex md:gap-2 gap-0">
             <Link
               className={cn(
                 "flex w-20 md:w-24 items-center justify-center p-1 transition-all hover:font-bold",

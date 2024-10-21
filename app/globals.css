@@ -149,11 +149,12 @@ body {
 }
 
 button:hover,
-a:hover {
+a:hover,
+.hoverable {
   cursor:
     url("/cursor/cursor-hover.svg") 4 2,
     pointer;
   cursor:
     -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 8 4,
     pointer;
-} 
+}

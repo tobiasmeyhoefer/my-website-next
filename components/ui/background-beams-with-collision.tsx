@@ -24,7 +24,7 @@ export const BackgroundBeamsWithCollision = ({
     {
       initialX: 600,
       translateX: 600,
-      duration: 5,
+      duration: 8,
       repeatDelay: 3,
       delay: 4,
     },
@@ -49,21 +49,21 @@ export const BackgroundBeamsWithCollision = ({
       repeatDelay: 2,
       className: "h-20",
     },
-    {
-      initialX: 1000,
-      translateX: 1000,
-      duration: 6,
-      repeatDelay: 2,
-      className: "h-12",
-    },
-    {
-      initialX: 1200,
-      translateX: 1200,
-      duration: 8,
-      repeatDelay: 4,
-      delay: 2,
-      className: "h-6",
-    },
+    // {
+    //   initialX: 1000,
+    //   translateX: 1000,
+    //   duration: 6,
+    //   repeatDelay: 2,
+    //   className: "h-12",
+    // },
+    // {
+    //   initialX: 1200,
+    //   translateX: 1200,
+    //   duration: 8,
+    //   repeatDelay: 4,
+    //   delay: 2,
+    //   className: "h-6",
+    // },
   ];
 
   return (
@@ -199,7 +199,7 @@ const CollisionMechanism = React.forwardRef<
           repeatDelay: beamOptions.repeatDelay || 0,
         }}
         className={cn(
-          "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-green-600 via-lime-800 to-transparent",
+          "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-emerald-500 via-emerald-800 to-transparent",
           beamOptions.className
         )}
       />
@@ -238,7 +238,7 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-gradient-to-r from-transparent via-lime-800 to-transparent blur-sm"
+        className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-gradient-to-r from-transparent via-emerald-800 to-transparent blur-sm"
       ></motion.div>
       {spans.map((span) => (
         <motion.span
@@ -250,7 +250,7 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
             opacity: 0,
           }}
           transition={{ duration: Math.random() * 1.5 + 0.5, ease: "easeOut" }}
-          className="absolute h-1 w-1 rounded-full bg-gradient-to-b from-lime-800 to-green-600"
+          className="absolute h-1 w-1 rounded-full bg-gradient-to-b from-emerald-800 to-emerald-500"
         />
       ))}
     </div>
