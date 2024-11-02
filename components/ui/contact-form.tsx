@@ -17,8 +17,14 @@ import { useForm } from "react-hook-form";
 import { Textarea } from "./textarea";
 
 const formSchema = z.object({
-  name: z.string().min(2, {message: "at least 2 letters"}).max(50, {message: "not more then 50 letters"}),
-  reason: z.string().min(2, {message: "at least 2 letters"}).max(300, {message: "not more then 300 letters"}),
+  name: z
+    .string()
+    .min(2, { message: "at least 2 letters" })
+    .max(50, { message: "not more then 50 letters" }),
+  reason: z
+    .string()
+    .min(2, { message: "at least 2 letters" })
+    .max(300, { message: "not more then 300 letters" }),
   contact: z.string().optional(),
 });
 
@@ -27,36 +33,39 @@ import { useToast } from "./use-toast";
 import { useState } from "react";
 
 const ContactForm = () => {
-
-  const { toast } = useToast()
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       reason: "",
-      contact: ""
+      contact: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true)
-    const response: actionResponse = await sendResendMail(values.name, values.reason, values.contact ?? "")
+    setIsLoading(true);
+    const response: actionResponse = await sendResendMail(
+      values.name,
+      values.reason,
+      values.contact ?? "",
+    );
 
     toast({
       title: response.msg,
-    })
-    form.reset()
-    setIsLoading(false)
+    });
+    form.reset();
+    setIsLoading(false);
   }
 
   return (
-    <section className="flex justify-center mb-20">
+    <section className="mb-20 flex justify-center">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg p-2 border border-none shadow-none max-w-[800px] w-full"
+          className="w-full max-w-[800px] space-y-8 rounded-lg border border-none p-2 shadow-none"
         >
           <FormField
             control={form.control}
@@ -65,7 +74,11 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel className="text-md max-md:text-sm">Name</FormLabel>
                 <FormControl>
-                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="Your name" {...field} />
+                  <Input
+                    className="focus-within:ring-red-100 md:h-12"
+                    placeholder="Your name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormDescription>Who are you?</FormDescription>
                 <FormMessage />
@@ -80,7 +93,7 @@ const ContactForm = () => {
                 <FormLabel className="text-md max-md:text-sm">Reason</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="md:h-[140px] h-[100px]"
+                    className="h-[100px] md:h-[140px]"
                     placeholder="Hey I wanna hire you!"
                     {...field}
                   />
@@ -95,16 +108,39 @@ const ContactForm = () => {
             name="contact"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md max-md:text-sm">Contact Information</FormLabel>
+                <FormLabel className="text-md max-md:text-sm">
+                  Contact Information
+                </FormLabel>
                 <FormControl>
-                  <Input className="md:h-12 focus-within:ring-red-100" placeholder="" {...field} />
+                  <Input
+                    className="focus-within:ring-red-100 md:h-12"
+                    placeholder=""
+                    {...field}
+                  />
                 </FormControl>
-                <FormDescription>How can I reach you? e.g. email or mobile</FormDescription>
+                <FormDescription>
+                  How can I reach you? e.g. email or mobile
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          {isLoading ? <Button disabled type="submit">Send</Button> : <Button type="submit">Submit</Button>}
+          {isLoading ? (
+            <Button
+              className="motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.38s]/blur motion-ease-spring-bouncier "
+              disabled
+              type="submit"
+            >
+              Send
+            </Button>
+          ) : (
+            <Button
+              className="motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.38s]/blur motion-ease-spring-bouncier"
+              type="submit"
+            >
+              Submit
+            </Button>
+          )}
         </form>
       </Form>
     </section>
