@@ -19,7 +19,7 @@ html {
 }
 
 ::selection {
-  background: #6c8c48;
+  background: #83a75a;
 }
 
 @layer base {
@@ -139,16 +139,16 @@ html {
   overflow: hidden;
 }
 
-body {
+/* body {
   cursor:
     url("/cursor/cursor-@1x.svg") 0 0,
     auto;
   cursor:
     -webkit-image-set(url("/cursor/cursor-@2x.svg") 2x) 0 0,
     auto;
-}
+} */
 
-button:hover,
+/* button:hover,
 a:hover,
 .hoverable {
   cursor:
@@ -157,4 +157,4 @@ a:hover,
   cursor:
     -webkit-image-set(url("/cursor/cursor-hover2.svg") 2x) 8 4,
     pointer;
-}
+} */
