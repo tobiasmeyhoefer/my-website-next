@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pt-10 mt-10 px-4 md:px-8 lg:px-10">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black dark:text-white max-w-5xl">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black dark:text-white max-w-5xl motion-preset-confetti motion-duration-500">
           Changelog from my journey
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
