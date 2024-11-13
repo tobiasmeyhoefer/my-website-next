@@ -39,7 +39,7 @@ export default function NavBar() {
             >
               changelog
             </Link>
-            <Link
+            {/* <Link
               className={cn(
                 "flex w-14 md:w-16 items-center justify-center p-1 transition-all hover:font-bold md:p-4",
                 path === "/blog" ? "font-bold" : "font-normal",
@@ -47,7 +47,7 @@ export default function NavBar() {
               href={"/blog"}
             >
               blog
-            </Link>
+            </Link> */}
           </div>
         </div>
         <ShinyButton />
