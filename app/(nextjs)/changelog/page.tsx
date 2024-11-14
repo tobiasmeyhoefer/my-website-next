@@ -32,6 +32,16 @@ export default function CareerPage() {
       content: (
         <div>
           <p className="mb-8 text-neutral-800 dark:text-neutral-200">
+            created a youtube channel to provide the world with free educational content about web development
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div>
+          <p className="mb-8 text-neutral-800 dark:text-neutral-200">
             since 2024_ Peaks & Pies, working as a fullstack webdeveloper on
             enterprise landing page conversion optimization for multiple
             international companies with Next.js and Sanity

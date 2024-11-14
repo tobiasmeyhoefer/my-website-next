@@ -127,7 +127,7 @@ const ContactForm = () => {
           />
           {isLoading ? (
             <Button
-              className="motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.38s]/blur motion-ease-spring-bouncier "
+              className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-opacity-in-[33%] "
               disabled
               type="submit"
             >
@@ -135,8 +135,9 @@ const ContactForm = () => {
             </Button>
           ) : (
             <Button
-              className="motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.38s]/blur motion-ease-spring-bouncier"
+              className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-opacity-in-[33%]"
               type="submit"
+              variant={"ringHover"}
             >
               Submit
             </Button>

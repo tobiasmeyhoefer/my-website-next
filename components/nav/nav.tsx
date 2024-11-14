@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <nav
       id="nav"
-      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center bg-background/20 dark:bg-black/20 backdrop-blur-sm backdrop-filter md:h-[100px]"
+      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center md:h-[100px]"
     >
       <div className="flex w-full max-w-[1920px] items-center justify-between px-8 md:px-10">
         <div className="flex items-center">
@@ -29,10 +29,10 @@ export default function NavBar() {
               alt="image of the author"
             />
           </Link>
-          <div className="flex md:gap-2 gap-0">
+          <div className="flex gap-0 md:gap-2">
             <Link
               className={cn(
-                "flex w-20 md:w-24 items-center justify-center p-1 transition-all hover:font-bold",
+                "flex w-20 items-center justify-center p-1 transition-all hover:font-bold md:w-24",
                 path === "/changelog" ? "font-bold" : "font-normal",
               )}
               href={"/changelog"}
@@ -50,7 +50,9 @@ export default function NavBar() {
             </Link> */}
           </div>
         </div>
-        <ShinyButton />
+        <div className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.70s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-280%] motion-translate-y-in-[120%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-opacity-in-[33%]">
+          <ShinyButton />
+        </div>
       </div>
     </nav>
   );
