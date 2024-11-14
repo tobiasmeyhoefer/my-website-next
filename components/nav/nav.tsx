@@ -6,6 +6,7 @@ import Image from "next/image";
 import ShinyButton from "@/components/ui/shiny-button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+// import BuyMeACoffeeIcon from "@/public/images/buymecoffee.png";
 
 export default function NavBar() {
   const path = usePathname();
@@ -50,7 +51,16 @@ export default function NavBar() {
             </Link> */}
           </div>
         </div>
-        <div className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.70s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-280%] motion-translate-y-in-[120%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-opacity-in-[33%]">
+        <div className="flex items-center gap-6">
+          <Link href={"https://buymeacoffee.com/tobiasmeyhoefer"}>
+            <Image
+              alt="support me"
+              src={"/images/buycoffee.png"}
+              height={130}
+              width={130}
+              className="max-md:hidden"
+            />
+          </Link>
           <ShinyButton />
         </div>
       </div>
