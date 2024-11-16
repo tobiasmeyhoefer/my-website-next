@@ -21,7 +21,7 @@ export async function sendResendMail(
   }
   const { data, error } = await resend.emails.send({
     from: "noreply@tobiasmeyhoefer.de",
-    to: ["tobias.meyhoefer02@gmail.com"],
+    to: ["tobitacklestech@gmail.com"],
     subject: "Kontaktanfrage von " + senderName,
     text: reason + "\n\n" + "Kontakt:" + contact,
   });
