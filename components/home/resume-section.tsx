@@ -1,6 +1,7 @@
 import ScrollAnimation from "@/components/animations/scroll-animation";
 import Link from "next/link";
 import { LinkPreview } from "../ui/link-preview";
+import { VelocityScroll } from "../ui/scroll-based-velocity";
 
 const ResumeSection = () => {
   return (
@@ -12,12 +13,16 @@ const ResumeSection = () => {
             currently cooking 👨🏼‍🍳
           </h2>
         </div>
-
-        <ul className="list-disc pl-5">
+        <VelocityScroll
+          text="YouTube content, bachelor thesis, builing awesome landing pages"
+          default_velocity={2}
+          className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+        />
+        {/* <ul className="list-disc pl-5">
           <li>Youtube content</li>
           <li>Bachelor Thesis</li>
           <li>building awesome LP`s</li>
-        </ul>
+        </ul> */}
         <hr className="my-10 dark:border-neutral-700" />
       </section>
       <section id="resume-area" className="mb-20">

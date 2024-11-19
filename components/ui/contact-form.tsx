@@ -1,6 +1,7 @@
 "use client";
 
 import { z } from "zod";
+import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -29,11 +30,9 @@ const formSchema = z.object({
 });
 
 import { actionResponse, sendResendMail } from "@/actions";
-import { useToast } from "./use-toast";
 import { useState } from "react";
 
 const ContactForm = () => {
-  const { toast } = useToast();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -47,18 +46,46 @@ const ContactForm = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
+    handleClick()
     const response: actionResponse = await sendResendMail(
       values.name,
       values.reason,
       values.contact ?? "",
     );
 
-    toast({
-      title: response.msg,
-    });
     form.reset();
     setIsLoading(false);
   }
+
+  const handleClick = () => {
+    const end = Date.now() + 1 * 1000; // 3 seconds
+    const colors = ["#ffde00", "#ead12f", "#c0c330", "#ff7300"];
+
+    const frame = () => {
+      if (Date.now() > end) return;
+
+      confetti({
+        particleCount: 1,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors: colors,
+      });
+      confetti({
+        particleCount: 1,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors: colors,
+      });
+
+      requestAnimationFrame(frame);
+    };
+
+    frame();
+  };
 
   return (
     <section className="mb-20 flex justify-center">
@@ -77,6 +104,7 @@ const ContactForm = () => {
                   <Input
                     className="focus-visible:ring-zinc-500 md:h-12"
                     placeholder="Your name"
+                    autoComplete="off"
                     {...field}
                   />
                 </FormControl>
@@ -115,6 +143,7 @@ const ContactForm = () => {
                   <Input
                     className="focus-within:ring-red-100 focus-visible:ring-zinc-500 md:h-12"
                     placeholder=""
+                    autoComplete="off"
                     {...field}
                   />
                 </FormControl>
@@ -125,15 +154,9 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          {isLoading ? (
-            <Button disabled type="submit">
-              Send
-            </Button>
-          ) : (
-            <Button type="submit" variant={"ringHover"}>
-              Submit
-            </Button>
-          )}
+          <Button disabled={isLoading} type="submit" variant={"ringHover"}>
+            Submit
+          </Button>
         </form>
       </Form>
     </section>
