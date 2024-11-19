@@ -4,7 +4,6 @@ import ScrollDown from "@/components/ui/scroll-down";
 import ResumeSection from "@/components/home/resume-section";
 import { Vortex } from "@/components/ui/vortex";
 import BlurIn from "@/components/ui/blur-in";
-import { TextHoverEffect } from "@/components/ui/text-hover-effects";
 
 export default function Home() {
   return (
