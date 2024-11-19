@@ -1,6 +1,7 @@
 import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
 import FooterContent from "@/components/FooterContent";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default function RootLayout({
           <NavBar />
         </div>
       </header>
-      <main className="flex mt-[80px] md:mt-[100px] min-h-[calc(100vh-160px)] md:min-h-[calc(100vh-180px)] justify-center">
+      <main className="mt-[80px] flex min-h-[calc(100vh-176px)] justify-center md:mt-[100px] md:min-h-[calc(100vh-196px)]">
         <div className="w-full max-w-[1000px] px-8 md:px-10">{children}</div>
         <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
           <DockInUse />

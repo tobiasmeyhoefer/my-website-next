@@ -19,7 +19,7 @@ html {
 }
 
 ::selection {
-  background: #83a75a;
+  background: #bda400;
 }
 
 @layer base {
@@ -56,6 +56,8 @@ html {
     --ring: 222.2 0% 4.9%;
 
     --radius: 0.5rem;
+
+    --brand: #ffde00;
   }
 
   .dark {
@@ -89,6 +91,8 @@ html {
     --border: 217.2 0% 17.5%;
     --input: 217.2 0% 17.5%;
     --ring: 212.7 0% 83.9%;
+
+    --brand: #ffde00;
   }
 }
 

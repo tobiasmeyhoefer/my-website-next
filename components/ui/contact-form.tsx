@@ -75,7 +75,7 @@ const ContactForm = () => {
                 <FormLabel className="text-md max-md:text-sm">Name</FormLabel>
                 <FormControl>
                   <Input
-                    className="md:h-12 focus-visible:ring-zinc-500"
+                    className="focus-visible:ring-zinc-500 md:h-12"
                     placeholder="Your name"
                     {...field}
                   />
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 <FormLabel className="text-md max-md:text-sm">Reason</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="h-[100px] md:h-[140px] focus-visible:ring-zinc-500"
+                    className="h-[100px] focus-visible:ring-zinc-500 md:h-[140px]"
                     placeholder="Hey I wanna hire you!"
                     {...field}
                   />
@@ -113,7 +113,7 @@ const ContactForm = () => {
                 </FormLabel>
                 <FormControl>
                   <Input
-                    className="focus-within:ring-red-100 md:h-12 focus-visible:ring-zinc-500"
+                    className="focus-within:ring-red-100 focus-visible:ring-zinc-500 md:h-12"
                     placeholder=""
                     {...field}
                   />
@@ -126,19 +126,11 @@ const ContactForm = () => {
             )}
           />
           {isLoading ? (
-            <Button
-              className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-rotate-in-[0deg] motion-blur-in-[10px] motion-opacity-in-[33%] "
-              disabled
-              type="submit"
-            >
+            <Button disabled type="submit">
               Send
             </Button>
           ) : (
-            <Button
-              className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.20s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-480%] motion-translate-y-in-[-300%] motion-blur-in-[10px] motion-opacity-in-[33%] motion-rotate-in-[0deg]"
-              type="submit"
-              variant={"ringHover"}
-            >
+            <Button type="submit" variant={"ringHover"}>
               Submit
             </Button>
           )}

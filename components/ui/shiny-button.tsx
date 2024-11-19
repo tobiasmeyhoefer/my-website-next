@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ShinyButton = () => {
   return (
-    <Link href={"/contact"} className="motion-duration-[0.15s]/blur motion-duration-[0.68s]/opacity motion-duration-[1.70s]/rotate motion-delay-[0.38s]/blur motion-delay-[0.38s]/scale motion-ease-spring-bouncier motion-scale-in-[0.5] motion-translate-x-in-[-280%] motion-translate-y-in-[120%] motion-rotate-in-[0deg] motion-blur-in-[10px] motion-opacity-in-[33%]">
+    <Link href={"/contact"} className="lg:motion-duration-[0.15s]/blur lg:motion-duration-[0.68s]/opacity lg:motion-duration-[1.70s]/rotate lg:motion-delay-[0.38s]/blur lg:motion-delay-[0.38s]/scale lg:motion-ease-spring-bouncier lg:motion-scale-in-[0.5] lg:motion-translate-x-in-[-280%] lg:motion-translate-y-in-[120%] lg:motion-rotate-in-[0deg] lg:motion-blur-in-[10px] lg:motion-opacity-in-[33%]">
       <LazyMotion features={domAnimation}>
         <m.button
           //@ts-ignore

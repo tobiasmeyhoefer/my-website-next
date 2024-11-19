@@ -3,7 +3,7 @@ import { DarkModeToggler } from "./DarkModeToggler";
 
 const FooterContent = () => {
   return (
-    <div className="flex h-20 items-center justify-end gap-6 p-6 text-sm">
+    <div className="flex h-24 items-center justify-end gap-6 p-6 text-sm">
       <Link
         className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
         target="_blank"

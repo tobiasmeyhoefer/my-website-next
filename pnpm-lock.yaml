@@ -123,8 +123,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.12)
       tailwindcss-motion:
-        specifier: 0.3.0-beta
-        version: 0.3.0-beta(tailwindcss@3.4.12)
+        specifier: 0.4.3-beta
+        version: 0.4.3-beta(tailwindcss@3.4.12)
       ua-parser-js:
         specifier: ^1.0.38
         version: 1.0.39
@@ -5621,8 +5621,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss-motion@0.3.0-beta:
-    resolution: {integrity: sha512-dBmakhcseaB7zK82H9zMmzNhAZFCA9DxWeuw0rkttIarur/7tnjWg1Nv9LlZZR9c+YctRyZns3D+1Fjbksq7Fg==}
+  tailwindcss-motion@0.4.3-beta:
+    resolution: {integrity: sha512-9S4nmSw01m0/z0UxodUNT7U+yUdlZdXnH9RMkb2rXvrUEQQ+rMVPeP9j4pMwJy779LECiSr+IoSTVrGluSfU2w==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
@@ -12609,7 +12609,7 @@ snapshots:
     dependencies:
       tailwindcss: 3.4.12
 
-  tailwindcss-motion@0.3.0-beta(tailwindcss@3.4.12):
+  tailwindcss-motion@0.4.3-beta(tailwindcss@3.4.12):
     dependencies:
       tailwindcss: 3.4.12
 

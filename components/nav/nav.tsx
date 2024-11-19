@@ -56,7 +56,7 @@ export default function NavBar() {
             <Image
               alt="support me"
               src={"/images/buycoffee.png"}
-              height={134}
+              height={38}
               width={134}
               className="max-md:hidden"
             />

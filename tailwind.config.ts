@@ -58,6 +58,7 @@ const config = {
           foreground: "var(--card-foreground)",
           hover: "var(--card-hover)",
         },
+        brand: "var(--brand)"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -88,7 +89,6 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
-    require("tailwindcss-motion"),
   ],
 } satisfies Config;
 

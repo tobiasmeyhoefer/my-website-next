@@ -7,11 +7,11 @@ import ResumeSection from "@/components/home/resume-section";
 export default function Home() {
   return (
     <>
-      <BackgroundBeamsWithCollision>
+      {/* <BackgroundBeamsWithCollision> */}
         <section className="flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center">
           <div className="relative flex -translate-y-[120px] flex-col items-center justify-center md:-translate-y-[120px]">
             {/* <TypingEffect /> */}
-            <h1 className="motion-preset-confetti mb-2 text-center font-montserrat text-2xl font-bold tracking-[-0.02em] drop-shadow-sm lg:text-5xl xl:mb-4 2xl:text-7xl">
+            <h1 className="mb-2 text-center font-montserrat text-2xl font-bold tracking-[-0.02em] drop-shadow-sm lg:text-5xl xl:mb-4 2xl:text-7xl">
               TOBIAS MEYHÖFER
             </h1>
             <p className="relative font-montserrat text-sm font-light lg:text-xl 2xl:text-3xl">
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
           <ScrollDown />
         </section>
-      </BackgroundBeamsWithCollision>
+      {/* </BackgroundBeamsWithCollision> */}
       <ResumeSection />
     </>
   );
