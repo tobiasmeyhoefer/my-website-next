@@ -6,7 +6,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export function DockInUse() {
   return (
     <>
-      <Dock className="flex h-[70px] gap-6 w-[220px] hover:w-[250px] motion-preset-wiggle transition-all items-center justify-center border-none bg-black/5 dark:bg-white/10 backdrop-blur-sm shadow-lg ">
+      <Dock className="flex h-[60px] gap-6 w-[220px] hover:w-[250px] hover:h-[70px] motion-preset-wiggle transition-all duration-500 items-center justify-center border-none bg-black/5 dark:bg-white/5 backdrop-blur-sm shadow-lg ">
         <DockIcon className="bg-transparent" link="https://github.com/tobiasmeyhoefer">
           <Icons.gitHub className="h-full w-full" />
         </DockIcon>

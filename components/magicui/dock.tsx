@@ -94,9 +94,9 @@ const DockIcon = ({
   );
 
   let width = useSpring(widthSync, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
+    mass: 0.3,
+    stiffness: 100,
+    damping: 15,
   });
 
   return (

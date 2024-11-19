@@ -56,8 +56,8 @@ export default function NavBar() {
             <Image
               alt="support me"
               src={"/images/buycoffee.png"}
-              height={130}
-              width={130}
+              height={134}
+              width={134}
               className="max-md:hidden"
             />
           </Link>
