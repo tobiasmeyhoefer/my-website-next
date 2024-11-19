@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DarkModeToggler } from "./DarkModeToggler";
+import Image from "next/image";
 
 const FooterContent = () => {
   return (
@@ -18,12 +19,13 @@ const FooterContent = () => {
       >
         Youtube
       </Link>
-      <Link
+      {/* <Link
         className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
         href={"/contact"}
       >
         Contact
-      </Link>
+      </Link> */}
+      <Image className="md:hidden" src={"/images/buycoffee.png"} alt="support me" height={38} width={134}/>
       <DarkModeToggler />
     </div>
   );

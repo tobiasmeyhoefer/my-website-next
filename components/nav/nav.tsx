@@ -6,7 +6,6 @@ import Image from "next/image";
 import ShinyButton from "@/components/ui/shiny-button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-// import BuyMeACoffeeIcon from "@/public/images/buymecoffee.png";
 
 export default function NavBar() {
   const path = usePathname();
@@ -14,7 +13,7 @@ export default function NavBar() {
   return (
     <nav
       id="nav"
-      className="fixed z-10 flex h-[80px] w-screen max-w-[1920px] justify-center md:h-[100px]"
+      className="fixed z-10 flex h-[80px] dark:bg-black white:bg-white w-screen max-w-[1920px] justify-center md:h-[100px]"
     >
       <div className="flex w-full max-w-[1920px] items-center justify-between px-8 md:px-10">
         <div className="flex items-center">
@@ -40,15 +39,6 @@ export default function NavBar() {
             >
               changelog
             </Link>
-            {/* <Link
-              className={cn(
-                "flex w-14 md:w-16 items-center justify-center p-1 transition-all hover:font-bold md:p-4",
-                path === "/blog" ? "font-bold" : "font-normal",
-              )}
-              href={"/blog"}
-            >
-              blog
-            </Link> */}
           </div>
         </div>
         <div className="flex items-center gap-6">
