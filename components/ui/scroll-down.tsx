@@ -24,7 +24,7 @@ const ScrollDown = () => {
 
   return (
     <a aria-label="scroll down button" id="scrollDownButton" href="#currently_cooking" className="transition-all">
-      <div className="absolute bottom-6 right-6 rounded-full bg-neutral-800 p-4 transition-all hover:bg-neutral-700">
+      <div className="absolute md:bottom-7 md:right-7 bottom-6 right-6 rounded-full bg-neutral-800 p-4 transition-all hover:bg-neutral-700">
         <FaAngleDown className="fill-white" />
       </div>
     </a>

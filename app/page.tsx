@@ -1,7 +1,6 @@
 import Image from "next/image";
 import star from "@/public/svg/star.svg";
 import ScrollDown from "@/components/ui/scroll-down";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import ResumeSection from "@/components/home/resume-section";
 
 export default function Home() {

@@ -3,9 +3,10 @@ import { Montserrat, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
-import { VisualEditing } from "next-sanity";
-import { draftMode } from "next/headers";
 import { ThemeProvider } from "@/components/theme-provider";
+import NavBar from "@/components/nav/nav";
+import { DockInUse } from "@/components/magicui/dock-in-use";
+import FooterContent from "@/components/FooterContent";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -37,24 +38,31 @@ export default function RootLayout({
           space_grotesk.variable,
         )}
       >
-        {draftMode().isEnabled && (
-          <a
-            className="fixed bottom-0 right-0 m-4 bg-blue-500 p-4 text-white"
-            href="/api/draft-mode/disable"
-          >
-            Disable preview mode
-          </a>
-        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
-          <main>{children}</main>
+          <main>
+            <header className="flex w-screen justify-center">
+              <div className="w-full max-w-[1800px]">
+                <NavBar />
+              </div>
+            </header>
+            <main className="mt-[80px] flex min-h-[calc(100vh-176px)] justify-center md:mt-[100px] md:min-h-[calc(100vh-196px)]">
+              <div className="w-full max-w-[1000px] px-8 md:px-10">
+                {children}
+              </div>
+              <span className="fixed bottom-8 left-auto right-auto m-0 h-fit w-fit p-0 max-xl:hidden">
+                <DockInUse />
+              </span>
+            </main>
+            <footer>
+              <FooterContent />
+            </footer>
+          </main>
         </ThemeProvider>
-
-        {draftMode().isEnabled && <VisualEditing />}
         <Toaster />
       </body>
     </html>
