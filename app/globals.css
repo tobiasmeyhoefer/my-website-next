@@ -25,7 +25,7 @@ html {
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #101010;
+    --foreground: #000000;
 
     --color-trail: #323232;
 
@@ -61,7 +61,7 @@ html {
   }
 
   .dark {
-    --background: #101010;
+    --background: #000000;
     --foreground: #ffffff;
 
     --color-trail: #f4f4f4;

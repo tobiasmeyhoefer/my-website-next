@@ -11,6 +11,9 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
       },
     ],
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
   },
   experimental: {
     taint: true,

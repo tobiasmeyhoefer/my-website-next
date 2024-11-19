@@ -1,5 +1,6 @@
 import ScrollAnimation from "@/components/animations/scroll-animation";
 import Link from "next/link";
+import { LinkPreview } from "../ui/link-preview";
 
 const ResumeSection = () => {
   return (
@@ -46,12 +47,18 @@ const ResumeSection = () => {
           <h3 className="font-bold">Work_</h3>
           <p className="mb-1">
             see{" "}
-            <Link
+            {/* <Link
               className="text-yellow-600 dark:text-brand "
               href={"/changelog"}
             >
               changelog
-            </Link>
+            </Link> */}
+            <LinkPreview
+              url="https://tobiasmeyhoefer.de/changelog"
+              className="text-yellow-600 dark:text-brand"
+            >
+              changelog
+            </LinkPreview>{" "}
           </p>
           {/* <p className="mb-1">
             since 2024: Peaks & Pies, working as a fullstack webdeveloper on
