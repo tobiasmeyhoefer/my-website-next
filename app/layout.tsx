@@ -8,6 +8,7 @@ import NavBar from "@/components/nav/nav";
 import { DockInUse } from "@/components/magicui/dock-in-use";
 import FooterContent from "@/components/FooterContent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--montserrat" });
 const space_grotesk = Space_Grotesk({
@@ -66,6 +67,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Toaster />
         <SpeedInsights />
+        <Analytics/>
       </body>
     </html>
   );
