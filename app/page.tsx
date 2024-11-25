@@ -18,7 +18,6 @@ export default function Home() {
             rangeSpeed={1}
           />
         </div>
-
         <div className="relative flex -translate-y-[120px] flex-col items-center justify-center md:-translate-y-[120px]">
           <BlurIn
             word="TOBIAS MEYHÖFER"

@@ -58,7 +58,18 @@ const config = {
           foreground: "var(--card-foreground)",
           hover: "var(--card-hover)",
         },
-        brand: "var(--brand)"
+        brand: "var(--brand)",
+        myteal: {
+          100: "#cceeff",
+          200: "#99ddff",
+          300: "#66cdff",
+          400: "#33bcff",
+          500: "#00abff",
+          600: "#0089cc",
+          700: "#006799",
+          800: "#004466",
+          900: "#002233",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,10 +97,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
