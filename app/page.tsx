@@ -4,6 +4,7 @@ import ScrollDown from "@/components/ui/scroll-down";
 import ResumeSection from "@/components/home/resume-section";
 import { Vortex } from "@/components/ui/vortex";
 import BlurIn from "@/components/ui/blur-in";
+import Star from "@/components/star";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
       <section className="flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center">
         <div className="hidden dark:block">
           <Vortex
-            particleCount={500}
-            // baseHue={360}
+            particleCount={80}
+            baseHue={390}
             rangeY={800}
             backgroundColor="black"
             rangeSpeed={1}
@@ -30,13 +31,14 @@ export default function Home() {
           />
         </div>
         <div className="absolute translate-y-[100px] md:translate-y-[150px]">
-          <Image
+          {/* <Image
             className="pointer-events-none h-[200px] w-[200px] select-none dark:brightness-200 lg:h-[300px] lg:w-[300px]"
             src={star}
             alt="star image"
             width={200}
             height={200}
-          />
+          /> */}
+          <Star className="h-[200px] w-[200px] select-none dark:brightness-200 lg:h-[300px] lg:w-[300px]"/>
         </div>
         <ScrollDown />
       </section>
