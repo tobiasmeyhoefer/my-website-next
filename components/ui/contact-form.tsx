@@ -3,6 +3,7 @@
 import { z } from "zod";
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -17,7 +18,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Textarea } from "./textarea";
 
-const formSchema = z.object({
+export const formSchema = z.object({
   name: z
     .string()
     .min(2, { message: "at least 2 letters" })
@@ -26,11 +27,14 @@ const formSchema = z.object({
     .string()
     .min(2, { message: "at least 2 letters" })
     .max(300, { message: "not more then 300 letters" }),
-  contact: z.string().optional(),
+  contact: z.string(),
+  isSponsorship: z.boolean().default(false),
+  companyWebsite: z.string().url().optional(),
 });
 
 import { actionResponse, sendResendMail } from "@/actions";
 import { useState } from "react";
+import { Separator } from "./separator";
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -41,17 +45,17 @@ const ContactForm = () => {
       name: "",
       reason: "",
       contact: "",
+      isSponsorship: false,
+      companyWebsite: "",
     },
   });
 
+  const watchIsSponsorship = form.watch("isSponsorship");
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
-    handleClick()
-    const response: actionResponse = await sendResendMail(
-      values.name,
-      values.reason,
-      values.contact ?? "",
-    );
+    handleClick();
+    await sendResendMail(values);
 
     form.reset();
     setIsLoading(false);
@@ -142,7 +146,7 @@ const ContactForm = () => {
                 <FormControl>
                   <Input
                     className="focus-within:ring-red-100 focus-visible:ring-zinc-500 md:h-12"
-                    placeholder=""
+                    placeholder="example@gmail.com"
                     autoComplete="off"
                     {...field}
                   />
@@ -154,6 +158,46 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
+          <Separator />
+          <FormField
+            control={form.control}
+            name="isSponsorship"
+            render={({ field }) => (
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <div className="space-y-1 leading-none">
+                  <FormLabel>
+                    Is this a sponsorship or partnership request?
+                  </FormLabel>
+                  {/* <FormDescription>
+                    Check this if you&apos;re interested in sponsoring or partnering.
+                  </FormDescription> */}
+                </div>
+              </FormItem>
+            )}
+          />
+          {watchIsSponsorship && (
+            <>
+              <FormField
+                control={form.control}
+                name="companyWebsite"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Company Website</FormLabel>
+                    <FormControl>
+                      <Input {...field} placeholder="https://example.com" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </>
+          )}
           <Button disabled={isLoading} type="submit" variant={"ringHover"}>
             Submit
           </Button>

@@ -2,6 +2,8 @@
 
 import 'server-only';
 import { Resend } from "resend";
+import { formSchema } from './components/ui/contact-form';
+import { z } from 'zod';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -10,11 +12,9 @@ export type actionResponse = {
 };
 
 export async function sendResendMail(
-  senderName: string,
-  reason: string,
-  contact: string,
+  values: z.infer<typeof formSchema>
 ): Promise<actionResponse> {
-  const wordCount = reason.split(" ").length;
+  const wordCount = values.reason.split(" ").length;
   if (wordCount < 6) {
     console.error("To short message!")
     return { msg: "To short message!" };
@@ -22,8 +22,8 @@ export async function sendResendMail(
   const { data, error } = await resend.emails.send({
     from: "noreply@tobiasmeyhoefer.de",
     to: ["tobitacklestech@gmail.com"],
-    subject: "Kontaktanfrage von " + senderName,
-    text: reason + "\n\n" + "Kontakt:" + contact,
+    subject: "Kontaktanfrage von " + values.name,
+    text: "contact request from" + values.name + "\n\n" + values.reason + "\n\n" + "Kontakt:" + values.contact + "\n\n" + values.isSponsorship + "\n\n" + values.companyWebsite,
   });
 
   if (error) {
