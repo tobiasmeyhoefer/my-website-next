@@ -29,7 +29,7 @@ export const formSchema = z.object({
     .max(300, { message: "not more then 300 letters" }),
   contact: z.string(),
   isSponsorship: z.boolean().default(false),
-  companyWebsite: z.string().url().optional(),
+  companyWebsite: z.string().optional(),
 });
 
 import { actionResponse, sendResendMail } from "@/actions";
