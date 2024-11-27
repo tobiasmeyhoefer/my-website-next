@@ -11,8 +11,8 @@ export default function Home() {
       <section className="flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center">
         <div className="hidden dark:block">
           <Vortex
-            particleCount={10}
-            baseHue={360}
+            particleCount={500}
+            // baseHue={360}
             rangeY={800}
             backgroundColor="black"
             rangeSpeed={1}
