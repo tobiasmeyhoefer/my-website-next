@@ -2,13 +2,11 @@
 
 import confetti from "canvas-confetti";
 import * as React from "react";
-import { useState } from "react";
 
 const Star = ({ className }: { className: string }) => {
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    const end = Date.now() + 0.5 * 1000;
+    const end = Date.now() + 0.5 * 200;
     const colors = ["#ffffff", "#ffffff", "#ffffff", "#ffffff"];
 
     const frame = () => {
@@ -44,10 +42,8 @@ const Star = ({ className }: { className: string }) => {
       className={className}
     >
       <path
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
-        className="hover:cursor-pointer hover:fill-zinc-700 fill-zinc-800 transition-all"
+        className="hover:cursor-pointer dark:hover:fill-zinc-300 dark:fill-zinc-500 transition-all"
         id="star"
         strokeLinecap="round"
         strokeLinejoin="round"

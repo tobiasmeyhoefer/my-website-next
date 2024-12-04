@@ -183,6 +183,12 @@ const ContactForm = () => {
           />
           {watchIsSponsorship && (
             <>
+              <p>
+                You can alternatively contact me here:{" "}
+                <a className="text-brand" href="mailto:tobitacklestech@gmail.com">
+                  tobitacklestech@gmail.com
+                </a>
+              </p>
               <FormField
                 control={form.control}
                 name="companyWebsite"
