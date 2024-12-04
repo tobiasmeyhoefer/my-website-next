@@ -14,7 +14,7 @@ const ResumeSection = () => {
           </h2>
         </div>
         <VelocityScroll
-          text="YouTube content, bachelor thesis, builing awesome landing pages"
+          text="YouTube content, bachelor thesis, builing awesome landing page, "
           default_velocity={2}
           className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
         />

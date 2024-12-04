@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://tobiasmeyhoefer.de/tech",
+      url: "https://tobiasmeyhoefer.de/changelog",
     //   lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
